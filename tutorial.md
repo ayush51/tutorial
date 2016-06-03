@@ -54,7 +54,10 @@ on the integration page.
 <a name="javascript_api"></a>
 #### The Javascript API
 
+```javascript
 
+<script type="text/javascript" async="" src="//surfly.com//static/js/widgit.js">
+```
 
 <a name=rest_api></a>
 #### The REST API
@@ -135,7 +138,7 @@ Please Note:
  - the way in which visitors can start a session (stealth mode, auto_start or #surflystart anchor) was covered in the 
    previous section, "Starting a session" 
  - A consise table detailing all of the options available for customization can be found in the API documentation.
-: 
+ 
 <a name="session_appearance"></a>
 ### Session appearance
 
@@ -155,11 +158,24 @@ The main points covered in this tutorial are:
 You can change the video quality, colour, and position of the session. To do this, simply configure the Surfly code snippet, 
 or change an option in a REST call. The session interface can also be changed with the PostMessage API.  
 
-Please note: 
+If you are using the Surfly snippet, you can simply adjust the configuration.  
+
+######Please note: 
  - A comprehensive and consise table detailing the session appearance can be found in the API documentation.
 
 <a name="chat_box"></a>
 ####Chat box
+
+You can change the chatbox color in the Surfly code snippet by changing the css string. 
+
+```javascript 
+
+chat_box_color:"#80ffbf"
+```
+
+The icons at the top of the Chatbox have been changed from a light red to a deep blue, which is more suited to our website's theme:
+
+![Changed chatbox colours](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)
 
 <a name="switch_control"></a>
 ####Switching the control from leader to follower
