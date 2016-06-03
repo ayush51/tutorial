@@ -155,7 +155,10 @@ The main points covered in this tutorial are:
 You can change the video quality, colour, and position of the session. To do this, simply configure the Surfly code snippet, 
 or change an option in a REST call. The session interface can also be changed with the PostMessage API.  
 
-If you are using the Surfly snippet, you can simply adjust the configuration.  
+If you are using the Surfly snippet, you can simply adjust the configuration to suit your needs, for example, by setting ```docked_only:"true"```,
+ you are able to remove the chat and video, and have just the icons available.   
+
+![docked_only](https://raw.github.com/surfly/tutorial/master/screens/docked_only.png)
 
 ######Please note: 
  - A comprehensive and consise table detailing the session appearance can be found in the API documentation.
@@ -205,8 +208,8 @@ This is achieved by the following:
 <a name="window_size"></a>
 #### Window Size options
 
-
-
+The window size can also be adjusted to suit your needs.  If you are using the Surfly code snippet you can adjust the min/ max parameters.  The window is
+normally set to the person with the smallest screen.  However, this can also be removed.    
 
 
 <a name="drawing_mode"></a>
