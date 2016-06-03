@@ -54,10 +54,7 @@ on the integration page.
 <a name="javascript_api"></a>
 #### The Javascript API
 
-```javascript
 
-<script type="text/javascript" async="" src="//surfly.com//static/js/widgit.js">
-```
 
 <a name=rest_api></a>
 #### The REST API
@@ -208,32 +205,34 @@ This is achieved by the following:
 <a name="window_size"></a>
 #### Window Size options
 
-This can be changed in the session appearance options. The max or min width and height can be specified.
 
-To change the window size, we need to adapt the Surfly code snippet, or the REST API. The default for the 
-max and min values for both width and height are all set at 0. This can be changed in order to suit your needs, 
-for example: 
 
-  [show a screen shot of the small/ large screen and how to adjust it in the code]
 
-The size of the window cannot be changed via the PostMessage API
 
 <a name="drawing_mode"></a>
 #### Options for the drawing mode
 
-The drawing options can be set either as session appearance options, or via the PostMessage API.
-
-There are two ways in which to adapt the drawing feature, drawing_mode and drawing_colour:
+There are two ways in which to adapt the drawing feature:
  - drawing_mode takes 3 options:
   - temporary, meaning that the drawings fade out. 
   - permanent, meaning that the drawing remain until the drawing_mode changes.
   - disabled, meaning that the drawing is turned off.
 
  - drawing_colour
-  -  is initially set as "default".
+  -  the default is yellow.
   -  but can be changed to any CSS string.
 
-[tutorial here]
+
+In the Surfly snippet this can be done as easily as the other changes
+
+```javascript
+   drawing_color:"#66ccff",
+   drawing_mode:"permanent",
+```
+This changes the drawing function so that the drawings do not fade away, but remain on the page.  The color
+of the magic marker has also been changed to a light blue.
+
+![changed drawing colour](https://raw.github.com/surfly/tutorial/master/screens/drawing.png)
 
 <a name="session_continuation"></a>
 ### Session continuation
