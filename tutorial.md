@@ -31,7 +31,7 @@ Using the REST API gives a greater programmatical approach towards integration.
 
 <a name="code_snippet"></a>
 
-##### The Surfly Code Snippet
+#### The Surfly Code Snippet
 
 This can be found by clicking on the 'integration' panel in your Settings. 
 If you get a message telling you that you do not have the API key set up yet, click on
@@ -47,8 +47,8 @@ Copy the code snippet and add it to the source code of your website.
 Check the scripts to make sure it is running, you may have to add https: to the src. 
 
 You should see a button at the bottom left of your screen, inviting you to ask for live help.
-Otherwise, you may get a message saying that your 
-original domain is not listed on your Surfly integration page, in order to get around this, simply add your domain to the widget's section
+Otherwise, you may get a message saying that your original domain is not listed on your Surfly integration page,
+in order to get around this, simply add your domain to the widget's section
 on the integration page.  
 
 <a name="javascript_api"></a>
@@ -59,10 +59,7 @@ on the integration page.
 <a name=rest_api></a>
 #### The REST API
 
-In order to integrate this into your website, look for the REST API key at the bottom of the integration page:
-
-![The Integration Page](https://raw.github.com/surfly/tutorial/master/screens/snippet_initial_screen.png)
-
+In order to integrate this into your website, look for the REST API key at the bottom of the integration page. (see the above image in the [Surfly code snippet section](#code_snippet))
 This is the key required in order to access the API using basic http authentication.
 
 <a name="start_session"></a>
@@ -132,7 +129,7 @@ The color, font size and the text color can also be changed, e.g:
 
 This then gives a much better integration into our example website: 
 
-(example website with adapted Surfly button)[https://raw.github.com/surfly/tutorial/master/screens/adapted_surfly_button.png]
+![example website with adapted Surfly button](https://raw.github.com/surfly/tutorial/master/screens/adapted_surfly_button.png)
 
 Please Note: 
  - the way in which visitors can start a session (stealth mode, auto_start or #surflystart anchor) was covered in the 
@@ -162,8 +159,7 @@ Please note:
  - A comprehensive and consise table detailing the session appearance can be found in the API documentation.
 
 <a name="chat_box"></a>
-##
-##Chat box
+####Chat box
 
 <a name="switch_control"></a>
 ####Switching the control from leader to follower
