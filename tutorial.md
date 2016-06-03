@@ -139,26 +139,22 @@ Please Note:
 <a name="session_appearance"></a>
 ### Session appearance
 
-You may change the appearance and the style of the session to meet your needs.
-
-The main points covered in this tutorial are: 
-
- - [appearance](#appearance)
- - [disabling the chat box](#chat_box)
- - [switching the control options](#switch_control)
- - [the window size options](#window_size)
- - [the drawing mode](#drawing_mode)
-
-<a name="appearance"></a>
-#### Changing the session appearance
-
-You can change the video quality, colour, and position of the session. To do this, simply configure the Surfly code snippet, 
-or change an option in a REST call. The session interface can also be changed with the PostMessage API.  
-
-If you are using the Surfly snippet, you can simply adjust the configuration to suit your needs, for example, by setting ```docked_only:"true"```,
- you are able to remove the chat and video, and have just the icons available.   
+You can simply adjust the javascript snippet configuration to suit your needs, for example, by setting ```docked_only:"true"```,
+you are able to remove the chat and video, and have just the icons available.
 
 ![docked_only](https://raw.github.com/surfly/tutorial/master/screens/docked_only.png)
+
+You can also change the position of the dock from the bottom left to the top of your screen by using ```dock_top_position:"true"```
+
+You can also change the look and the appearance of the chatbox, change the quality and size of the video, and switch the control from one user to another. 
+
+The main points covered in the session appearance section are: 
+
+ - [Changing the chat box](#chat_box)
+ - [Switching the control options](#switch_control)
+ - [The window size options](#window_size)
+ - [The drawing mode](#drawing_mode)
+
 
 ######Please note: 
  - A comprehensive and consise table detailing the session appearance can be found in the API documentation.
@@ -177,39 +173,29 @@ The icons at the top of the Chatbox have been changed from a light red to a deep
 
 ![Changed chatbox colours](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)
 
+
 <a name="switch_control"></a>
 ####Switching the control from leader to follower
 
 Changing control in the session can be done in the PostMessage API, once a Surfly session has started, or can be set prior to the session with 
 session appearance options.
 
-To change the session appearance options, this again requires configuring the code snippet. 
-
 The options are: 
  - agent_can_request_control. With the controllers permission, the agent can take control.
  - agent_can_take_control. In this case, the agent can take control without needing approval from the controller.
 
-This can be achieved like so:
+Both of these parameters gives the agent another option in their dock.  
 
-[include screen shot]
+![request control](https://raw.github.com/surfly/tutorial/master/screens/agent_request.png)
 
-To change the PostMessage API, 
+As can be seen in the above image, the hand button has been added.  This is the button allowing the agent to take, or request, control.  
 
- - the type is "control"
-
- - the parameters are: 
-   - "to", which is the index of the user who is control of the session.
-   - "gained", if true, control was gained, if false, control was lost.
-
-This is achieved by the following:
-
-[include screen shot]
 
 <a name="window_size"></a>
 #### Window Size options
 
 The window size can also be adjusted to suit your needs.  If you are using the Surfly code snippet you can adjust the min/ max parameters.  The window is
-normally set to the person with the smallest screen.  However, this can also be removed.    
+normally set to the person with the smallest screen. However, this can also be removed.    
 
 
 <a name="drawing_mode"></a>
