@@ -188,21 +188,31 @@ Both of these parameters gives the agent another option in their dock.
 
 ![request control](https://raw.github.com/surfly/tutorial/master/screens/agent_request.png)
 
-As can be seen in the above image, the hand button has been added.  This is the button allowing the agent to take, or request, control.  
+As can be seen in the above image, the hand button has changed from faded, to bold.  This is the button allowing the agent to take, or request, control.  
 
 
 <a name="window_size"></a>
 #### Window Size options
 
-The window size can also be adjusted to suit your needs.  If you are using the Surfly code snippet you can adjust the min/ max parameters.  The window is
-normally set to the person with the smallest screen. However, this can also be removed.    
+The window size can also be adjusted to suit your needs.  
+If you are using the Surfly code snippet you can adjust the min/ max parameters.  
 
+```
+min_height: "200",
+min_width: "200",
+```
+
+The window is normally set to the person with the smallest screen. However, this can also be removed.    
+
+```
+set_to_smallest: "false"
+```
 
 <a name="drawing_mode"></a>
 #### Options for the drawing mode
 
 There are two ways in which to adapt the drawing feature:
- - drawing_mode takes 3 options:
+  -  drawing_mode takes 3 options:
   - temporary, meaning that the drawings fade out. 
   - permanent, meaning that the drawing remain until the drawing_mode changes.
   - disabled, meaning that the drawing is turned off.
@@ -254,7 +264,7 @@ In order to allow soft session continuation, you need to adapt the widget like s
 
 This is fairly straightforward, as demonstrated below: 
 
-  [add a screen shot/ tutorial and the necessary code]
+  [add a screen shot/ tutorial]
 
 
 <a name="security_features"></a>
