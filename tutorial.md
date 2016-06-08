@@ -70,6 +70,7 @@ You can start a session in three ways:
  - [The #surflystart anchor](#surflystart_anchor)
  - [Stealth mode](#stealth_mode)
 
+You can also [detect a session](#detect_session), which gives you greater flexibility with regards to integrating Surfly into your website.
 
 <a name="auto_start"></a>
 #### Auto start a session
@@ -104,14 +105,30 @@ Of course, you can customise the look of the link with css in order for it to fi
 
 Stealth mode means that the visitor can initiate a Surfly session by pressing CTRL+ENTER.
 
-This is already the default in  the Surfly code snippet, to disallow it, simply set ```stealth_mode:"false"```
+This is already the default in the Surfly code snippet, to disallow it, simply set ```stealth_mode:"false"```
 
+<a name="detect_session"></a>
+#### Detecting a session
+
+Using the REST API in order to detect a session: 
+You need to use the REST API key that is in the integration panel in your account. 
+Then you need to make a request call, for example:
+
+```python
+@app.route('/detect_session', methods = ['POST', 'GET'])
+def detect_session():
+   request = Request('https://api.surfly.com/v2/sessions/?api_key="your_key_here"&active_session=true')
+   response_body = urlopen(request).read()
+   return response_body
+```   
+
+This returns a list of all the current active sessions that are being run from that account.  
 
 <a name="button_appearance"></a>
 ### Button Appearance
 
 The Surfly button can be completley adapted in order for it to fully integrate into your own website and its design.
-v
+
 The default position for the button is "bottomright", but this can easily be changed.  
 In the Surfly code snippet, it is simply changing the default value, eg:
 
