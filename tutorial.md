@@ -111,7 +111,7 @@ This is already the default in  the Surfly code snippet, to disallow it, simply 
 ### Button Appearance
 
 The Surfly button can be completley adapted in order for it to fully integrate into your own website and its design.
-
+v
 The default position for the button is "bottomright", but this can easily be changed.  
 In the Surfly code snippet, it is simply changing the default value, eg:
 
@@ -197,12 +197,14 @@ As can be seen in the above image, the hand button has changed from faded, to bo
 The window size can also be adjusted to suit your needs.  
 If you are using the Surfly code snippet you can adjust the min/ max parameters.  
 
+For example, this would set the window size to be larger than 200x200:
+
 ```
 min_height: "200",
 min_width: "200",
 ```
 
-The window is normally set to the person with the smallest screen. However, this can also be removed.    
+The window is normally set to the person with the smallest screen. However, this can also be removed:    
 
 ```
 set_to_smallest: "false"
@@ -212,7 +214,7 @@ set_to_smallest: "false"
 #### Options for the drawing mode
 
 There are two ways in which to adapt the drawing feature:
-  -  drawing_mode takes 3 options:
+ - drawing_mode takes 3 options:
   - temporary, meaning that the drawings fade out. 
   - permanent, meaning that the drawing remain until the drawing_mode changes.
   - disabled, meaning that the drawing is turned off.
@@ -238,7 +240,7 @@ of the magic marker has also been changed to a light blue.
 
 Please Note: This is only supported for sessions started with the Surfly widgit. 
 
-Surfly's proxy approach means that cookies can be transferred to the Surfly session and then back again to the original page. 
+Information can be carried over from your website, and into the Surfly session.  Once the session has finshed, the information is returned back to the website.
 
 There are two main ways to set up session continuation:
  - [Full session continuation](#full_session)
@@ -247,24 +249,30 @@ There are two main ways to set up session continuation:
 <a name="full_session"></a>
 #### Full session continuation
 
-A full session continuation requires a change in the host websites' load balancer configuration. It allows the transfer of all data, including cookies with a HttpOnly tag.
+A full session continuation requires a change in the host websites' load balancer configuration. It allows the transfer of all data, including (unlike soft session continuation), 
+cookies with a HttpOnly tag.
+
 
 <a name="soft_session"></a>
 #### Soft session continuation
 
-Soft session continuation allows you to carry out soft session integration without changing load balancer configuration. The Surfly widget needs to 
-be on all the pages you wish to transfer the information from. Cookies with the HttpOnly flag will not be transferred. 
+Soft session continuation allows you to carry out session continuation without changing the load balancer configuration. The Surfly widget needs to 
+be on all the pages you wish to transfer the information from. For security reasons, the widgit also needs to be on the final page that the session
+will end on.
 
 In order to allow soft session continuation, you need to adapt the widget like so:
 
 ```
-   cookie_transfer_enabled: true,
-   cookie_transfer_proxying: false
+   cookie_transfer_enabled: "true",
+   cookie_transfer_proxying: "false",
 ```
 
-This is fairly straightforward, as demonstrated below: 
+If you do not want the customer to start a session, but wish to be able to continue their session should they chose to later on in the process, you can always set 
+the button to be hidden:
 
-  [add a screen shot/ tutorial]
+```
+   hidden: "true",
+```
 
 
 <a name="security_features"></a>
