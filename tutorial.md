@@ -5,7 +5,6 @@
 Welcome to the Surfly tutorial! 
 Here you will find a detailed description on how to integrate Surfly into your website, and adapt it to your needs.
 
-
 The tutorial covers:
 
  - [Integrating Surfly into your website](#add_surfly)
@@ -71,7 +70,7 @@ In order to use this, you need to add the #surflystart anchor to a page with the
 
 ```javascript
 
-<a href="surflystart"> Click to start a Surfly session!</a>
+<a href="#surflystart"> Click to start a Surfly session!</a>
 ```
 
 As can be seen from the link below, this will add a link within your website which visitors will click in order to start a Surfly session.
