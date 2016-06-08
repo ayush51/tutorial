@@ -22,14 +22,6 @@ documentation.  Otherwise, please do not hesitate to contact us for help.
 <a name="add_surfly"></a>
 ### Integrating Surfly into your website
 
-There are three different ways in which to integrate Surfly into your website:  
- - [Surfly Code Snippet](#code_snippet)
- - [The Javascript API](#javascript_api)
- - [The REST API](#rest_api)
-
-Using the REST API gives a greater programmatical approach towards integration.  
-
-<a name="code_snippet"></a>
 
 #### The Surfly Code Snippet
 
@@ -41,7 +33,6 @@ You should now be looking at:
 
 ![The integration page](https://raw.github.com/surfly/tutorial/master/screens/snippet_initial_screen.png)
 
-As can be seen on your screen, the integration page not only shows the code snippet, but also how to set up widgits and the REST API.
 
 Copy the code snippet and add it to the source code of your website.
 Check the scripts to make sure it is running, you may have to add https: to the src. 
@@ -51,26 +42,15 @@ Otherwise, you may get a message saying that your original domain is not listed 
 in order to get around this, simply add your domain to the widget's section
 on the integration page.  
 
-<a name="javascript_api"></a>
-#### The Javascript API
-
-
-
-<a name=rest_api></a>
-#### The REST API
-
-In order to integrate this into your website, look for the REST API key at the bottom of the integration page. (see the above image in the [Surfly code snippet section](#code_snippet))
-This is the key required in order to access the API using basic http authentication.
 
 <a name="start_session"></a>
 ### Starting a session
 
-You can start a session in three ways:
+You can start a session in the following ways:
  - [The auto_start option](#auto_start)
  - [The #surflystart anchor](#surflystart_anchor)
  - [Stealth mode](#stealth_mode)
 
-You can also [detect a session](#detect_session), which gives you greater flexibility with regards to integrating Surfly into your website.
 
 <a name="auto_start"></a>
 #### Auto start a session
@@ -94,7 +74,7 @@ In order to use this, you need to add the #surflystart anchor to a page with the
 <a href="surflystart"> Click to start a Surfly session!</a>
 ```
 
-This will add a link to your website which visitors will click in order to start a Surfly session.
+As can be seen from the link below, this will add a link within your website which visitors will click in order to start a Surfly session.
 
 ![The end result](https://raw.github.com/surfly/tutorial/master/screens/Surflystart_anchor.png)
 
@@ -107,22 +87,6 @@ Stealth mode means that the visitor can initiate a Surfly session by pressing CT
 
 This is already the default in the Surfly code snippet, to disallow it, simply set ```stealth_mode:"false"```
 
-<a name="detect_session"></a>
-#### Detecting a session
-
-Using the REST API in order to detect a session: 
-You need to use the REST API key that is in the integration panel in your account. 
-Then you need to make a request call, for example:
-
-```python
-@app.route('/detect_session', methods = ['POST', 'GET'])
-def detect_session():
-   request = Request('https://api.surfly.com/v2/sessions/?api_key="your_key_here"&active_session=true')
-   response_body = urlopen(request).read()
-   return response_body
-```   
-
-This returns a list of all the current active sessions that are being run from that account.  
 
 <a name="button_appearance"></a>
 ### Button Appearance
@@ -194,8 +158,6 @@ The icons at the top of the Chatbox have been changed from a light red to a deep
 <a name="switch_control"></a>
 ####Switching the control from leader to follower
 
-Changing control in the session can be done in the PostMessage API, once a Surfly session has started, or can be set prior to the session with 
-session appearance options.
 
 The options are: 
  - agent_can_request_control. With the controllers permission, the agent can take control.
@@ -221,7 +183,8 @@ min_height: "200",
 min_width: "200",
 ```
 
-The window is normally set to the person with the smallest screen. However, this can also be removed:    
+The window is normally set to the person with the smallest screen. This allows for a smooth transition into the Surfly session.
+However, this can also be removed:    
 
 ```
 set_to_smallest: "false"
