@@ -3,7 +3,7 @@
 ### Introduction
 
 Welcome to the Surfly tutorial! 
-Here you will find a detailed description on how to integrate Surfly into your website, and adapt it to your needs.
+Here you will find a detailed description on how to integrate Surfly into your website using the Surfly widget. 
 
 The tutorial covers:
 
@@ -24,7 +24,7 @@ documentation.  Otherwise, please do not hesitate to contact us for help.
 
 #### The Surfly Code Snippet
 
-This can be found by clicking on the 'integration' panel in your Settings. 
+This can be found by clicking on the 'integration' panel in your account settings. 
 If you get a message telling you that you do not have the API key set up yet, click on
 'Generate API'. 
 
@@ -39,7 +39,7 @@ Check the scripts to make sure it is running, you may have to add https: to the 
 You should see a button at the bottom left of your screen, inviting you to ask for live help.
 Otherwise, you may get a message saying that your original domain is not listed on your Surfly integration page,
 in order to get around this, simply add your domain to the widget's section
-on the integration page.  
+on the integration page.  You do not need to add https:// to the start of the domain name.  
 
 
 <a name="start_session"></a>
@@ -84,7 +84,7 @@ Of course, you can customise the look of the link with css in order for it to fi
 
 Stealth mode means that the visitor can initiate a Surfly session by pressing CTRL+ENTER.
 
-This is already the default in the Surfly code snippet, to disallow it, simply set ```stealth_mode:"false"```
+As stealth mode is already the default in the Surfly code snippet, to disallow it, simply set ```stealth_mode:"false"```
 
 
 <a name="button_appearance"></a>
@@ -99,7 +99,7 @@ In the Surfly code snippet, it is simply changing the default value, eg:
   position:"middleright"
 ```
 
-The color, font size and the text color can also be changed, e.g:
+The full appearance of the button can be changed.  You can specify the color of the button along with the font size and font color, e.g:
 
 ```javascript
   theme_font_background:"#ff0080", 
@@ -124,7 +124,7 @@ you are able to remove the chat and video, and have just the icons available.
 
 ![docked_only](https://raw.github.com/surfly/tutorial/master/screens/docked_only.png)
 
-You can also change the position of the dock from the bottom left to the top of your screen by using ```dock_top_position:"true"```
+To change the position of the dock from the bottom left of your screen to the top of your screen add  ```dock_top_position:"true"``` to the code snippet
 
 You can also change the look and the appearance of the chatbox, change the quality and size of the video, and switch the control from one user to another. 
 
@@ -194,9 +194,9 @@ set_to_smallest: "false"
 
 There are two ways in which to adapt the drawing feature:
  - drawing_mode takes 3 options:
-  - temporary, meaning that the drawings fade out. 
-  - permanent, meaning that the drawing remain until the drawing_mode changes.
-  - disabled, meaning that the drawing is turned off.
+  - temporary, the drawings fade out. 
+  - permanent, the drawings remain until the drawing_mode changes.
+  - disabled, the drawing functionality is disabled.
 
  - drawing_colour
   -  the default is yellow.
@@ -228,7 +228,7 @@ There are two main ways to set up session continuation:
 <a name="full_session"></a>
 #### Full session continuation
 
-A full session continuation requires a change in the host websites' load balancer configuration. It allows the transfer of all data, including (unlike soft session continuation), 
+Full session continuation requires a change in the host websites' load balancer configuration. It allows the transfer of all data, including (unlike soft session continuation), 
 cookies with a HttpOnly tag.
 
 
@@ -236,7 +236,7 @@ cookies with a HttpOnly tag.
 #### Soft session continuation
 
 Soft session continuation allows you to carry out session continuation without changing the load balancer configuration. The Surfly widget needs to 
-be on all the pages you wish to transfer the information from. For security reasons, the widgit also needs to be on the final page that the session
+be on all the pages you wish to transfer the information from. For security reasons, the widget also needs to be present on the final page that the session
 will end on.
 
 In order to allow soft session continuation, you need to adapt the widget like so:
@@ -246,7 +246,7 @@ In order to allow soft session continuation, you need to adapt the widget like s
    cookie_transfer_proxying: "false",
 ```
 
-If you do not want the customer to start a session, but wish to be able to continue their session should they chose to later on in the process, you can always set 
+If you do not want the customer to start a session on a certain page, but wish to be able to transfer information from that page to a later Surfly session, you can always set 
 the button to be hidden:
 
 ```
@@ -283,7 +283,12 @@ therefore gives more control over where a visitor can access, or not.
 <a name="auditlog"></a>
 #### Auditlog
 
-(unknown as to what this is -> possibly to do with the storing and removal of data?)
+This allows you to see the records from sessions. 
+You can also set a message for the logs:
+
+```
+Sufly.log("custom message")
+```
 
 <a name="form_masking"></a>
 #### Form masking
