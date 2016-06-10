@@ -93,8 +93,6 @@ The Surfly button can be completley adapted in order for it to fully integrate i
 
 Its default appearance is red, with white text and sits to the bottom left of the screen.
 
-![Support button](https://raw.github.com/surfly/tutorial/master/screens/support_button.png)
-
  
 The position of the button can be moved to either to the bottom right of the screen, or to the middle left. 
 Your preference can be added to the code snippet, for example:
@@ -129,7 +127,7 @@ The main points covered in the session appearance section are:
  - [Switching the control options](#switch_control)
  - [The window size options](#window_size)
  - [The drawing mode](#drawing_mode)
- - [Ending a session to reveal a popup window](#popupurl)
+ - [Ending a session to display another page, or redirect to another page](#popupurl)
 
 ######Please note: 
  - A comprehensive and consise table detailing the session appearance can be found in the API documentation.
@@ -195,6 +193,14 @@ If you do not wish to have a chatbox, you can set ```docked_only:"true"```.  Onl
 
 To change the position of the dock from the bottom left of your screen to the top of your screen add  ```dock_top_position:"true"``` to the code snippet
 
+###### Storing the chat logs
+
+If you wish to store the chat logs, set ```store_chat_logs: "true"``` in the code widget. 
+
+After the session has ended, you can go to your dashboard and click on history.  The chat log will have two icons inside, allowing you to either view the 
+logs, or download them.  
+
+![chatlogs](https://raw.github.com/surfly/tutorial/master/screens/logged_icon.png)
 
 <a name="switch_control"></a>
 ####Switching the control from leader to follower
@@ -261,7 +267,18 @@ The green drawings underscoring the button are clearly visable to the leader of 
 ![changed drawing colour](https://raw.github.com/surfly/tutorial/master/screens/drawing.png)
 
 <a name="popupurl"></a>
-#### Exiting the session to a popup window
+#### Exiting the session display or redirect to another page
+
+You may want to show a user another page after the session has finished.  You could show a popup window with the page you want to display, or you can 
+redirect them to another url.  
+
+Showing a window:
+ - [Show a page in a popup](#showpage)
+ - [Redirect the user to another url](#url_redirect)
+
+
+<a name="showpage"></a>
+###### Show a popup window
 
 If you want to end the session and show the user a popup window, you can set the end_of_session_popup_url in the code snippet to point to the url of that page.
 After the session ends, the window will be loaded on the users page.
@@ -274,11 +291,32 @@ The user can exit the popup window by clicking on the cross to the top right of 
 
 ![Popup url](https://raw.github.com/surfly/tutorial/master/screens/popup_example.png)
 
+<a name="url_redirect></a>
+###### Redirect the user to another url
+
+You can either redirect to the leader or the follower to another url after the session has finished.
+ 
+
+This is simply:
+
+```javascript
+
+follower_redirect_url: "your url here"
+
+```
+
+Or, for the leader:
+
+```javascript
+
+leader_redirect_url: "Your url here"
+```
+
 
 <a name="session_continuation"></a>
 ### Session continuation
 
-Please Note: This is only supported for sessions started with the Surfly widgit. 
+Please Note: This is only supported for sessions started with the Surfly widget. 
 
 Information can be carried over from your website, and into the Surfly session.  Once the session has finshed, the information is returned back to the website.
 
