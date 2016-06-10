@@ -123,21 +123,13 @@ Please Note:
 <a name="session_appearance"></a>
 ### Session appearance
 
-You can simply adjust the javascript snippet configuration to suit your needs, for example, by setting ```docked_only:"true"```,
-you are able to remove the chat and video, and have just the icons available.
-
-![docked_only](https://raw.github.com/surfly/tutorial/master/screens/docked_only.png)
-
-To change the position of the dock from the bottom left of your screen to the top of your screen add  ```dock_top_position:"true"``` to the code snippet
-
-You can also change the look and the appearance of the chatbox, change the quality and size of the video, and switch the control from one user to another. 
-
 The main points covered in the session appearance section are: 
 
  - [Changing the chat box](#chat_box)
  - [Switching the control options](#switch_control)
  - [The window size options](#window_size)
  - [The drawing mode](#drawing_mode)
+ - [Ending a session to reveal a popup window](#popupurl)
 
 ######Please note: 
  - A comprehensive and consise table detailing the session appearance can be found in the API documentation.
@@ -145,7 +137,7 @@ The main points covered in the session appearance section are:
 <a name="chat_box"></a>
 ####Chat box
 
-The default:
+###### The default:
 
  - The icons are a soft red color.
  - The agent:
@@ -169,6 +161,8 @@ The default:
 
 ![default for leader](https://raw.github.com/surfly/tutorial/master/screens/default_for_leader.png)
 
+###### Changing the chatbox color
+
 You can change the chatbox color in the Surfly code snippet by changing the css string. 
 
 ```javascript 
@@ -180,6 +174,8 @@ The icons at the top of the Chatbox have been changed from a light red to a deep
 
 ![Changed chatbox colours](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)
 
+###### The agent cannot end the session
+
 You can also change the amount of control the members of the session can have.  For instance, if you do not want to allow the agent to 
 be able to end the session, you can specify this in the code snippet:
 
@@ -190,6 +186,15 @@ agent_can_end_session:"false",
 This will remove the exit symbol from the agents chatbox:
 
 ![agent cannot exit](https://raw.github.com/surfly/tutorial/master/screens/agent_cannot_end.png)
+
+###### Docked only
+
+If you do not wish to have a chatbox, you can set ```docked_only:"true"```.  Only the panel containing the different icons will be visable:
+
+![docked_only](https://raw.github.com/surfly/tutorial/master/screens/docked_only.png)
+
+To change the position of the dock from the bottom left of your screen to the top of your screen add  ```dock_top_position:"true"``` to the code snippet
+
 
 <a name="switch_control"></a>
 ####Switching the control from leader to follower
@@ -233,12 +238,12 @@ The drawing option allows the followers within the Surfly session to highlight t
 drawing functionality can be adapted to change the mode or the color of the drawings.  To do this, simply specify your preferences in 
 the code snippet.  
 
- - ```drawing_mode``` takes 3 options:
+ - drawing_mode takes 3 options:
   - temporary, the drawings fade out. 
   - permanent, the drawings remain until the drawing_mode changes.
   - disabled, the drawing functionality is disabled.
 
- - ```drawing_colour```:
+ - drawing_colour:
   -  the default is yellow.
   -  but can be changed to any CSS string.
 
@@ -254,6 +259,21 @@ a vibrant green:
 The green drawings underscoring the button are clearly visable to the leader of the session:
 
 ![changed drawing colour](https://raw.github.com/surfly/tutorial/master/screens/drawing.png)
+
+<a name="popupurl"></a>
+#### Exiting the session to a popup window
+
+If you want to end the session and show the user a popup window, you can set the end_of_session_popup_url in the code snippet to point to the url of that page.
+After the session ends, the window will be loaded on the users page.
+
+```
+end_of_session_popup_url:"your_url_here"
+```
+
+The user can exit the popup window by clicking on the cross to the top right of the window.
+
+![Popup url](https://raw.github.com/surfly/tutorial/master/screens/popup_example.png)
+
 
 <a name="session_continuation"></a>
 ### Session continuation
