@@ -148,17 +148,26 @@ The main points covered in the session appearance section are:
 The default:
 
  - The icons are a soft red color.
- - The follower:
+ - The agent:
    - Can see how many people are in the session
    - Can exit the session
    - Can maximise/ minimise the chat box window
+   - Start videochat
+   - Share documents
+
+![default for follower](https://raw.github.com/surfly/tutorial/master/screens/default_for_agent.png)
 
  - The leader:
    - Can see how many people are in the session
    - Can exit the session
    - Can maximise/ minimise the chat box window
+   - Can switch control
    - Can add a user to the session
-   - Can navigate to a new url   
+   - Can navigate to a new url
+   - Start videochat
+   - Share documents   
+
+![default for leader](https://raw.github.com/surfly/tutorial/master/screens/default_for_leader.png)
 
 You can change the chatbox color in the Surfly code snippet by changing the css string. 
 
