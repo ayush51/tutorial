@@ -94,7 +94,7 @@ The Surfly button can be completley adapted in order for it to fully integrate i
 
 Its default appearance is red, with white text and sits to the bottom left of the screen.
 
-![Support button]((https://raw.github.com/surfly/tutorial/master/screens/support_button.png)
+![Support button](https://raw.github.com/surfly/tutorial/master/screens/support_button.png)
 
  
 The position of the button can be moved to either to the bottom right of the screen, or to the middle left. 
@@ -107,12 +107,12 @@ Your preference can be added to the code snippet, for example:
 The full appearance of the button can be changed.  You can specify the color of the button along with the font size and font color, e.g:
 
 ```javascript
-  theme_font_background:"#ff0080", 
-  theme_font_color:"#ffffff",
-  theme_font_size:"16",
+    theme_font_background:"#000000",
+    theme_font_color:"#ffffff",
+    theme_font_size:"16",
 ```  
-
-This then gives a much better integration into our example website: 
+This changes the color of the button to black, which suits the theme of our example website.  The font color remains white, but the size of the 
+font has increased to size 16, which also increases the size of the support button. 
 
 ![example website with adapted Surfly button](https://raw.github.com/surfly/tutorial/master/screens/adapted_surfly_button.png)
 
