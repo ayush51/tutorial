@@ -92,8 +92,13 @@ As stealth mode is already the default in the Surfly code snippet, to disallow i
 
 The Surfly button can be completley adapted in order for it to fully integrate into your own website and its design.
 
-The default position for the button is "bottomright", but this can easily be changed.  
-In the Surfly code snippet, it is simply changing the default value, eg:
+Its default appearance is red, with white text and sits to the bottom left of the screen.
+
+![Support button]((https://raw.github.com/surfly/tutorial/master/screens/support_button.png)
+
+ 
+The position of the button can be moved to either to the bottom right of the screen, or to the middle left. 
+Your preference can be added to the code snippet, for example:
 
 ```javascript 
   position:"middleright"
