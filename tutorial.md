@@ -197,25 +197,29 @@ set_to_smallest: "false"
 <a name="drawing_mode"></a>
 #### Options for the drawing mode
 
-There are two ways in which to adapt the drawing feature:
- - drawing_mode takes 3 options:
+The drawing option allows the followers within the Surfly session to highlight the areas on the screen that they wish to draw attention to.  The 
+drawing functionality can be adapted to change the mode or the color of the drawings.  To do this, simply specify your preferences in 
+the code snippet.  
+
+ - ```drawing_mode``` takes 3 options:
   - temporary, the drawings fade out. 
   - permanent, the drawings remain until the drawing_mode changes.
   - disabled, the drawing functionality is disabled.
 
- - drawing_colour
+ - ```drawing_colour```
   -  the default is yellow.
   -  but can be changed to any CSS string.
 
 
-In the Surfly snippet this can be done as easily as the other changes
+In our example website we adapted the code in order so that the drawing mode would be permanent, and that the color of the drawings would be 
+a vibrant green:
 
 ```javascript
-   drawing_color:"#66ccff",
+   drawing_color:"#55ff00",
    drawing_mode:"permanent",
 ```
-This changes the drawing function so that the drawings do not fade away, but remain on the page.  The color
-of the magic marker has also been changed to a light blue.
+
+The green drawings underscoring the button are clearly visable to the leader of the session:
 
 ![changed drawing colour](https://raw.github.com/surfly/tutorial/master/screens/drawing.png)
 
