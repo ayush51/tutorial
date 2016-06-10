@@ -13,7 +13,6 @@ The tutorial covers:
  - [Session Appearance](#session_appearance)
  - [Session Continuation](#session_continuation)
  - [Security Features](#security_features)
- - [Customizing Surfly](#customizing_surfly)
 
 Our API is also highly detailed, so if you don't find what you are looking for, it may be in the 
 documentation.  Otherwise, please do not hesitate to contact us for help.  
@@ -140,12 +139,26 @@ The main points covered in the session appearance section are:
  - [The window size options](#window_size)
  - [The drawing mode](#drawing_mode)
 
-
 ######Please note: 
  - A comprehensive and consise table detailing the session appearance can be found in the API documentation.
 
 <a name="chat_box"></a>
 ####Chat box
+
+The default:
+
+ - The icons are a soft red color.
+ - The follower:
+   - Can see how many people are in the session
+   - Can exit the session
+   - Can maximise/ minimise the chat box window
+
+ - The leader:
+   - Can see how many people are in the session
+   - Can exit the session
+   - Can maximise/ minimise the chat box window
+   - Can add a user to the session
+   - Can navigate to a new url   
 
 You can change the chatbox color in the Surfly code snippet by changing the css string. 
 
@@ -158,6 +171,16 @@ The icons at the top of the Chatbox have been changed from a light red to a deep
 
 ![Changed chatbox colours](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)
 
+You can also change the amount of control the members of the session can have.  For instance, if you do not want to allow the agent to 
+be able to end the session, you can specify this in the code snippet:
+
+```javascript
+agent_can_end_session:"false",
+```
+
+This will remove the exit symbol from the agents chatbox:
+
+![agent cannot exit](https://raw.github.com/surfly/tutorial/master/screens/agent_cannot_end.png)
 
 <a name="switch_control"></a>
 ####Switching the control from leader to follower
@@ -206,7 +229,7 @@ the code snippet.
   - permanent, the drawings remain until the drawing_mode changes.
   - disabled, the drawing functionality is disabled.
 
- - ```drawing_colour```
+ - ```drawing_colour```:
   -  the default is yellow.
   -  but can be changed to any CSS string.
 
@@ -305,12 +328,6 @@ Sufly.log("custom message")
 This allows you to set 'surfly_private' on forms which may have sensitive data, such as payment details.
 Surfly will not synchronise the content of the field to the followers.
 
-<a name="customizing_surfly"></a>
-### Customizing Surfly
 
-Depending on who is in control, certain buttons can be disabled.
 
-This is specified in the session integration options, where it is possible to add:
- - 'agent_can_end_session', which, if activated, lets the 'end session' button appear on the users end.  
-
-Only the leader of the session can change the drawing function, the followers cannot.
+{show the entire changed widget code here}
