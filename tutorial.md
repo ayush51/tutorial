@@ -18,7 +18,6 @@ The tutorial covers:
 <a name="add_surfly"></a>
 ### Integrating Surfly into your website
 
-
 #### The Surfly Code Snippet
 
 This can be found by clicking on the 'integration' panel in your account settings. 
@@ -29,14 +28,13 @@ You should now be looking at:
 
 ![The integration page](https://raw.github.com/surfly/tutorial/master/screens/snippet_initial_screen.png)
 
-
 Copy the code snippet and add it to the source code of your website.
 Check the scripts to make sure it is running, you may have to add https: to the src. 
 
 When you open your webpage, you should see a button at the bottom left of your screen, inviting you to ask for live help.
 Otherwise, you may get a message saying that your original domain is not listed on your Surfly integration page,
 in order to get around this, simply add your domain to the widget's section
-on the integration page.  You do not need to add https:// to the start of the domain name.  
+on the integration page. You do not need to add https:// to the start of the domain name. 
 
 
 <a name="start_session"></a>
@@ -52,7 +50,7 @@ You can start a session in the following ways:
 #### Auto start a session
 
 If you enable auto start, it means the webpage including the code snippet will immediatly start a Surfly session. The page will display a red banner asking the 
-visitor to wait for an agent to join their session, and the queue pin number.  
+visitor to wait for an agent to join their session, and the queue pin number.
 
 To enable this feature, set auto_start to true in the Surfly code snippet.
 
@@ -72,7 +70,7 @@ In order to use this, you need to add the #surflystart anchor to a page with the
 <a href="#surflystart"> Click to start a Surfly session!</a>
 ```
 
-As can be seen from the link below, this will add a link within your website which visitors will click in order to start a Surfly session.
+As can be seen from the link below, this will add a link within your website which visitors can click in order to start a Surfly session.
 
 ![The end result](https://raw.github.com/surfly/tutorial/master/screens/Surflystart_anchor.png)
 
@@ -109,7 +107,7 @@ You can further adapt the button to suit your needs by specifying the color of t
     theme_font_color:"#ffffff",
     theme_font_size:"16",
 ```  
-Our example code changes the color of the button to black, which suits the theme of the tutorial's website.  The font color remains white, but the size of the 
+Our example code changes the color of the button to black, which suits the theme of the tutorial's website. The font color remains white, but the size of the 
 font has increased to size 16, which also increases the size of the support button. 
 
 ![example website with adapted Surfly button](https://raw.github.com/surfly/tutorial/master/screens/adapted_surfly_button.png)
@@ -133,7 +131,6 @@ The main points covered in the session appearance section are:
 
 <a name="chat_box"></a>
 ####Chat box
-
 
 
 ###### The default chat box settings:
@@ -172,7 +169,7 @@ chat_box_color:"#80ffbf"
 
 As can be seen in the image below, the icons at the top of the Chatbox have been changed from a light red to a deep blue, which is more suited to our website's theme:
 
-![Changed chatbox colours](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)
+![Changed chatbox colors](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)
 
 ###### The agent cannot end the session
 
@@ -189,17 +186,17 @@ This will remove the exit icon from the agents chatbox:
 
 ###### Docked only
 
-If you do not wish to have a chatbox, you can set ```docked_only:"true"```.  Only the panel containing the different icons will be visable:
+If you do not wish to have a chatbox, you can set ```docked_only:"true"```. Only the panel containing the different icons will be visable:
 
 ![docked_only](https://raw.github.com/surfly/tutorial/master/screens/docked_only.png)
 
-To change the position of the dock from the bottom left of your screen to the top of your screen add  ```dock_top_position:"true"``` to the code snippet
+To change the position of the dock from the bottom left of your screen to the top of your screen add  ```dock_top_position:"true"``` to the code snippet.
 
 ###### Storing the chat logs
 
 If you wish to store the chat logs, set ```store_chat_logs: "true"``` in the code widget. 
 
-After the session has ended, you can go to your dashboard and click on history.  The chat log will have two icons inside, allowing you to either view the 
+After the session has ended, you can go to your dashboard and click on history. The chat log will have two icons inside, allowing you to either view the 
 logs, or download them.  
 
 ![chatlogs](https://raw.github.com/surfly/tutorial/master/screens/logged_icon.png)
@@ -221,7 +218,7 @@ As can be seen in the above image, the hand button is now bold, which means the 
 <a name="window_size"></a>
 #### Window Size options
 
-The window size can also be adjusted to suit your needs by adjusting the min/ max parameters.  
+The window size can also be adjusted to suit your needs by adjusting the min/ max parameters.
 
 For example, this would set the window size to be larger than 200x200:
 
@@ -231,7 +228,7 @@ min_width: "200",
 ```
 
 The window is normally set to the person with the smallest screen, as this allows for a smooth transition into the Surfly session.
-However, if required, this can also be removed:    
+However, if required, this can also be removed:  
 
 ```
 set_to_smallest: "false"
@@ -240,16 +237,16 @@ set_to_smallest: "false"
 <a name="drawing_mode"></a>
 #### Options for the drawing mode
 
-The drawing option allows the followers within the Surfly session to highlight the areas on the screen that they wish to draw attention to.  The 
-drawing functionality can be adapted to change the mode or the color of the drawings.  To do this, simply specify your preferences in 
-the code snippet.  
+The drawing option allows the followers within the Surfly session to highlight the areas on the screen that they wish to draw attention to. The 
+drawing functionality can be adapted to change the mode or the color of the drawings. To do this, simply specify your preferences in 
+the code snippet.
 
  - drawing_mode takes 3 options:
   - temporary, the drawings fade out. 
   - permanent, the drawings remain until the drawing_mode changes.
   - disabled, the drawing functionality is disabled.
 
- - drawing_colour:
+ - drawing_color:
   -  the default is yellow.
   -  but can be changed to any CSS string.
 
@@ -264,13 +261,13 @@ a vibrant green:
 
 The green drawings underscoring the button are clearly visable to the leader of the session:
 
-![changed drawing colour](https://raw.github.com/surfly/tutorial/master/screens/drawing.png)
+![changed drawing color](https://raw.github.com/surfly/tutorial/master/screens/drawing.png)
 
 <a name="popupurl"></a>
 #### Exiting the session display or redirect to another page
 
-You may want to show a user another page after the session has finished.  You can either show a popup window within the page you want to display, or you can 
-redirect them to another url.  
+You may want to show a user another page after the session has finished. You can either show a popup window within the page you want to display, or you can 
+redirect them to another url.
 
 ###### Show a popup window
 
@@ -310,8 +307,8 @@ leader_redirect_url: "Your url here"
 
 Please Note: This is only supported for sessions started with the Surfly widget. 
 
-Cookies can be carried over from your website, and into the Surfly session.  Once the session has finshed, the information is returned back to the website.
-This allows a smooth transition into, and out of, the session.  
+Cookies can be carried over from your website, and into the Surfly session. Once the session has finshed, the information is returned back to the website.
+This allows a smooth transition into, and out of, the session.
 
 
 There are two main ways to set up session continuation:
@@ -339,7 +336,7 @@ To adapt the load balancer configuration you need to set the following request h
  - Host: surfly.com
 
 The X-Widget-Key is the widget key from your code snippet, and the X-Continuation-Origin is the origin page containing the Surfly widget. 
-You may also need to specify the port, if it is non-standard.  
+You may also need to specify the port, if it is non-standard.
 
 ###### Please Note:
 The API has further details, and includes examples on how to set up full session continuation in Haproxy and Nginx
@@ -369,20 +366,14 @@ the button to be hidden:
 <a name="security_features"></a>
 ### Security Features
 
-The following security features can be integrated into your website:
-
- - [Blacklisting or Whitelisting](#blacklist)
- - [Auditlog](#auditlog)
- - [Form masking](#form_masking)
-
 
 <a name="blacklist_whitelist"></a>
-#### Blacklisting and Whitelisting  
+#### Blacklisting and Whitelisting 
 
 Please note: This option is only available to enterprise clients. 
 
-Blacklisting is used in order to deny users access from a select few pages,  If you want more control over what your users can access, whitelisting may be the most viable option.  
-Whitelisting allows access only to the pages specified in the code snippet.  
+Blacklisting is used in order to deny users access from a select few pages, If you want more control over what your users can access, whitelisting may be the most viable option.
+Whitelisting allows access only to the pages specified in the code snippet.
 
 Both the blacklist and whitelist variables are in the format of a JSON array, and can take the following parameters:
  - pattern: A regular expression matching restricted url (in the case of blacklist), or the allowed url (in the case of whitelist)
@@ -401,6 +392,6 @@ For example:
 ```
 
 would allow (whitelist) or restrict (blacklist) access to your_website.com. If the user attempted to access a restricted page then, in this case, they would see
-the Surfly default page as a redirect url has not been provided.   
+the Surfly default page as a redirect url has not been provided. 
 
 
