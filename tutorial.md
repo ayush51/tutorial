@@ -378,26 +378,41 @@ the button to be hidden:
 
 The following security features can be integrated into your website:
 
- - [Blacklist](#blacklist)
- - [Whitelist](#whitelist)
+ - [Blacklisting or Whitelisting](#blacklist)
  - [Auditlog](#auditlog)
  - [Form masking](#form_masking)
 
 
-For both Blacklisting and Whitelisting, you may choose to add two options:
- - redirect, this allows you to redirect the user back to the page on which they clicked the restricted link.
- - type, this allows you to specify which requests get redirected.
+<a name="blacklist_whitelist"></a>
+#### Blacklisting and Whitelisting  
 
-<a name="blacklist"></a>
-#### Blacklist 
+Please note: This option is only available to enterprise clients. 
 
-This option is only available to the enterprise clients. Blacklisting restricts access to certain resources.
+Blacklisting restricts access to a select few pages, if you wish only to allow the users to access a limited amount of pages, whitelisting may be the most viable option.  
+Whitelisting allows access only to the pages specified in the code snippet.  
 
-<a name"whitelist"></a>
-#### Whitelist
+Both the blacklist and whitelist variables are in the format of a JSON array, and can take the following parameters:
+ - pattern: A regular expression of the restricted url
+ - redirect: An url you wish to redirect the user to (optional)
+ - type: The restriction type. (optional)
 
-This option is only available to the enterprise clients. Whitelisting allows access only to specific resources, and
-therefore gives more control over where a visitor can access, or not.
+The pattern specified for blacklist will be the restricted url. The pattern specified for whitelist will be the allowed url.  
+If the redirect url is not specified, the user will be redirected to Surfly's default page.
+
+For example:
+
+```
+{
+   "pattern": ".*your_website\\.com*",
+} 
+
+```
+
+would allow/ restrict access to your_website.com if called with whitelist/ blacklist. If the user attempted to access a restricted page then, in this case, they would see
+the Surfly default page as a redirect url has not been provided.   
+
+
+Please note: Further examples are available in the API.  
 
 <a name="auditlog"></a>
 #### Auditlog
@@ -405,16 +420,13 @@ therefore gives more control over where a visitor can access, or not.
 This allows you to see the records from sessions. 
 You can also set a message for the logs:
 
-```
-Sufly.log("custom message")
+```javascript
+Sufly.log("custom message");
 ```
 
 <a name="form_masking"></a>
 #### Field masking
 
-This allows you to set 'surfly_private' on forms which may have sensitive data, such as payment details.
-Surfly will not synchronise the content of the field to the followers.
+Field masking allows you to hide sensitive data, such as payment details, from the followers. In order to do this set ```surfly_private```
+on the FORM element you wish to keep private. 
 
-
-
-{show the entire changed widget code here}
