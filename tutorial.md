@@ -14,8 +14,6 @@ The tutorial covers:
  - [Session Continuation](#session_continuation)
  - [Security Features](#security_features)
 
-Our API is also highly detailed, so if you don't find what you are looking for, it may be in the 
-documentation.  Otherwise, please do not hesitate to contact us for help.  
 
 <a name="add_surfly"></a>
 ### Integrating Surfly into your website
@@ -35,7 +33,7 @@ You should now be looking at:
 Copy the code snippet and add it to the source code of your website.
 Check the scripts to make sure it is running, you may have to add https: to the src. 
 
-You should see a button at the bottom left of your screen, inviting you to ask for live help.
+When you open your webpage, you should see a button at the bottom left of your screen, inviting you to ask for live help.
 Otherwise, you may get a message saying that your original domain is not listed on your Surfly integration page,
 in order to get around this, simply add your domain to the widget's section
 on the integration page.  You do not need to add https:// to the start of the domain name.  
@@ -135,10 +133,12 @@ The main points covered in the session appearance section are:
 <a name="chat_box"></a>
 ####Chat box
 
-###### The default:
 
- - The icons are a soft red color.
- - The agent:
+
+###### The default chat box settings:
+
+ - The icons within the chat box are a soft red color.
+ - The default icons for the agent:
    - Can see how many people are in the session
    - Can exit the session
    - Can maximise/ minimise the chat box window
@@ -147,7 +147,7 @@ The main points covered in the session appearance section are:
 
 ![default for follower](https://raw.github.com/surfly/tutorial/master/screens/default_for_agent.png)
 
- - The leader:
+ - The default icons for the leader:
    - Can see how many people are in the session
    - Can exit the session
    - Can maximise/ minimise the chat box window
@@ -161,27 +161,28 @@ The main points covered in the session appearance section are:
 
 ###### Changing the chatbox color
 
-You can change the chatbox color in the Surfly code snippet by changing the css string. 
+You can change the chatbox color in the Surfly code snippet by specifying the chat_box_color parameter and giving it the css string you want to change the
+default to.  
 
 ```javascript 
 
 chat_box_color:"#80ffbf"
 ```
 
-The icons at the top of the Chatbox have been changed from a light red to a deep blue, which is more suited to our website's theme:
+As can be seen in the image below, the icons at the top of the Chatbox have been changed from a light red to a deep blue, which is more suited to our website's theme:
 
 ![Changed chatbox colours](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)
 
 ###### The agent cannot end the session
 
-You can also change the amount of control the members of the session can have.  For instance, if you do not want to allow the agent to 
+You can also change the amount of control the members of the session can have, by adding or removing icons.  For instance, if you do not want to allow the agent to 
 be able to end the session, you can specify this in the code snippet:
 
 ```javascript
 agent_can_end_session:"false",
 ```
 
-This will remove the exit symbol from the agents chatbox:
+This will remove the exit icon from the agents chatbox:
 
 ![agent cannot exit](https://raw.github.com/surfly/tutorial/master/screens/agent_cannot_end.png)
 
@@ -204,7 +205,6 @@ logs, or download them.
 
 <a name="switch_control"></a>
 ####Switching the control from leader to follower
-
 
 The options are: 
  - agent_can_request_control. With the controllers permission, the agent can take control.
@@ -230,7 +230,7 @@ min_height: "200",
 min_width: "200",
 ```
 
-The window is normally set to the person with the smallest screen. This allows for a smooth transition into the Surfly session.
+The window is normally set to the person with the smallest screen, as this allows for a smooth transition into the Surfly session.
 However, this can also be removed:    
 
 ```
@@ -318,7 +318,9 @@ leader_redirect_url: "Your url here"
 
 Please Note: This is only supported for sessions started with the Surfly widget. 
 
-Information can be carried over from your website, and into the Surfly session.  Once the session has finshed, the information is returned back to the website.
+Cookies can be carried over from your website, and into the Surfly session.  Once the session has finshed, the information is returned back to the website.
+This allows a smooth transition into, and out of, the session.  
+
 
 There are two main ways to set up session continuation:
  - [Full session continuation](#full_session)
@@ -327,9 +329,27 @@ There are two main ways to set up session continuation:
 <a name="full_session"></a>
 #### Full session continuation
 
-Full session continuation requires a change in the host websites' load balancer configuration. It allows the transfer of all data, including (unlike soft session continuation), 
-cookies with a HttpOnly tag.
+Full session continuation allows the transfer of all data, including (unlike soft session continuation), cookies with a HttpOnly tag.
+This requires a change in the host websites' load balancer configuration alongside a small change to the code snippet.
 
+The changes that need to be made in the code snippet are:
+
+```javascript
+  cookie_transfer_enabled: true,
+  cookie_transfer_proxying: true,
+  cookie_transfer_urls: ["https://your_website_name.com/surfly_cookie_transfer/"]
+```
+
+To adapt the load balancer configuration you need to set the following request headers in the host website's config file:
+
+ - X-Widget-Key: your_widget_key
+ - X-continuation-origin: https://the_origin_page_with_Surfly_Widget.com
+ - Host: surfly.com
+
+The X-Widget-Key is the widget key from your code snippet, and the X-Continuation-Origin is the origin page in which the Surfly widget has been integrated. 
+You may also need to specify the port, if it is non-standard.  
+
+Please see the API for examples on how to set up full session continuation in Haproxy and Nginx
 
 <a name="soft_session"></a>
 #### Soft session continuation
@@ -390,7 +410,7 @@ Sufly.log("custom message")
 ```
 
 <a name="form_masking"></a>
-#### Form masking
+#### Field masking
 
 This allows you to set 'surfly_private' on forms which may have sensitive data, such as payment details.
 Surfly will not synchronise the content of the field to the followers.
