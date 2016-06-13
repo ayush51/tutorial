@@ -51,8 +51,12 @@ You can start a session in the following ways:
 <a name="auto_start"></a>
 #### Auto start a session
 
-If you enable auto start, it means the page will immediatly redirect to a Surfly session. 
-Set the auto_start flag to true in the Surfly code snippet.
+If you enable auto start, it means the webpage including the code snippet will immediatly start a Surfly session. The page will display a red banner asking the 
+visitor to wait for an agent to join their session, and the queue pin number.  
+
+![Queue banner](https://raw.github.com/surfly/tutorial/master/screens/waiting_banner.png)
+
+To enable this feature, set auto_start to true in the Surfly code snippet.
 
 ```javascript
 
