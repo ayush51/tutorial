@@ -54,8 +54,6 @@ You can start a session in the following ways:
 If you enable auto start, it means the webpage including the code snippet will immediatly start a Surfly session. The page will display a red banner asking the 
 visitor to wait for an agent to join their session, and the queue pin number.  
 
-![Queue banner](https://raw.github.com/surfly/tutorial/master/screens/waiting_banner.png)
-
 To enable this feature, set auto_start to true in the Surfly code snippet.
 
 ```javascript
@@ -85,7 +83,9 @@ Of course, you can customise the look of the link with css in order for it to fi
 
 Stealth mode means that the visitor can initiate a Surfly session by pressing CTRL+ENTER.
 
-As stealth mode is already the default in the Surfly code snippet, to disallow it, simply set ```stealth_mode:"false"```
+As stealth mode is already the default in the Surfly code snippet, to disallow it, simply set stealth mode to false:
+
+ ```stealth_mode:"false"``` 
 
 
 <a name="button_appearance"></a>
@@ -95,7 +95,6 @@ The Surfly button can be completley adapted in order for it to fully integrate i
 
 Its default appearance is red, with white text and sits to the bottom left of the screen.
 
- 
 The position of the button can be moved to either to the bottom right of the screen, or to the middle left. 
 Your preference can be added to the code snippet, for example:
 
@@ -103,21 +102,19 @@ Your preference can be added to the code snippet, for example:
   position:"middleright"
 ```
 
-The full appearance of the button can be changed.  You can specify the color of the button along with the font size and font color, e.g:
+You can further adapt the button to suit your needs by specifying the color of the button along with the font size and font color, e.g:
 
 ```javascript
     theme_font_background:"#000000",
     theme_font_color:"#ffffff",
     theme_font_size:"16",
 ```  
-This changes the color of the button to black, which suits the theme of our example website.  The font color remains white, but the size of the 
+Our example code changes the color of the button to black, which suits the theme of the tutorial's website.  The font color remains white, but the size of the 
 font has increased to size 16, which also increases the size of the support button. 
 
 ![example website with adapted Surfly button](https://raw.github.com/surfly/tutorial/master/screens/adapted_surfly_button.png)
 
 Please Note: 
- - the way in which visitors can start a session (stealth mode, auto_start or #surflystart anchor) was covered in the 
-   previous section, "Starting a session" 
  - A consise table detailing all of the options available for customization can be found in the API documentation.
  
 <a name="session_appearance"></a>
@@ -142,7 +139,7 @@ The main points covered in the session appearance section are:
 ###### The default chat box settings:
 
  - The icons within the chat box are a soft red color.
- - The default icons for the agent:
+ - The default settings for the agent:
    - Can see how many people are in the session
    - Can exit the session
    - Can maximise/ minimise the chat box window
@@ -151,7 +148,7 @@ The main points covered in the session appearance section are:
 
 ![default for follower](https://raw.github.com/surfly/tutorial/master/screens/default_for_agent.png)
 
- - The default icons for the leader:
+ - The default settings for the leader:
    - Can see how many people are in the session
    - Can exit the session
    - Can maximise/ minimise the chat box window
@@ -218,14 +215,13 @@ Both of these parameters gives the agent another option in their dock.
 
 ![request control](https://raw.github.com/surfly/tutorial/master/screens/agent_request.png)
 
-As can be seen in the above image, the hand button has changed from faded, to bold.  This is the button allowing the agent to take, or request, control.  
+As can be seen in the above image, the hand button is now bold, which means the agent can now use it to take, or request, control.  
 
 
 <a name="window_size"></a>
 #### Window Size options
 
-The window size can also be adjusted to suit your needs.  
-If you are using the Surfly code snippet you can adjust the min/ max parameters.  
+The window size can also be adjusted to suit your needs by adjusting the min/ max parameters.  
 
 For example, this would set the window size to be larger than 200x200:
 
@@ -235,7 +231,7 @@ min_width: "200",
 ```
 
 The window is normally set to the person with the smallest screen, as this allows for a smooth transition into the Surfly session.
-However, this can also be removed:    
+However, if required, this can also be removed:    
 
 ```
 set_to_smallest: "false"
@@ -273,15 +269,9 @@ The green drawings underscoring the button are clearly visable to the leader of 
 <a name="popupurl"></a>
 #### Exiting the session display or redirect to another page
 
-You may want to show a user another page after the session has finished.  You could show a popup window with the page you want to display, or you can 
+You may want to show a user another page after the session has finished.  You can either show a popup window within the page you want to display, or you can 
 redirect them to another url.  
 
-Showing a window:
- - [Show a page in a popup](#showpage)
- - [Redirect the user to another url](#url_redirect)
-
-
-<a name="showpage"></a>
 ###### Show a popup window
 
 If you want to end the session and show the user a popup window, you can set the end_of_session_popup_url in the code snippet to point to the url of that page.
@@ -295,12 +285,10 @@ The user can exit the popup window by clicking on the cross to the top right of 
 
 ![Popup url](https://raw.github.com/surfly/tutorial/master/screens/popup_example.png)
 
-<a name="url_redirect></a>
 ###### Redirect the user to another url
 
-You can either redirect to the leader or the follower to another url after the session has finished.
+You can either redirect the leader or the follower to another url after the session has finished.
  
-
 This is simply:
 
 ```javascript
@@ -350,10 +338,11 @@ To adapt the load balancer configuration you need to set the following request h
  - X-continuation-origin: https://the_origin_page_with_Surfly_Widget.com
  - Host: surfly.com
 
-The X-Widget-Key is the widget key from your code snippet, and the X-Continuation-Origin is the origin page in which the Surfly widget has been integrated. 
+The X-Widget-Key is the widget key from your code snippet, and the X-Continuation-Origin is the origin page containing the Surfly widget. 
 You may also need to specify the port, if it is non-standard.  
 
-Please see the API for examples on how to set up full session continuation in Haproxy and Nginx
+###### Please Note:
+The API has further details, and includes examples on how to set up full session continuation in Haproxy and Nginx
 
 <a name="soft_session"></a>
 #### Soft session continuation
@@ -392,15 +381,14 @@ The following security features can be integrated into your website:
 
 Please note: This option is only available to enterprise clients. 
 
-Blacklisting restricts access to a select few pages, if you wish only to allow the users to access a limited amount of pages, whitelisting may be the most viable option.  
+Blacklisting is used in order to deny users access from a select few pages,  If you want more control over what your users can access, whitelisting may be the most viable option.  
 Whitelisting allows access only to the pages specified in the code snippet.  
 
 Both the blacklist and whitelist variables are in the format of a JSON array, and can take the following parameters:
- - pattern: A regular expression of the restricted url
- - redirect: An url you wish to redirect the user to (optional)
+ - pattern: A regular expression matching restricted url (in the case of blacklist), or the allowed url (in the case of whitelist)
+ - redirect: An url you wish to redirect the user to after they have attempted to access a restricted page (optional)
  - type: The restriction type. (optional)
 
-The pattern specified for blacklist will be the restricted url. The pattern specified for whitelist will be the allowed url.  
 If the redirect url is not specified, the user will be redirected to Surfly's default page.
 
 For example:
@@ -412,25 +400,7 @@ For example:
 
 ```
 
-would allow/ restrict access to your_website.com if called with whitelist/ blacklist. If the user attempted to access a restricted page then, in this case, they would see
+would allow (whitelist) or restrict (blacklist) access to your_website.com. If the user attempted to access a restricted page then, in this case, they would see
 the Surfly default page as a redirect url has not been provided.   
 
-
-Please note: Further examples are available in the API.  
-
-<a name="auditlog"></a>
-#### Auditlog
-
-This allows you to see the records from sessions. 
-You can also set a message for the logs:
-
-```javascript
-Sufly.log("custom message");
-```
-
-<a name="form_masking"></a>
-#### Field masking
-
-Field masking allows you to hide sensitive data, such as payment details, from the followers. In order to do this set ```surfly_private```
-on the FORM element you wish to keep private. 
 
