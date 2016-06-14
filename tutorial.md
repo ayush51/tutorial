@@ -16,16 +16,18 @@ during the session, and it is possible to have multiple followers in one session
 
 ###### Taking a session
 
-The sessions can be managed via the Surfly dashboard. Requests for sessions are listed in the Queue panel. Here, agents can see how many users they have queue'd up, and how long they have 
+The sessions can be managed via Surfly's admin panel. Requests for sessions are listed in the Queue panel. Here, agents can see how many users they have queue'd up, and how long they have 
 been waiting. To take a session, the agent simply presses the "take call" button. If your visitors are logged in on your website already, you can also show their name in the queue, so that the
 agent greeting them knows who they are.
 
-
+![The Queue panel](https://raw.github.com/surfly/tutorial/master/screens/queue_panel.png)
 
 The tutorial covers:
 
  - [Session Modification](#session_modification)
  - [Add Surfly to your website](#add_surfly)
+ - [Advanced options](#advanced_options)
+ - [Example](#examples)
 
 <a name="session_modification"></a>
 ### Session Modification
@@ -224,7 +226,8 @@ The font color remains white, but the size of the font has increased to size 16,
 
 ### Create your own invite page
 
-## Advanced
+<a name="advanced_options"></a>
+## Advanced options
 
 <a name="session_continuation"></a>
 ### Session continuation
@@ -256,4 +259,5 @@ Whitelisting allows access only to the pages specified in the code snippet.
 If the redirect url is not specified, the user will be redirected to Surfly's default page.
 
 
-
+<a name="examples"></a>
+## Examples:
