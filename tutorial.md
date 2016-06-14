@@ -83,7 +83,9 @@ Stealth mode means that the visitor can initiate a Surfly session by pressing CT
 
 As stealth mode is already the default in the Surfly code snippet, to disallow it, simply set stealth mode to false:
 
- ```stealth_mode:"false"``` 
+```
+stealth_mode:"false"
+``` 
 
 
 <a name="button_appearance"></a>
