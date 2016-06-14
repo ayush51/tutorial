@@ -9,10 +9,13 @@ your website. Surfly is easy to set up, as only requires a small addition to you
 
 ###### What is a Surfly session?
 
-A Surfly session will allow you to share browsers, video chat and text chat with others. A session is started once a vistor to your website requests a session, either through clicking a button,
-entering a webpage, or by simply pressing CTRL+ENTER. The visitor will be queue'd until an agent joins the session. The visitor is in control, and is refered to as the leader of the session.
-The agent can see everything that the leader is doing, and can guide them through the website. Control between the leader and the agent can also be switched during the session, and it is 
-possible to have multiple followers in one session. 
+A Surfly session allows you to share your browser with others. Typically, a vistor to your website will request a session and be queue'd until an agent joins them. The passive member of the 
+session is referred to as the follower, and the active member is the leader.  The leader will navigate the site, and the follower can help guide them through it. Initially the agent is the 
+follower, and the website visitor is the leader, however you can choose to swap control during the session. 
+
+Communication within the session can be done via text or video chat, and followers may highlight areas they wish to draw attention to with the drawing functionality. You may also share documents 
+and invite others to join your session by sharing the session url or sending an email. Each session has its own ID, which has been formatted to be easily communicated over the phone.   
+
 
 ###### Taking a session
 
