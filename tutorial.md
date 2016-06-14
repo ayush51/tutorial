@@ -22,7 +22,7 @@ and invite others to join your session by sharing the session url or sending an 
 
 The sessions can be managed via Surfly's admin panel. To take a session, navigate to the Queue panel. Here, agents can see how many users they have queue'd up, their location, and the time 
 they have been waiting. To take a session, the agent simply presses the "take call" button. If your visitors are logged in on your website already, you can also display metadata, such as
-the visitos name in the queue, so that the agent greeting them knows who they are.
+the visitors name in the queue, so that the agent greeting them knows who they are.
 
 ![The Queue panel](https://raw.github.com/surfly/tutorial/master/screens/queue_panel.png)
 
@@ -44,6 +44,7 @@ The main points covered in the session modification section are:
 
  - [Changing the chat box](#chat_box)
  - [Video chat](#video_chat)
+ - [Document sharing](#document_sharing)
  - [The window size options](#window_size)
  - [The drawing mode](#drawing_mode)
  - [Ending a session to display another page, or redirect to another page](#popupurl)
@@ -90,6 +91,13 @@ logs, or download them.
 
 Surfly also allows you to have a video chat option. However, if you do not want to use it, it can be easily disabled. You can also set the video to be full screen, or
 restrict the quality.
+
+<a name="document_sharing"></a>
+#### Document sharing 
+
+If you wish to share documents during the Surfly session, you can click the paper icon to the bottom right of the chat box, or the dock. Once you have clicked on it, 
+you can upload a document from your desktop. The default for document sharing is that they can only be viewed, and not downloaded. However, you can change the settings
+so that the files can be downloaded.  You may also disable the document sharing tool, if you wish. 
 
 <a name="window_size"></a>
 #### Window Size options
