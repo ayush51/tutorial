@@ -7,18 +7,27 @@
 Surfly enables you to integrate co-browsing technology fully into your own website. The appearance of the co-browsing session can be fully customised, to allow for a seamless addition to 
 your website. Surfly is easy to set up, as only requires a small addition to your websites' source code. Small changes within this code snippet allow you to specify the options you desire.
 
-A Surfly session will allow you to share browsers, video chat and text chat. The sessions are of the format that the vistor to the website will request a session,
-either through clicking a button, entering a webpage, or by simply pressing CTRL+ENTER. As this vistor has instigated the session, they are now in control 
-and are the 'leader' of the session. The leader will be queue'd until an agent joins the session.  Once both the leader and the agent have joined, the session can begin. 
-The leader, as they are in control, will share their screen with the agent. The agent can see everything that the leader is doing, and can guide them through the website. 
-Control between the leader and the agent can also be switched during the session, and it is possible to have multiple followers in one session. 
+###### What is a Surfly session?
+
+A Surfly session will allow you to share browsers, video chat and text chat with others. A vistor to your website will request a session, either through clicking a button, entering a webpage, 
+or by simply pressing CTRL+ENTER. The visitor will be queue'd until an agent joins the session. Once the agent has joined, the session can begin. The visitor is in control, and is refered to 
+as the leader of the session. The agent can see everything that the leader is doing, and can guide them through the website. Control between the leader and the agent can also be switched
+during the session, and it is possible to have multiple followers in one session. 
+
+###### Taking a session
+
+The sessions can be managed via the Surfly dashboard. Requests for sessions are listed in the Queue panel. Here, agents can see how many users they have queue'd up, and how long they have 
+been waiting. To take a session, the agent simply presses the "take call" button. If your visitors are logged in on your website already, you can also show their name in the queue, so that the
+agent greeting them knows who they are.
+
+
 
 The tutorial covers:
 
  - [Session Modification](#session_modification)
  - [Add Surfly to your website](#add_surfly)
 
-<a name="session_modification></a>
+<a name="session_modification"></a>
 ### Session Modification
 
 You can adapt the way a session starts, looks and behaves by changing the default settings to meet your needs.
@@ -34,8 +43,7 @@ The main points covered in the session modification section are:
 <a name="chat_box"></a>
 ####Chat box
 
-The following list covers the defaults for the chat box settings. It is possible to adapt all of these to meet 
-your needs, if you so desire. 
+The following list covers the default settings for the chat box. Each of these can be changed to suit your needs.
 
 ###### The default chat box settings:
 
@@ -153,8 +161,8 @@ You should now be looking at:
 ![The integration page](https://raw.github.com/surfly/tutorial/master/screens/snippet_initial_screen.png)
 
 
-In the 'domain names' section on the integration page, you need to specify the domains on which you want to show the Surfly button.  
-If your website is hosted on "https://example.com", simply add "example.com" to the domain name list.
+In the 'domain names' section on the integration page, you need to specify the domains on which you want to show the Surfly button. This is easily set up,
+if your website is hosted on "https://example.com", simply add "example.com" to the domain name list.
 
 Finally, copy the code snippet and add it to the source code of your website.
 
@@ -230,9 +238,12 @@ There are two main ways to set up session continuation:
  - Full session continuation allows the transfer of all data, including (unlike soft session continuation), cookies with a HttpOnly tag.
  - Soft session continuation allows the transfer of data excluding cookies with a HttpOnly tag.
 
-<a name="security_features"></a>
-### Security Features
 
+
+<a name="custom_metadata"></a>
+### Add custom metadata to Queue request
+
+If a user has logged into your website, you could pass information on to the agent, such as name and address.
 
 <a name="blacklist_whitelist"></a>
 #### Blacklisting and Whitelisting
