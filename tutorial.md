@@ -4,7 +4,7 @@
 
 ###### Welcome to Surfly!
 
-Surfly enables you to integrate co-browsing technology fully into your own website. The appearance of the co-browsing session can be fully customised, to allow for a seamless addition to 
+Surfly enables you to integrate our co-browsing technology fully into your own website. The appearance of the co-browsing session can be fully customised, to allow for a seamless addition to 
 your website. Surfly is easy to set up, as only requires a small addition to your websites' source code. Small changes within this code snippet allow you to specify the options you desire.
 
 ###### What is a Surfly session?
@@ -27,7 +27,7 @@ The tutorial covers:
  - [Session Modification](#session_modification)
  - [Add Surfly to your website](#add_surfly)
  - [Advanced options](#advanced_options)
- - [Example](#examples)
+ - [Example use cases](#examples)
 
 <a name="session_modification"></a>
 ### Session Modification
@@ -45,40 +45,13 @@ The main points covered in the session modification section are:
 <a name="chat_box"></a>
 ####Chat box
 
-The following list covers the default settings for the chat box. Each of these can be changed to suit your needs.
-
-###### The default chat box settings:
-
- - The icons within the chat box are a soft red color.
- - The chat box uses gravitars, (globally recognised avitars), meaning that your image 
-   will be included in the chat.
-
- - The default settings for the agent:
-   - Can see how many people are in the session
-   - Can exit the session
-   - Can maximise/ minimise the chat box window
-   - Start videochat
-   - Share documents
-
-![default for follower](https://raw.github.com/surfly/tutorial/master/screens/default_for_agent.png)
-
- - The default settings for the leader:
-   - Can see how many people are in the session
-   - Can exit the session
-   - Can maximise/ minimise the chat box window
-   - Can switch control
-   - Can add a user to the session
-   - Can navigate to a new url
-   - Start videochat
-   - Share documents   
-
-![default for leader](https://raw.github.com/surfly/tutorial/master/screens/default_for_leader.png)
+Modifying the chat box can not only change its appearance, but also limit or extend the amount of control that the leader and the follower 
+can have. You can also choose to remove the chat box functionality entirely.
 
 ###### Changing the chatbox color
 
-The default chatbox color is a soft red, however, this can also be altered to suit your needs. 
-
-As can be seen in the image below, the icons at the top of the Chatbox have been changed from a light red to a deep blue, which is more suited to our website's theme:
+The default chatbox color is a soft red, however, this can also be altered to match your websites theme. As can be seen in the image below, 
+we changed the icons at the top of the Chatbox from a light red to a deep blue, which is more suited to our example website:
 
 ![Changed chatbox colors](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)
 
@@ -168,8 +141,8 @@ if your website is hosted on "https://example.com", simply add "example.com" to 
 
 Finally, copy the code snippet and add it to the source code of your website.
 
-When you open your webpage, you should see a button at the bottom left of your screen, inviting you to ask for live help.
-
+When you open your webpage, you should see a "get live help" button at the bottom left of your screen. If a visitor clicks on this, they will be queue'd for support.  
+You can answer this request via the Surfly admin panel.
 
 <a name="start_session"></a>
 ### Starting a session
@@ -185,7 +158,7 @@ You can start a session in the following ways:
 
 If you enable auto start, it means the webpage including the code snippet will immediatly start a Surfly session. The page will, by default, display a red banner asking the
 visitor to wait for an agent to join their session, and the queue pin number.
-Auto start can be used to  create your own custom webpage from which you want to start a session from.
+Auto start can be used to create your own custom webpage from which you want to start a session from.
 
 <a name="surflystart_anchor"></a>
 #### Customise your own button
@@ -203,34 +176,30 @@ If you do not wish to have a visual button or link on your webpage, then you can
 by pressing CTRL+ENTER.
 
 <a name="button_appearance"></a>
-### Button Appearance
+#### Button Appearance
 
-If you prefer, you can also adapt the default "ask for help" button that Surfly provides.
+If you prefer, you can also adapt the default "get live help" button that Surfly provides. The Surfly button can be completley adapted in order for it to fully integrate into your 
+own website and its design. Its default appearance is red, with white text and sits to the bottom left of the screen. The position of the button can be moved to either the
+bottom right of the screen, or to the middle left. You can further adapt the button to suit your needs by specifying the color of the button along with the font size and font color.
 
-The Surfly button can be completley adapted in order for it to fully integrate into your own website and its design.
-
-Its default appearance is red, with white text and sits to the bottom left of the screen.
-
-The position of the button can be moved to either to the bottom right of the screen, or to the middle left.
-
-You can further adapt the button to suit your needs by specifying the color of the button along with the font size and font color, e.g:
-
-As you can see below, in the example website, we changed the default color of the button to black, which suits the theme of the tutorial's website.
-The font color remains white, but the size of the font has increased to size 16, which also increases the size of the support button.
+As you can see below, in the example website, we changed the position and the style of the button.  The default color of the button was changed to black, which suits the theme 
+of our example  website. The font color remains white, but the size of the font has increased to size 16, which also increases the size of the support button.
 
 ![example website with adapted Surfly button](https://raw.github.com/surfly/tutorial/master/screens/adapted_surfly_button.png)
 
-### The session ID approach
+#### The session ID approach
 
-### Integrate with existing chat solutions
+The session ID approach enables a small, discrete icon to be added to your website.
 
-### Create your own invite page
+#### Integrate with existing chat solutions
+
+#### Create your own invite page
 
 <a name="advanced_options"></a>
-## Advanced options
+### Advanced options
 
 <a name="session_continuation"></a>
-### Session continuation
+#### Session continuation
 
 Please Note: This is only supported for sessions started with the Surfly widget.
 
@@ -242,11 +211,12 @@ There are two main ways to set up session continuation:
  - Soft session continuation allows the transfer of data excluding cookies with a HttpOnly tag.
 
 
-
 <a name="custom_metadata"></a>
-### Add custom metadata to Queue request
+#### Add custom metadata to Queue request
 
 If a user has logged into your website, you could pass information on to the agent, such as name and address.
+Surfly will also use the name in order to display this in the chatbox, and the email in order to match the 
+correct gravitar to the user.
 
 <a name="blacklist_whitelist"></a>
 #### Blacklisting and Whitelisting
@@ -260,4 +230,4 @@ If the redirect url is not specified, the user will be redirected to Surfly's de
 
 
 <a name="examples"></a>
-## Examples:
+### Examples use cases
