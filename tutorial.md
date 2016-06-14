@@ -5,7 +5,8 @@
 ###### Welcome to Surfly!
 
 Surfly enables you to integrate our co-browsing technology fully into your own website. The appearance of the co-browsing session can be fully customised to allow for a seamless addition to 
-your website. Surfly is easy to set up, as only requires a small addition to your websites' source code. Small changes within this code snippet allow you to adapt Surfly to your needs.
+your website. Surfly is easy to set up, as only requires a small addition to your websites' source code. You may also adapt the functionality of the session, by enabling the options you 
+wish to include, or disabling those you wish to remove.  
 
 ###### What is a Surfly session?
 
@@ -20,10 +21,11 @@ and invite others to join your session by sharing the session url or sending an 
 ###### Taking a session
 
 The sessions can be managed via Surfly's admin panel. To take a session, navigate to the Queue panel. Here, agents can see how many users they have queue'd up, their location, and the time 
-they have been waiting. To take a session, the agent simply presses the "take call" button. If your visitors are logged in on your website already, you can also show their name in the queue, 
-so that the agent greeting them knows who they are.
+they have been waiting. To take a session, the agent simply presses the "take call" button. If your visitors are logged in on your website already, you can also display metadata, such as
+the visitos name in the queue, so that the agent greeting them knows who they are.
 
 ![The Queue panel](https://raw.github.com/surfly/tutorial/master/screens/queue_panel.png)
+
 
 The tutorial covers:
 
@@ -35,13 +37,13 @@ The tutorial covers:
 <a name="session_modification"></a>
 ### Session Modification
 
-You can adapt the way a session starts, looks and behaves by changing the default settings to meet your needs.
+You can adapt the way a session starts, looks and behaves by changing the default settings to meet your needs. The chat, video and drawing functionality 
+can all be adapted or removed as you see fit.
 
 The main points covered in the session modification section are: 
 
  - [Changing the chat box](#chat_box)
  - [Video chat](#video_chat)
- - [Switching the control options](#switch_control)
  - [The window size options](#window_size)
  - [The drawing mode](#drawing_mode)
  - [Ending a session to display another page, or redirect to another page](#popupurl)
@@ -55,7 +57,7 @@ can have. You can also choose to remove the chat box functionality entirely, and
 ###### Changing the chatbox color
 
 The default chatbox color is a soft red, however, this can also be altered to match your websites theme. As can be seen in the image below, 
-we changed the icons at the top of the Chatbox from a light red to a deep blue, which is more suited to our example website:
+we changed the icons at the top of the Chatbox from a light red to purple, which is more suited to our example website:
 
 ![Changed chatbox colors](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)
 
@@ -68,7 +70,7 @@ This is a simple change, and removes the exit icon from the agents chatbox.
 
 ###### Docked only
 
-It is also possible to remove the video and text chat functionality, if you wish. Only the panel containing the different icons will be visable:
+If you do not want to allow video or text chat, you can remove the video and text chat functionality. Only the panel containing the different icons will be visable:
 
 ![docked_only](https://raw.github.com/surfly/tutorial/master/screens/docked_only.png)
 
@@ -89,28 +91,17 @@ logs, or download them.
 Surfly also allows you to have a video chat option. However, if you do not want to use it, it can be easily disabled. You can also set the video to be full screen, or
 restrict the quality.
 
-<a name="switch_control"></a>
-####Switching the control from leader to follower
-
-If you want to be able to switch the controls between the leader and the follower, you can chose between either allowing the agent to take control, or to 
-request it from the leader. This could be useful for when users require further guidance through the website.
-
-![request control](https://raw.github.com/surfly/tutorial/master/screens/agent_request.png)
-
-As can be seen in the above image, the hand button is now bold, which means the agent can now use it to take, or request, control.  
-
-
 <a name="window_size"></a>
 #### Window Size options
 
 You can specify either the maximum or minimum size you want the window to be. The window is normally set to the person with the smallest screen, 
-as this allows for a smooth transition into the Surfly session.  However, if required, this can also be removed.
+as this allows for a smooth transition into the Surfly session. However, if required, this can also be removed.
 
 <a name="drawing_mode"></a>
 #### Options for the drawing mode
 
-The drawing option allows the followers within the Surfly session to highlight the areas on the screen that they wish to draw attention to. The 
-drawing defaults are that the mode is temporary and the color is yellow, however both of these can be changed.
+The drawing option allows the followers within the Surfly session to highlight the areas on the screen that they wish to bring attention to. The default
+options for the drawing function are that the mode is temporary (so will fade after a few minutes) and the color is yellow, however both of these can be changed.
 
 In our example website we adapted the code in order so that the drawing mode would be permanent, and that the color of the drawings would be 
 a vibrant green:
@@ -174,7 +165,7 @@ Auto start is especially useful if you want to display a certain webpage whilst 
 #### Customise your own button
 
 If you want to create your own button, you can use the #surflystart anchor, which can be integrated into your websites source code.  The button can be fully
-styled so that it compliments your website design.  In the example website below, you can see the blue button below will lead you to a Surfly session. You can
+styled with css so that it compliments your website design.  In the example website below, you can see the blue button below will lead you to a Surfly session. You can
 also specify the text on the button.
 
 ![The end result](https://raw.github.com/surfly/tutorial/master/screens/Surflystart_anchor.png)
@@ -182,7 +173,7 @@ also specify the text on the button.
 <a name="stealth_mode"></a>
 #### Start a session in stealth mode
 
-If you do not wish to have a visual button or link on your webpage, then you can use stealth mode.  This allows vistors to initiate a Surfly session simply 
+If you do not wish to have a visual button or link on your webpage, then you can use stealth mode. This allows vistors to initiate a Surfly session simply 
 by pressing CTRL+ENTER.
 
 <a name="button_appearance"></a>
@@ -196,6 +187,8 @@ As you can see below, in the example website, we changed the position and the st
 of our example  website. The font color remains white, but the size of the font has increased to size 16, which also increases the size of the support button.
 
 ![example website with adapted Surfly button](https://raw.github.com/surfly/tutorial/master/screens/adapted_surfly_button.png)
+
+The button, by default, will only be shown if an agent is logged in to the Surfly admin page. This can also be disabled, if you wish.
 
 #### The session ID approach
 
@@ -214,6 +207,8 @@ This section covers:
  - [Adding custom metadata to queue requests](#custom_metadata)
  - [Field masking](#field_masking)
  - [Blacklist and Whitelist](#blacklist_whitelist)
+ - [Customise control switching](#customise_control_switching)
+ - [The REST API](#rest_api)
 
 <a name="session_continuation"></a>
 #### Session continuation
@@ -224,8 +219,10 @@ Cookies can be carried over from your website, and into the Surfly session. For 
 session. Once the session has finshed, the information is returned back to the website. This allows a smooth transition into, and out of, the session.
 
 There are two main ways to set up session continuation:
- - Full session continuation allows the transfer of all data, including (unlike soft session continuation), cookies with a HttpOnly tag. 
- - Soft session continuation allows the transfer of cookies from the current page, excluding cookies with a HttpOnly tag.
+ - Full session continuation allows the transfer of all data, including (unlike soft session continuation), cookies with a HttpOnly tag. This requires a change in the load balance configuration
+   of the host website. 
+ - Soft session continuation does not require a change in the load balance configuration, but is more limited.  A Surfly widget needs to be present on all pages you wish to transfer cookies from, 
+   and excludes cookies with a HttpOnly tag.
 
 
 <a name="custom_metadata"></a>
@@ -248,6 +245,28 @@ Blacklisting is used in order to deny users access from a select few pages, If y
 Whitelisting allows access only to the pages specified in the code snippet.
 
 If the redirect url is not specified, the user will be redirected to Surfly's default page.
+
+<a name="customise_control_switching></a>
+#### Customise control switching 
+
+If you want to be able to switch the controls between the leader and the follower, you can chose between either allowing the agent to take control, or to
+request it from the leader. This could be useful for when users require further guidance through the website.
+
+![request control](https://raw.github.com/surfly/tutorial/master/screens/agent_request.png)
+
+As can be seen in the above image, the hand button is now bold, which means the agent can now use it to take, or request, control.
+
+
+<a name="rest_api"></a>
+#### The REST API
+
+The REST API allows you to tightly integrate Surfly into your website. You can delete, create, update and retrieve information on your agents, sessions and the incomming queue.
+
+<a name="reseller information"></a>
+#### Resellers 
+
+Resellers can create new Surfly clients, through the use of the REST API.  You may invoice the clients directly, or let Surfly do this for you. 
+The REST API allows you to manage your clients by letting you create, delete, and get information about the client. 
 
 
 <a name="examples"></a>
