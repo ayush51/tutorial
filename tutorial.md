@@ -8,6 +8,9 @@ Surfly enables you to integrate our co-browsing technology fully into your own w
 your website. Surfly is easy to set up, as only requires a small addition to your websites' source code. You may also adapt the functionality of the session, by enabling the options you 
 wish to include, or disabling those you wish to remove.  
 
+You can either use Surfly as a feature on your own website, or integrate some (or all) of the functionality into your own product.  For example, you may already have video chat on your website, 
+and wish to add only the co-browsing functionality.
+
 ###### What is a Surfly session?
 
 A Surfly session allows you to share your browser with others. Typically, a vistor to your website will request a session and be queue'd until an agent (the person who receives the call)
@@ -44,6 +47,7 @@ The main points covered in the session modification section are:
  - [Changing the chat box](#chat_box)
  - [Video chat](#video_chat)
  - [Document sharing](#document_sharing)
+ - [Inviting users to join your session](#invite_user)
  - [The window size options](#window_size)
  - [The drawing mode](#drawing_mode)
  - [Ending a session to display another page, or redirect to another page](#popupurl)
@@ -104,6 +108,19 @@ If you wish to share documents during the Surfly session, you can click the pape
 
 Once you have clicked on it, you can upload a document from your desktop. The default for document sharing is that they can only be viewed, and not downloaded. However, you can change the settings
 so that the files can be downloaded. You may also disable the document sharing tool, if you wish. 
+
+<a name="invite_user"></a>
+#### Inviting a user to join your session
+
+You can invite a user to join your session from your Surfly admin panel or from within a Surfly session: 
+ - To start a session from the Surfly admin panel, navigate to the "start" button at the top left of your screen. 
+ - Within the Surfly session the leader can, by default, invite people by clicking on the "add user" icon in the dock.
+
+Both of these methods will load the following screen:
+
+![invite_user](https://raw.github.com/surfly/tutorial/master/screens/invite_user.png)
+
+You can then decide to either share the url of the session, or send an email to the user you wish to invite. 
 
 <a name="window_size"></a>
 #### Window Size options
