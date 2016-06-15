@@ -65,24 +65,26 @@ we changed the icons at the top of the Chatbox from a light red to purple, which
 
 ###### The agent cannot end the session
 
-You may wish to disable the ability for the agent to end a session, preferring to allow the visitor full control over the session durations.
-This is a simple change, and removes the exit icon from the agents chatbox.
+If you would like to allow your visitor full control over the session duration, you can chose to disable the exit icon from the agents dock. 
+The agent can no longer see the exit icon, and the session will only end when the leader exits the session. 
 
 ![agent cannot exit](https://raw.github.com/surfly/tutorial/master/screens/agent_cannot_end.png)
 
 ###### Docked only
 
-If you do not want to allow video or text chat, you can remove the video and text chat functionality. Only the panel containing the different icons will be visable:
+During a session you can choose to minimise the chat window, and display only the icons in a dock. It is also possible to fully disable the video and text chat so only the dock panel 
+containing the icons will be available for the session. By deciding to use only the dock, you will also disable document sharing.
+
 
 ![docked_only](https://raw.github.com/surfly/tutorial/master/screens/docked_only.png)
 
-You can also change the position of the dock from the bottom left of your screen to the top of your screen.
+You can also change the default position of the dock from the bottom left of your screen to the top of your screen.
 
 ###### Storing the chat logs
 
 If you want to monitor the conversations between the agents and the user, you can choose to store the chat logs.  
 
-After the session has ended, navigate to 'history'. The chat log section will have two icons inside, allowing you to either view the 
+After the session has ended, navigate to 'history' in your Surfly admin panel. The chat log section will have two icons inside, allowing you to either view the 
 logs, or download them.  
 
 ![chatlogs](https://raw.github.com/surfly/tutorial/master/screens/logged_icon.png)
@@ -90,14 +92,17 @@ logs, or download them.
 <a name="video_chat"></a>
 #### Video chat
 
-Surfly also allows you communicate in your session with video chat. However, if you do not want to use it, it can be easily disabled. You can also maximise the video to full screen, or
-restrict the video quality.
+Surfly also allows you communicate in your session with video chat. You can also maximise the video to full screen, or
+restrict the video quality. However, if you do not want to use it, it can be easily disabled.
 
 <a name="document_sharing"></a>
 #### Document sharing 
 
-If you wish to share documents during the Surfly session, you can click the paper icon to the bottom right of the chat box, or the dock. Once you have clicked on it, 
-you can upload a document from your desktop. The default for document sharing is that they can only be viewed, and not downloaded. However, you can change the settings
+If you wish to share documents during the Surfly session, you can click the paper icon to the bottom right of the chat box.
+
+![share documents](https://raw.github.com/surfly/tutorial/master/screens/share_document.png)
+
+Once you have clicked on it, you can upload a document from your desktop. The default for document sharing is that they can only be viewed, and not downloaded. However, you can change the settings
 so that the files can be downloaded. You may also disable the document sharing tool, if you wish. 
 
 <a name="window_size"></a>
