@@ -63,7 +63,7 @@ can have. You can also choose to remove the chat box functionality entirely, and
 The default chatbox color is a soft red, however, this can also be altered to match your websites theme. As can be seen in the image below, 
 we changed the icons at the top of the Chatbox from a light red to purple, which is more suited to our example website:
 
-| [![Default changed color](https://raw.github.com/surfly/tutorial/master/screens/red_default_chat.png)](Default chat color) | [![Changed chatbox colors](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)](chaged colr icons) |
+| [![Default changed color](https://raw.github.com/surfly/tutorial/master/screens/red_default_chat.png)](Default chat color) | [![Changed chatbox colors](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)](changed color icons) |
 |:---:|:---:|
 | default chat box color | Changed chat box colors |
 
@@ -125,8 +125,9 @@ You can then decide to either share the url of the session, or send an email to 
 <a name="window_size"></a>
 #### Window Size options
 
-The window is normally set to the person with the smallest screen, as this allows for a smooth transition into the Surfly session. You can, however, decide to set a maximum 
-or minimum size for the window.  Alternatively you may decide to remove it.
+The window is normally set to the person with the smallest screen, as this allows for a smooth transition into the Surfly session. If you see blank edges at the side of your screen, it is 
+only because your screen is larger than the person you are co-browsing with. You can, however, decide to set a maximum or minimum size for the window.  Alternatively you may decide to remove the
+set to smallest screen functionality.
 
 <a name="drawing_mode"></a>
 #### Options for the drawing mode
@@ -224,11 +225,15 @@ of our example  website. The font color remains white, but the size of the font 
 
 The button, by default, will only be shown if an agent is logged in to the Surfly admin page. This can also be disabled, if you wish.
 
+<a name="session_id"></a>
 #### The session ID approach
 
 The session ID approach enables a small, discrete icon to be added to your website.  When a visitor clicks on this icon, they will start a Surfly session.
 
 #### Integrate with existing chat solutions
+
+You may wish to add certain aspects of Surfly functionality to your website or product.  For example, if you have already established your own video or text chat, you may want to add only the
+co-browsing functionality.  Surfly can be integrated fully into your own product, so that it sits as a transparent addition to your product. 
 
 #### Create your own invite page
 
