@@ -24,9 +24,7 @@
    
    `| [![First Example](https://raw.github.com/surfly/tutorial/master/screens/first_example.png)](First example) | 
      [![Second Example](https://raw.github.com/surfly/tutorial/master/screens/second_example.png)](second example) |
-     
      |:---:|:---:| 
-     
      | first example | second example |`
      
      *please note* this will add captions to the images
