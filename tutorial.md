@@ -63,6 +63,8 @@ can have. You can also choose to remove the chat box functionality entirely, and
 The default chatbox color is a soft red, however, this can also be altered to match your websites theme. As can be seen in the image below, 
 we changed the icons at the top of the Chatbox from a light red to purple, which is more suited to our example website:
 
+![Default changed color](https://raw.github.com/surfly/tutorial/master/screens/red_default_chat.png) | ![Changed chatbox colors](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_color.png)
+
 | [![Default changed color](https://raw.github.com/surfly/tutorial/master/screens/red_default_chat.png)](Default chat color) | [![Changed chatbox colors](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)](changed color icons) |
 |:---:|:---:|
 | default chat box color | Changed chat box colors |
@@ -200,7 +202,7 @@ have customised the page so that the user is aware that they are in the queue.
 #### Customise your own button
 
 If you want to create your own button, you can use the #surflystart anchor, which can be integrated into your websites source code. The button can be fully
-styled with css so that it compliments your website design.  In the example website below, you can see the blue button below will lead you to a Surfly session. You can
+styled with css so that it compliments your website design.  In the image of our example website, you can see the blue button below will lead you to a Surfly session. You can
 also specify the text on the button.
 
 ![The end result](https://raw.github.com/surfly/tutorial/master/screens/Surflystart_anchor.png)
