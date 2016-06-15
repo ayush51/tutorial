@@ -13,7 +13,7 @@ and wish to add only the co-browsing functionality.
 
 ###### What is a Surfly session?
 
-A Surfly session allows you to share your browser with others. Typically, a vistor to your website will request a session and be queue'd until an agent (the person who receives the call)
+A Surfly session allows you to share your browser with others. Typically, a visitor to your website will request a session and be queue'd until an agent (the person who receives the call)
 joins them. The passive member of the session is referred to as the follower, and the active member is the leader.  The leader will navigate the site, and the follower can help guide them 
 through it. Initially the agent is the follower, and the website visitor is the leader, however you can choose to swap control during the session. 
 
@@ -40,7 +40,8 @@ The tutorial covers:
 <a name="session_modification"></a>
 ### Session Modification
 
-You can adapt the way a session starts, looks and behaves by changing the default settings to meet your needs.
+You can adapt the way a session starts, looks and behaves by changing the default settings to meet your needs. This is easy to accomplish by specifying your prefences in the Surfly widget.  If 
+you would like greater control over the user interface, you can also fully customise it through the API. (please see the documentation for further details).
 
 The main points covered in the session modification section are: 
 
@@ -60,7 +61,7 @@ can have. You can also choose to remove the chat box functionality entirely, and
 
 ###### Changing the chatbox color
 
-The default chatbox color is a soft red, however, this can also be altered to match your websites theme. As can be seen in the image below, 
+As shown, the default chatbox color is a soft red, however, this can also be altered to match your websites theme. As can be seen in the image on the right, 
 we changed the icons at the top of the Chatbox from a light red to purple, which is more suited to our example website:
 
 ![Default changed color](https://raw.github.com/surfly/tutorial/master/screens/red_default_chat.png)  ![Changed chatbox colors](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)
@@ -95,7 +96,7 @@ logs, or download them.
 <a name="video_chat"></a>
 #### Video chat
 
-Surfly also allows you communicate in your session with video chat. You can also maximise the video to full screen, or
+Surfly also allows you communicate within the session via video chat. You can also maximise the video to full screen, or
 restrict the video quality. However, if you do not want to use it, it can be easily disabled.
 
 <a name="document_sharing"></a>
@@ -135,8 +136,7 @@ The drawing option allows the followers within the Surfly session to highlight t
 a magic marker. The drawing function takes two parameters, drawing_mode and drawing_color.  The defaults are that the mode is temporary (so the drawings will fade out) and the color is 
 initially set to yellow. Of course, if you would prefer to have something different, both of these parameters can be changed, or you can turn the drawing function off entirely. 
 
-In our example website we adapted the code so that the drawing mode would be permanent, and that the color of the drawings would be 
-a vibrant green:
+In our example website we adapted the code so that the drawing mode would be permanent, and that the color of the drawings would be a vibrant green:
 
 The green drawings underscoring the button are clearly visable to the leader of the session:
 
@@ -207,8 +207,8 @@ clicks on it, it will lead them to a Surfly session.
 <a name="stealth_mode"></a>
 #### Start a session in stealth mode
 
-If you do not wish to have a visual button or link on your webpage, then you can use stealth mode. This allows vistors to initiate a Surfly session simply 
-by pressing CTRL+ENTER.  The vistor will then be queue'd, and the Surfly session will start as normal.
+If you do not wish to have a visual button or link on your webpage, then you can use stealth mode. This allows visitors to initiate a Surfly session simply 
+by pressing CTRL+ENTER.  The visitor will then be queue'd, and the Surfly session will start as normal.
 
 <a name="button_appearance"></a>
 #### Button Appearance
@@ -232,7 +232,7 @@ The session ID approach enables a small, discrete icon to be added to your websi
 #### Integrate with existing chat solutions
 
 It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want add Surfly's co-browsing 
-functionality. Surfly can be integrated in such a way so that it acts as a transparent addition to your product.
+functionality to this. Surfly can be integrated in such a way so that it acts as a transparent addition to your product.
 
 #### Create your own invite page
 
@@ -243,8 +243,7 @@ This section covers:
 
  - [Session continuation](#sessuion_continuation)
  - [Adding custom metadata to queue requests](#custom_metadata)
- - [Field masking](#field_masking)
- - [Blacklist and Whitelist](#blacklist_whitelist)
+ - [Security Features](#security_features)
  - [Customise control switching](#customise_control_switching)
  - [The REST API](#rest_api)
 
@@ -271,23 +270,38 @@ of this data, such as name and address, to the agent. Surfly will also use the n
 
 You can also track the queue status from the clients side, so you can monitor the behaviour of the client when they leave, rejoin, or are waiting in the queue.
 
+<a name="security_features"></a>
+#### Security Features
+
+There are three main ways in which to protect your users during a Surfly session:
+ 
+ - [Blacklisting and Whitelisting](#blacklist_whitelist)
+ - [Field masking](#field_masking)
+ - [Auditlog](#auditlog)
+
 <a name="field_masking"></a>
-#### Field masking
+##### Field masking
 
 Field masking allows you to protect your users data during the Surfly session. If at some point, the user is required to enter sensitive information, such as payment details, into your website,
 you can hide the input from the session followers. 
 
 <a name="blacklist_whitelist"></a>
-#### Blacklisting and Whitelisting
+##### Blacklisting and Whitelisting
 
 Please note: This option is only available to enterprise clients.
 
-Blacklisting is used in order to deny users access from a select few pages, If you want more control over what your users can access, whitelisting may be the most viable option.
-Whitelisting allows access only to the pages specified in the code snippet.
+Blacklisting is used in order to deny users access from a select few webpages. If you want more control over what your users can access, whitelisting may be the most viable option.
+Whitelisting allows access only to the pages specified in the code snippet. 
 
-If the redirect url is not specified, the user will be redirected to Surfly's default page.
+Users who do attempt to access the restricted url can be redirected to another page of your choice, or referred back to the original page where they had clicked the link. Otherwise, if 
+the redirect url is not specified, the user will be redirected to Surfly's default page. 
 
-<a name="customise_control_switching></a>
+<a name="auditlog"></a>
+##### Auditlog
+
+This allows you to create custom log messages, and to list and review all the session logs.
+
+<a name="customise_control_switching"></a>
 #### Customise control switching 
 
 If you want to be able to switch control between the leader and the follower, you can chose between either allowing the agent to take control, or to
@@ -302,7 +316,7 @@ As can be seen in the above image, the hand button is now bold, which means the 
 #### The REST API
 
 The REST API allows you to tightly integrate Surfly into your website. You can delete, create, update and retrieve information on your agents, sessions and the incoming queue.
-Using the REST API allows for a more programmatical approach towards integration.
+Using the REST API allows for a more programmatical approach towards integration, and can be used to add the co-browsing technology into your own product. 
 
 <a name="reseller information"></a>
 #### Resellers 
