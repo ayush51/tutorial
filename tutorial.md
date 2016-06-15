@@ -118,7 +118,7 @@ You can invite a user to join your session from your Surfly admin panel or from 
 
 Both of these methods will load the following screen:
 
-![invite_user](https://raw.github.com/surfly/tutorial/master/screens/invite_user.png)
+![invite_user](https://raw.github.com/surfly/tutorial/alterations/screens/invite_user.png)
 
 You can then decide to either share the url of the session, or send an email to the user you wish to invite. 
 
