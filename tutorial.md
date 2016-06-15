@@ -59,8 +59,9 @@ can have. You can also choose to remove the chat box functionality entirely, and
 The default chatbox color is a soft red, however, this can also be altered to match your websites theme. As can be seen in the image below, 
 we changed the icons at the top of the Chatbox from a light red to purple, which is more suited to our example website:
 
-| [! [Default changed color](https://raw.github.com/surfly/tutorial/master/screens/red_default_chat.png)] | [! [Changed chatbox colors](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)] |
+| [![Default changed color](https://raw.github.com/surfly/tutorial/master/screens/red_default_chat.png)](Default chat color) | [![Changed chatbox colors](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)](chaged colr icons) |
 |:---:|:---:|
+| default chat box color | Changed chat box colors |
 
 ###### The agent cannot end the session
 
