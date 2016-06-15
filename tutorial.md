@@ -198,9 +198,9 @@ have customised the page so that the user is aware that they are in the queue.
 <a name="surflystart_anchor"></a>
 #### Customise your own button
 
-If you want to create your own button, you can use the #surflystart anchor, which can be integrated into your websites source code. The button can be fully
-styled with css so that it compliments your website design.  In the image of our example website, you can see the blue button below will lead you to a Surfly session. You can
-also specify the text on the button.
+If you want to create your own button, you can use the #surflystart anchor, which can be integrated into your websites source code. You can choose the text you wish to write 
+onto the button, and it can be fully styled with css so that it compliments your website design.  As you can see in the image below, we created our own start button. If a visitor to the website
+clicks on it, it will lead them to a Surfly session.
 
 ![The end result](https://raw.github.com/surfly/tutorial/master/screens/Surflystart_anchor.png)
 
@@ -274,7 +274,8 @@ You can also track the queue status from the clients side, so you can monitor th
 <a name="field_masking"></a>
 #### Field masking
 
-You may want to protect your users data during the Surfly session. Field masking allows you to hide sensitive information, such as payment details, from the session followers.
+Field masking allows you to protect your users data during the Surfly session. If at some point, the user is required to enter sensitive information, such as payment details, into your website,
+you can hide the input from the session followers. 
 
 <a name="blacklist_whitelist"></a>
 #### Blacklisting and Whitelisting
