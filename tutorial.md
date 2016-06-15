@@ -270,6 +270,8 @@ There are two main ways to set up session continuation:
 Adding custom metadata to the Queue requests allows you to give extra information about the user to the agent. For example, if the user is logged in to your website, then you can pass on some 
 of this data, such as name and address, to the agent. Surfly will also use the name in order to display this in the chatbox, and the email in order to match the correct gravitar to the user.
 
+You can also track the queue status from the clients side, so you can monitor the behaviour of the client when they leave, rejoin, or are waiting in the queue.
+
 <a name="field_masking"></a>
 #### Field masking
 
