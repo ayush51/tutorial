@@ -228,12 +228,12 @@ The button, by default, will only be shown if an agent is logged in to the Surfl
 <a name="session_id"></a>
 #### The session ID approach
 
-The session ID approach enables a small, discrete icon to be added to your website.  When a visitor clicks on this icon, they will start a Surfly session.
+The session ID approach enables a small, discrete icon to be added to your website. When a visitor clicks on this icon, they will start a Surfly session.
 
 #### Integrate with existing chat solutions
 
-You may wish to add certain aspects of Surfly functionality to your website or product.  For example, if you have already established your own video or text chat, you may want to add only the
-co-browsing functionality.  Surfly can be integrated fully into your own product, so that it sits as a transparent addition to your product. 
+It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want add Surfly's co-browsing 
+functionality. Surfly can be integrated in such a way so that it acts as a transparent addition to your product.
 
 #### Create your own invite page
 
@@ -258,6 +258,7 @@ Cookies can be carried over from your website, and into the Surfly session. For 
 session. Once the session has finshed, the information is returned back to the website. This allows a smooth transition into, and out of, the session.
 
 There are two main ways to set up session continuation:
+
  - Full session continuation allows the transfer of all data, including (unlike soft session continuation), cookies with a HttpOnly tag. This requires a change in the load balance configuration
    of the host website. 
  - Soft session continuation does not require a change in the load balance configuration, but is more limited.  A Surfly widget needs to be present on all pages you wish to transfer cookies from, 
@@ -267,7 +268,7 @@ There are two main ways to set up session continuation:
 #### Add custom metadata to Queue request
 
 Adding custom metadata to the Queue requests allows you to give extra information about the user to the agent. For example, if the user is logged in to your website, then you can pass on some 
-of this data, such as name and address. Surfly will also use the name in order to display this in the chatbox, and the email in order to match the correct gravitar to the user.
+of this data, such as name and address, to the agent. Surfly will also use the name in order to display this in the chatbox, and the email in order to match the correct gravitar to the user.
 
 <a name="field_masking"></a>
 #### Field masking
@@ -294,7 +295,7 @@ request it from the leader. This could be useful for when users require further 
 
 As can be seen in the above image, the hand button is now bold, which means the agent can now use it to take, or request, control.
 
-
+ 
 <a name="rest_api"></a>
 #### The REST API
 
