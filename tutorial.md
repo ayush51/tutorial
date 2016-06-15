@@ -109,16 +109,16 @@ so that the files can be downloaded. You may also disable the document sharing t
 #### Window Size options
 
 The window is normally set to the person with the smallest screen, as this allows for a smooth transition into the Surfly session. You can, however, decide to set a maximum 
-or minimum size for the window.  Alternativly you may also remove it.
+or minimum size for the window.  Alternatively you may decide to remove it.
 
 <a name="drawing_mode"></a>
 #### Options for the drawing mode
 
 The drawing option allows the followers within the Surfly session to highlight the areas on the screen that they wish to bring attention to. It works in a similar way to a highlighter, or 
-a magic marker. The default options for the drawing function are that the mode is temporary (so will fade after a few minutes) and the color is yellow.  Of course, if you would prefer to have
-something different, both of these parameters can be changed, or you can turn the drawing function off entirely. 
+a magic marker. The drawing function takes two parameters, drawing_mode and drawing_color.  The defaults are that the mode is temporary (so the drawings will fade out) and the color is 
+initially set to yellow. Of course, if you would prefer to have something different, both of these parameters can be changed, or you can turn the drawing function off entirely. 
 
-In our example website we adapted the code in order so that the drawing mode would be permanent, and that the color of the drawings would be 
+In our example website we adapted the code so that the drawing mode would be permanent, and that the color of the drawings would be 
 a vibrant green:
 
 The green drawings underscoring the button are clearly visable to the leader of the session:
@@ -128,8 +128,8 @@ The green drawings underscoring the button are clearly visable to the leader of 
 <a name="popupurl"></a>
 #### Exiting the session display or redirect to another page
 
-You may want to show a user another page after the session has finished. You can either show a popup window within the page you want to display, or you can 
-redirect them to another url.
+You may want to show a user another page after the session has finished. You can either show a popup window within the host website, or you can 
+send them to another webpage.
 
 In the example below, we have chosen to show the leader a popup url within their screen after the session has finished.  
 The user can exit the popup window by clicking on the cross to the top right of the window.
@@ -173,7 +173,10 @@ You can start a session in the following ways:
 
 If you enable auto start, it means the webpage including the code snippet will immediatly start a Surfly session. The page will, by default, display a red banner asking the
 visitor to wait for an agent to join their session, and the queue pin number.
-Auto start is especially useful if you want to display a certain webpage whilst the visitor is waiting for an agent to join them.
+Auto start is especially useful if you want to display a certain webpage whilst the visitor is waiting for an agent to join them.  In our example webpage we have enabled autostart and
+have customised the page so that the user is aware that they are in the queue.
+
+![auto_start](https://raw.github.com/surfly/tutorial/master/screens/auto_start.png)
 
 <a name="surflystart_anchor"></a>
 #### Customise your own button
