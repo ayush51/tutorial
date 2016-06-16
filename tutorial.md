@@ -273,7 +273,7 @@ You can also track the queue status from the clients side, so you can monitor th
 <a name="security_features"></a>
 #### Security Features
 
-There are three main ways in which to protect your users during a Surfly session:
+Surfly's security features allow you the option to protect users data during the session, and, if required, restrict access to selected webpages. 
  
  - [Blacklisting and Whitelisting](#blacklist_whitelist)
  - [Field masking](#field_masking)
@@ -282,8 +282,9 @@ There are three main ways in which to protect your users during a Surfly session
 <a name="field_masking"></a>
 ##### Field masking
 
-Field masking allows you to protect your users data during the Surfly session. If at some point, the user is required to enter sensitive information, such as payment details, into your website,
-you can hide that input from the session followers. Whilst the leader is able to read what they are typing into the form, the followers will only see a series of x's.
+Field masking allows you to protect the leaders data during the Surfly session. If the user is required to enter sensitive information (such as payment details), into your website,
+you can hide that input from the session followers. As shown in the images below, the leader is still able to read what they are typing into the form, but the followers will only see a
+series of x's.
 
 | [![Leader field masking](https://raw.github.com/surfly/tutorial/alterations/screens/Leader_fieldmasking.png)](The leader) | [![Follower field masking](https://raw.github.com/surfly/tutorial/alterations/screens/follower_fieldmasking.png)](The follower) |
 |:---:|:---:|
@@ -291,7 +292,7 @@ you can hide that input from the session followers. Whilst the leader is able to
 
 ###### Please note: 
 
-Whilst the leader can hide their data inputs from the followers, the followers cannot hide their details from the leader.
+Whilst the leader can mask their data, and hide it from the followers, the followers cannot hide their data from the leader.
 
 <a name="blacklist_whitelist"></a>
 ##### Blacklisting and Whitelisting
