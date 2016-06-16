@@ -16,14 +16,14 @@ and wish to add only the co-browsing functionality.
 ###### How a Surfly session works
 
 Typically, a visitor to your website will request a session and be queue'd until an agent (the person who receives the call) joins them. The passive member of the
-session is referred to as the follower, and the active member is the leader.  The leader will navigate the site, and the follower can help guide them through it. 
+session is referred to as the follower, and the active member is the leader. The leader will navigate the site, and the follower can help guide them through it. 
 Initially the agent is the follower, and the website visitor is the leader, however you can choose to swap control during the session.
 
 
 ###### During the session
 
-A Surfly session allows you to share your browser with others. During the session, the mouse arrows from all users will be visable.  Only the leader can select or click things on the page,
-and if the leader decides to navigate to another url, the followers screens will be synchronised so that they can also see the new ul.  The followers can take advantage of the drawing tool in
+A Surfly session allows you to share your browser with others. During the session, the mouse arrows from all users will be visable. Only the leader can select or click items on the page,
+and if the leader decides to navigate to another url, the followers screens will be synchronised so that they can also see the new ul. The followers can take advantage of the drawing tool in
 order to highlight areas on the screen. Communication within the session can be done via text or video chat, or you may choose to disallow that functionality entirely. The users may also
 share documents and invite others to join them, if they wish.
 
