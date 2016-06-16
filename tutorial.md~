@@ -280,7 +280,7 @@ you can hide the input from the session followers.
 
 Please note: This option is only available to enterprise clients.
 
-Blacklisting is used in order to deny users access from a select few pages. If you want more control over what your users can access, whitelisting may be the most viable option.
+Blacklisting is used in order to deny users access from a select few pages, If you want more control over what your users can access, whitelisting may be the most viable option.
 Whitelisting allows access only to the pages specified in the code snippet.
 
 If the redirect url is not specified, the user will be redirected to Surfly's default page.
