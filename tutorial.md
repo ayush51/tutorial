@@ -258,21 +258,26 @@ functionality to this. Surfly can be integrated in such a way so that it acts as
 
 #### Create your own invite page
 
-You can fully customise the page for inviting people to start surfly and also add metadata so that the agents know information about the user before they start a session
+You can fully customise the page from which you want to invite users to start a session from.  If your user has logged in to your website, you can also decide to add metadata to your
+queue panel.  This allows you to pass information to your agents, such as name or email address.  You also do not have to use the Surfly url for the session.
+
 
 <a name="advanced_options"></a>
 ### Advanced options
 
 This section covers:
 
- - [Session continuation](#sessuion_continuation)
+ - [Surfly and third party cookies](#third_party_cookies)
+ - [Session continuation](#session_continuation)
  - [Adding custom metadata to queue requests](#custom_metadata)
  - [Security Features](#security_features)
  - [Customise control switching](#customise_control_switching)
 
-Sufly and 3rd party cookies
 
-Top level domains do not work with iframe - can do a c-name/ open a new tab
+<a name="third_party_cookies"></a>
+#### Sufly and third party cookies
+
+Top level domains do not transfer third party cookies to the iframe, so instead you may choose to open a session in a new tab, or to use a CNAME.
 
 <a name="session_continuation"></a>
 #### Session continuation
