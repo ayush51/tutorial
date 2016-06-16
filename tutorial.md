@@ -8,9 +8,12 @@ Surfly enables you to integrate our co-browsing technology fully into your own w
 your website. Surfly is easy to set up, as only requires a small addition to your websites' source code. You may also adapt the functionality of the session, by enabling the options you 
 wish to include, or disabling those you wish to remove.  
 
+You can either use Surfly as a feature on your own website, or integrate some (or all) of the functionality into your own product.  For example, you may already have video chat on your website, 
+and wish to add only the co-browsing functionality.
+
 ###### What is a Surfly session?
 
-A Surfly session allows you to share your browser with others. Typically, a vistor to your website will request a session and be queue'd until an agent (the person who receives the call)
+A Surfly session allows you to share your browser with others. Typically, a visitor to your website will request a session and be queue'd until an agent (the person who receives the call)
 joins them. The passive member of the session is referred to as the follower, and the active member is the leader.  The leader will navigate the site, and the follower can help guide them 
 through it. Initially the agent is the follower, and the website visitor is the leader, however you can choose to swap control during the session. 
 
@@ -26,6 +29,20 @@ the visitors name in the queue, so that the agent greeting them knows who they a
 
 ![The Queue panel](https://raw.github.com/surfly/tutorial/master/screens/queue_panel.png)
 
+###### The Admin panel
+
+Surfly's admin panel allows you to track your users and your agents, and can be customised to suit your needs.
+
+The buttons on the admin panel are:
+
+ - The 'start' button, this allows you to immediatly start co-browsing.  When you click on this link you are asked to invite someone to join your session, by either sending them the session url 
+   directly, or via email.  
+ - The 'queue' button, which gives you a list of queue'd users.  You can add metadata to this so that the agent knows more information about the user.
+ - The 'history' button gives an overview of your sessions, the agent that took them and the duration.  You can also choose to add chat logs to the history panel.
+ - The 'agent' button allows you to add agents to your account, and also review the amount of sessions each agent has joined.
+ - The 'settings' button lets you change your profile settings, and also includes your account details. Here, you can review your account plan, billing and personal information.
+   The settings button also contains your integration information, the Surfly code snippet and the REST API key. 
+ - The 'log out' button lets you exit the admin panel.
 
 The tutorial covers:
 
@@ -37,13 +54,15 @@ The tutorial covers:
 <a name="session_modification"></a>
 ### Session Modification
 
-You can adapt the way a session starts, looks and behaves by changing the default settings to meet your needs.
+You can adapt the way a session starts, looks and behaves by changing the default settings to meet your needs. This is easy to accomplish by specifying your prefences in the Surfly widget.  If 
+you would like greater control over the user interface, you can also fully customise it through the API. (please see the documentation for further details).
 
 The main points covered in the session modification section are: 
 
  - [Changing the chat box](#chat_box)
  - [Video chat](#video_chat)
  - [Document sharing](#document_sharing)
+ - [Inviting users to join your session](#invite_user)
  - [The window size options](#window_size)
  - [The drawing mode](#drawing_mode)
  - [Ending a session to display another page, or redirect to another page](#popupurl)
@@ -56,12 +75,11 @@ can have. You can also choose to remove the chat box functionality entirely, and
 
 ###### Changing the chatbox color
 
-The default chatbox color is a soft red, however, this can also be altered to match your websites theme. As can be seen in the image below, 
+As shown, the default chatbox color is a soft red, however, this can also be altered to match your websites theme. As can be seen in the image on the right, 
 we changed the icons at the top of the Chatbox from a light red to purple, which is more suited to our example website:
 
-| [![Default changed color](https://raw.github.com/surfly/tutorial/master/screens/red_default_chat.png)](Default chat color) | [![Changed chatbox colors](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)](chaged colr icons) |
-|:---:|:---:|
-| default chat box color | Changed chat box colors |
+![Default changed color](https://raw.github.com/surfly/tutorial/master/screens/red_default_chat.png)  ![Changed chatbox colors](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)
+
 
 ###### The agent cannot end the session
 
@@ -92,7 +110,7 @@ logs, or download them.
 <a name="video_chat"></a>
 #### Video chat
 
-Surfly also allows you communicate in your session with video chat. You can also maximise the video to full screen, or
+Surfly also allows you communicate within the session via video chat. You can also maximise the video to full screen, or
 restrict the video quality. However, if you do not want to use it, it can be easily disabled.
 
 <a name="document_sharing"></a>
@@ -105,11 +123,25 @@ If you wish to share documents during the Surfly session, you can click the pape
 Once you have clicked on it, you can upload a document from your desktop. The default for document sharing is that they can only be viewed, and not downloaded. However, you can change the settings
 so that the files can be downloaded. You may also disable the document sharing tool, if you wish. 
 
+<a name="invite_user"></a>
+#### Inviting a user to join your session
+
+You can invite a user to join your session from your Surfly admin panel or from within a Surfly session: 
+ - To start a session from the Surfly admin panel, navigate to the "start" button at the top left of your screen. 
+ - Within the Surfly session the leader can, by default, invite people by clicking on the "add user" icon in the dock.
+
+Both of these methods will load the following screen:
+
+![invite_user](https://raw.github.com/surfly/tutorial/alterations/screens/invite_user.png)
+
+You can then decide to either share the url of the session, or send an email to the user you wish to invite. 
+
 <a name="window_size"></a>
 #### Window Size options
 
-The window is normally set to the person with the smallest screen, as this allows for a smooth transition into the Surfly session. You can, however, decide to set a maximum 
-or minimum size for the window.  Alternatively you may decide to remove it.
+The window is normally set to the person with the smallest screen, as this allows for a smooth transition into the Surfly session. If you see blank edges at the side of your screen, it is 
+only because your screen is larger than the person you are co-browsing with. You can, however, decide to set a maximum or minimum size for the window.  Alternatively you may decide to remove the
+set to smallest screen functionality.
 
 <a name="drawing_mode"></a>
 #### Options for the drawing mode
@@ -118,8 +150,7 @@ The drawing option allows the followers within the Surfly session to highlight t
 a magic marker. The drawing function takes two parameters, drawing_mode and drawing_color.  The defaults are that the mode is temporary (so the drawings will fade out) and the color is 
 initially set to yellow. Of course, if you would prefer to have something different, both of these parameters can be changed, or you can turn the drawing function off entirely. 
 
-In our example website we adapted the code so that the drawing mode would be permanent, and that the color of the drawings would be 
-a vibrant green:
+In our example website we adapted the code so that the drawing mode would be permanent, and that the color of the drawings would be a vibrant green:
 
 The green drawings underscoring the button are clearly visable to the leader of the session:
 
@@ -181,24 +212,27 @@ have customised the page so that the user is aware that they are in the queue.
 <a name="surflystart_anchor"></a>
 #### Customise your own button
 
-If you want to create your own button, you can use the #surflystart anchor, which can be integrated into your websites source code. The button can be fully
-styled with css so that it compliments your website design.  In the example website below, you can see the blue button below will lead you to a Surfly session. You can
-also specify the text on the button.
+If you want to create your own button, you can use the #surflystart anchor, which can be integrated into your websites source code. You can choose the text you wish to write 
+onto the button, and it can be fully styled with css so that it compliments your website design.  As you can see in the image below, we created our own start button. If a visitor to the website
+clicks on it, it will lead them to a Surfly session.
 
 ![The end result](https://raw.github.com/surfly/tutorial/master/screens/Surflystart_anchor.png)
 
 <a name="stealth_mode"></a>
 #### Start a session in stealth mode
 
-If you do not wish to have a visual button or link on your webpage, then you can use stealth mode. This allows vistors to initiate a Surfly session simply 
-by pressing CTRL+ENTER.  The vistor will then be queue'd, and the Surfly session will start as normal.
+If you do not wish to have a visual button or link on your webpage, then you can use stealth mode. This allows visitors to initiate a Surfly session simply 
+by pressing CTRL+ENTER.  The visitor will then be queue'd, and the Surfly session will start as normal.
 
 <a name="button_appearance"></a>
 #### Button Appearance
 
 If you prefer, you can also adapt the default "get live help" button that Surfly provides. The buttons default appearance is red, with white text and sits to the bottom left of the screen. 
-The position of the button can be moved to either the bottom right of the screen, or to the middle left. You can further adapt the button to suit your needs by specifying the color of the 
-button along with the font size and font color.
+
+![default button appearance](https://raw.github.com/surfly/tutorial/alterations/screens/default_button.png)
+
+The button appearance can be adapted by changing where it appears on your screen, and the colors and size of it. The position of the button can be moved to either the bottom right of the screen,
+or to the middle left. You can further adapt the button to suit your needs by specifying the color of the button along with the font size and font color.
 
 As you can see below, in the example website, we changed the position and the style of the button.  The default color of the button was changed to black, which suits the theme 
 of our example  website. The font color remains white, but the size of the font has increased to size 16, which also increases the size of the support button.
@@ -207,25 +241,43 @@ of our example  website. The font color remains white, but the size of the font 
 
 The button, by default, will only be shown if an agent is logged in to the Surfly admin page. This can also be disabled, if you wish.
 
+<a name="session_id"></a>
 #### The session ID approach
 
-The session ID approach enables a small, discrete icon to be added to your website.  When a visitor clicks on this icon, they will start a Surfly session.
+The session ID approach is especially useful if you are already in contact with a customer via another medium. If the customer needs help navigating a website, the 
+agent can direct them to start a co-browsing session. The customer will click on the link, and have a unique ID assigned to them, which they can give to the agent. 
+As shown in the image below, this unique session ID will also be shown in the queue panel, allowing the agent to identify the customer, and join the session.
+
+![The Queue panel](https://raw.github.com/surfly/tutorial/master/screens/queue_panel.png)
+
 
 #### Integrate with existing chat solutions
 
+It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want add Surfly's co-browsing 
+functionality to this. Surfly can be integrated in such a way so that it acts as a transparent addition to your product.
+
 #### Create your own invite page
+
+You can fully customise the page from which you want to invite users to start a session from.  If your user has logged in to your website, you can also decide to add metadata to your
+queue panel.  This allows you to pass information to your agents, such as name or email address.  You also do not have to use the Surfly url for the session.
+
 
 <a name="advanced_options"></a>
 ### Advanced options
 
 This section covers:
 
- - [Session continuation](#sessuion_continuation)
+ - [Surfly and third party cookies](#third_party_cookies)
+ - [Session continuation](#session_continuation)
  - [Adding custom metadata to queue requests](#custom_metadata)
- - [Field masking](#field_masking)
- - [Blacklist and Whitelist](#blacklist_whitelist)
+ - [Security Features](#security_features)
  - [Customise control switching](#customise_control_switching)
- - [The REST API](#rest_api)
+
+
+<a name="third_party_cookies"></a>
+#### Sufly and third party cookies
+
+Top level domains do not transfer third party cookies to the iframe, so instead you may choose to open a session in a new tab, or to use a CNAME.
 
 <a name="session_continuation"></a>
 #### Session continuation
@@ -236,6 +288,7 @@ Cookies can be carried over from your website, and into the Surfly session. For 
 session. Once the session has finshed, the information is returned back to the website. This allows a smooth transition into, and out of, the session.
 
 There are two main ways to set up session continuation:
+
  - Full session continuation allows the transfer of all data, including (unlike soft session continuation), cookies with a HttpOnly tag. This requires a change in the load balance configuration
    of the host website. 
  - Soft session continuation does not require a change in the load balance configuration, but is more limited.  A Surfly widget needs to be present on all pages you wish to transfer cookies from, 
@@ -245,24 +298,51 @@ There are two main ways to set up session continuation:
 #### Add custom metadata to Queue request
 
 Adding custom metadata to the Queue requests allows you to give extra information about the user to the agent. For example, if the user is logged in to your website, then you can pass on some 
-of this data, such as name and address. Surfly will also use the name in order to display this in the chatbox, and the email in order to match the correct gravitar to the user.
+of this data, such as name and address, to the agent. Surfly will also use the name in order to display this in the chatbox, and the email in order to match the correct gravitar to the user.
+
+You can also track the queue status from the clients side, so you can monitor the behaviour of the client when they leave, rejoin, or are waiting in the queue.
+
+<a name="security_features"></a>
+#### Security Features
+
+Surfly's security features allow you the option to protect users data during the session, and, if required, restrict access to selected webpages. 
+ 
+ - [Blacklisting and Whitelisting](#blacklist_whitelist)
+ - [Field masking](#field_masking)
+ - [Auditlog](#auditlog)
 
 <a name="field_masking"></a>
-#### Field masking
+##### Field masking
 
-You may want to protect your users data during the Surfly session. Field masking allows you to hide sensitive information, such as payment details, from the session followers.
+Field masking allows you to protect the leaders data during the Surfly session. If the user is required to enter sensitive information (such as payment details), into your website,
+you can hide that input from the session followers. As shown in the images below, the leader is still able to read what they are typing into the form, but the followers (including the
+agent) will only see a series of x's.
+
+| [![Leader field masking](https://raw.github.com/surfly/tutorial/alterations/screens/Leader_fieldmasking.png)](The leader) | [![Follower field masking](https://raw.github.com/surfly/tutorial/alterations/screens/follower_fieldmasking.png)](The follower) |
+|:---:|:---:|
+| The leader | The follower |
+
+###### Please note: 
+
+Whilst the leader can mask their data, and hide it from the followers, the followers cannot hide their data from the leader.
 
 <a name="blacklist_whitelist"></a>
-#### Blacklisting and Whitelisting
+##### Blacklisting and Whitelisting
 
 Please note: This option is only available to enterprise clients.
 
-Blacklisting is used in order to deny users access from a select few pages, If you want more control over what your users can access, whitelisting may be the most viable option.
-Whitelisting allows access only to the pages specified in the code snippet.
+Blacklisting is used in order to deny users access from a select few webpages. If you want more control over what your users cannot access, whitelisting may be the most viable option.
+Whitelisting allows access only to the pages specified in the code snippet. 
 
-If the redirect url is not specified, the user will be redirected to Surfly's default page.
+Users who do attempt to access the restricted url can be redirected to another page of your choice, or referred back to the original page where they had clicked the link. Otherwise, if 
+the redirect url is not specified, the user will be redirected to Surfly's default page. 
 
-<a name="customise_control_switching></a>
+<a name="auditlog"></a>
+##### Auditlog
+
+This allows you to create custom log messages, and to list and review all the session logs.
+
+<a name="customise_control_switching"></a>
 #### Customise control switching 
 
 If you want to be able to switch control between the leader and the follower, you can chose between either allowing the agent to take control, or to
@@ -271,19 +351,6 @@ request it from the leader. This could be useful for when users require further 
 ![request control](https://raw.github.com/surfly/tutorial/master/screens/agent_request.png)
 
 As can be seen in the above image, the hand button is now bold, which means the agent can now use it to take, or request, control.
-
-
-<a name="rest_api"></a>
-#### The REST API
-
-The REST API allows you to tightly integrate Surfly into your website. You can delete, create, update and retrieve information on your agents, sessions and the incoming queue.
-Using the REST API allows for a more programmatical approach towards integration.
-
-<a name="reseller information"></a>
-#### Resellers 
-
-Resellers can create new Surfly clients, through the use of the REST API.  You may invoice the clients directly, or let Surfly do this for you. 
-The REST API allows you to manage your clients by letting you create, delete, and get information about the client.
 
 <a name="examples"></a>
 ### Examples use cases
