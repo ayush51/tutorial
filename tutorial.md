@@ -109,12 +109,9 @@ logs, or download them.
 <a name="video_chat"></a>
 #### Video chat
 
-<<<<<<< HEAD
 Surfly also allows you communicate within the session via video chat. You can also maximise the video to full screen, or
 restrict the video quality. However, if you do not want to use it, it can be easily disabled.
-=======
-Surfly also allows you to communicate in your session with video chat. You can also maximise the video to full screen, or restrict the video quality. However, if you do not want to use it, it can be easily disabled.
->>>>>>> master
+
 
 <a name="document_sharing"></a>
 #### Document sharing 
@@ -256,18 +253,13 @@ As shown in the image below, this unique session ID will also be shown in the qu
 
 #### Integrate with existing chat solutions
 
-<<<<<<< HEAD
-It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want add Surfly's co-browsing 
-functionality to this. Surfly can be integrated in such a way so that it acts as a transparent addition to your product.
-=======
-It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want to add Surfly's co-browsing 
-functionality. Surfly can be integrated in such a way so that it acts as a transparent addition to your product.
->>>>>>> master
+It is also possible to customise your session and to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want to add Surfly's co-browsing functionality to this. In this case, Surfly can be integrated in such a way so that it acts as a transparent addition to your product and allow you to entirely customise the appearance of the session. 
+
 
 #### Create your own invite page
 
-You can fully customise the page from which you want to invite users to start a session from.  If your user has logged in to your website, you can also decide to add metadata to your
-queue panel.  This allows you to pass information to your agents, such as name or email address.  You also do not have to use the Surfly url for the session.
+You can fully customise the page from which you want to invite users to start a session.  If your user has logged in to your website, you can also decide to add metadata to your
+queue panel.  This allows you to pass information to your agents, such as name or email address. You also do not have to use the Surfly url for the session and can redirect your clients to a customised landing page.
 
 
 <a name="advanced_options"></a>
@@ -283,7 +275,7 @@ This section covers:
 
 
 <a name="third_party_cookies"></a>
-#### Sufly and third party cookies
+#### Surfly and third party cookies
 
 Top level domains do not transfer third party cookies to the iframe, so instead you may choose to open a session in a new tab, or to use a CNAME.
 
@@ -339,13 +331,9 @@ Whilst the leader can mask their data, and hide it from the followers, the follo
 
 Please note: This option is only available to enterprise clients.
 
-<<<<<<< HEAD
+
 Blacklisting is used in order to deny users access from a select few webpages. If you want more control over what your users cannot access, whitelisting may be the most viable option.
 Whitelisting allows access only to the pages specified in the code snippet. 
-=======
-Blacklisting is used in order to deny users access from a select few pages. If you want more control over what your users can access, whitelisting may be the most viable option.
-Whitelisting allows access only to the pages specified in the code snippet.
->>>>>>> master
 
 Users who do attempt to access the restricted url can be redirected to another page of your choice, or referred back to the original page where they had clicked the link. Otherwise, if 
 the redirect url is not specified, the user will be redirected to Surfly's default page. 
