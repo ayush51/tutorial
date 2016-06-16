@@ -2,22 +2,30 @@
 
 ### Introduction
 
+
 ###### Welcome to Surfly!
 
 Surfly enables you to integrate our co-browsing technology fully into your own website. The appearance of the co-browsing session can be fully customised to allow for a seamless addition to 
 your website. Surfly is easy to set up, as it only requires a small addition to your website's source code. You may also adapt the functionality of the session, by enabling the options you 
 wish to include, or disabling those you wish to remove.  
 
-You can either use Surfly as a feature on your own website, or integrate some (or all) of the functionalities into your own product.  For example, you may already have video chat on your website, and wish to add only the co-browsing functionality.
+You can either use Surfly as a feature on your own website, or integrate some (or all) of the functionality into your own product. For example, you may already have video chat on your website, 
+and wish to add only the co-browsing functionality.
 
-###### What is a Surfly session?
 
-A Surfly session allows you to share your browser with others. Typically, a visitor to your website will request a session and be queue'd until an agent (the person who receives the call)
-joins them. The passive member of the session is referred to as the follower, and the active member is the leader.  The leader will navigate the site, and the follower can help guide them 
-through it. Initially the agent is the follower, and the website visitor is the leader, however you can choose to swap control during the session. 
+###### How a Surfly session works
 
-Communication within the session can be done via text or video chat, and followers may highlight areas they wish to draw attention to with the drawing functionality. You may also share documents 
-and invite others to join your session by sharing the session url or sending an email. Each session has its own ID, which has been formatted to be easily communicated over the phone.   
+Typically, a visitor to your website will request a session and be queue'd until an agent (the person who receives the call) joins them. The passive member of the
+session is referred to as the follower, and the active member is the leader. The leader will navigate the site, and the follower can help guide them through it. 
+Initially the agent is the follower, and the website visitor is the leader, however you can choose to swap control during the session.
+
+
+###### During the session
+
+A Surfly session allows you to share your browser with others. During the session, the mouse arrows from all users will be visable. Only the leader can select or click items on the page,
+and if the leader decides to navigate to another url, the followers screens will be synchronised so that they can also see the new ul. The followers can take advantage of the drawing tool in
+order to highlight areas on the screen. Communication within the session can be done via text or video chat, or you may choose to disallow that functionality entirely. The users may also
+share documents and invite others to join them, if they wish.
 
 
 ###### Taking a session
@@ -27,6 +35,7 @@ they have been waiting. To take a session, the agent simply presses the "take ca
 the visitors name in the queue, so that the agent greeting them knows who they are.
 
 ![The Queue panel](https://raw.github.com/surfly/tutorial/master/screens/queue_panel.png)
+
 
 ###### The Admin panel
 
@@ -43,7 +52,7 @@ The buttons on the admin panel are:
    The settings button also contains your integration information, the Surfly code snippet and the REST API key. 
  - The 'log out' button lets you exit the admin panel.
 
-The tutorial covers:
+###### The tutorial covers:
 
  - [Session Modification](#session_modification)
  - [Add Surfly to your website](#add_surfly)
