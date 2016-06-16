@@ -110,11 +110,16 @@ logs, or download them.
 #### Video chat
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Surfly also allows you communicate within the session via video chat. You can also maximise the video to full screen, or
 restrict the video quality. However, if you do not want to use it, it can be easily disabled.
 =======
 Surfly also allows you to communicate in your session with video chat. You can also maximise the video to full screen, or restrict the video quality. However, if you do not want to use it, it can be easily disabled.
 >>>>>>> master
+=======
+Surfly also allows you to communicate in your session with video chat. You can also maximise the video to full screen, or restrict the video quality. However, if you do not want to use it, it can be easily disabled.
+
+>>>>>>> e5117235af952fd5bd2e8b23da32a2120622785b
 
 <a name="document_sharing"></a>
 #### Document sharing 
@@ -257,12 +262,19 @@ As shown in the image below, this unique session ID will also be shown in the qu
 #### Integrate with existing chat solutions
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want add Surfly's co-browsing 
 functionality to this. Surfly can be integrated in such a way so that it acts as a transparent addition to your product.
 =======
 It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want to add Surfly's co-browsing 
 functionality. Surfly can be integrated in such a way so that it acts as a transparent addition to your product.
 >>>>>>> master
+=======
+
+It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want to add Surfly's co-browsing 
+functionality. Surfly can be integrated in such a way so that it acts as a transparent addition to your product.
+
+>>>>>>> e5117235af952fd5bd2e8b23da32a2120622785b
 
 #### Create your own invite page
 
@@ -340,12 +352,19 @@ Whilst the leader can mask their data, and hide it from the followers, the follo
 Please note: This option is only available to enterprise clients.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Blacklisting is used in order to deny users access from a select few webpages. If you want more control over what your users cannot access, whitelisting may be the most viable option.
 Whitelisting allows access only to the pages specified in the code snippet. 
 =======
 Blacklisting is used in order to deny users access from a select few pages. If you want more control over what your users can access, whitelisting may be the most viable option.
 Whitelisting allows access only to the pages specified in the code snippet.
 >>>>>>> master
+=======
+
+Blacklisting is used in order to deny users access from a select few pages. If you want more control over what your users can access, whitelisting may be the most viable option.
+Whitelisting allows access only to the pages specified in the code snippet.
+
+>>>>>>> e5117235af952fd5bd2e8b23da32a2120622785b
 
 Users who do attempt to access the restricted url can be redirected to another page of your choice, or referred back to the original page where they had clicked the link. Otherwise, if 
 the redirect url is not specified, the user will be redirected to Surfly's default page. 
