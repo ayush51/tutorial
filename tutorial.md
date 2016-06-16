@@ -214,8 +214,11 @@ by pressing CTRL+ENTER.  The visitor will then be queue'd, and the Surfly sessio
 #### Button Appearance
 
 If you prefer, you can also adapt the default "get live help" button that Surfly provides. The buttons default appearance is red, with white text and sits to the bottom left of the screen. 
-The position of the button can be moved to either the bottom right of the screen, or to the middle left. You can further adapt the button to suit your needs by specifying the color of the 
-button along with the font size and font color.
+
+![default button appearance](https://raw.github.com/surfly/tutorial/alterations/screens/default_button.png)
+
+The button appearance can be adapted by changing where it appears on your screen, and the colors and size of it. The position of the button can be moved to either the bottom right of the screen,
+or to the middle left. You can further adapt the button to suit your needs by specifying the color of the button along with the font size and font color.
 
 As you can see below, in the example website, we changed the position and the style of the button.  The default color of the button was changed to black, which suits the theme 
 of our example  website. The font color remains white, but the size of the font has increased to size 16, which also increases the size of the support button.
@@ -283,8 +286,8 @@ Surfly's security features allow you the option to protect users data during the
 ##### Field masking
 
 Field masking allows you to protect the leaders data during the Surfly session. If the user is required to enter sensitive information (such as payment details), into your website,
-you can hide that input from the session followers. As shown in the images below, the leader is still able to read what they are typing into the form, but the followers will only see a
-series of x's.
+you can hide that input from the session followers. As shown in the images below, the leader is still able to read what they are typing into the form, but the followers (including the
+agent) will only see a series of x's.
 
 | [![Leader field masking](https://raw.github.com/surfly/tutorial/alterations/screens/Leader_fieldmasking.png)](The leader) | [![Follower field masking](https://raw.github.com/surfly/tutorial/alterations/screens/follower_fieldmasking.png)](The follower) |
 |:---:|:---:|
