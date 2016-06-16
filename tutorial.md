@@ -34,9 +34,7 @@ To take a session, log in to your Surfly account, and navigate to the Queue pane
 they have been waiting. To take a session, the agent simply presses the "take call" button. If your visitors are logged in on your website already, you can also display metadata, such as
 the visitors name in the queue, so that the agent greeting them knows who they are.
 
-| [![The Queue panel](https://raw.github.com/surfly/tutorial/master/screens/queue_panel.png)](The Queue panel) |
-|:---:|
-| The Queue panel |
+![The Queue panel](https://raw.github.com/surfly/tutorial/master/screens/queue_panel.png "The Queue panel") 
 
 
 ###### The Admin panel
