@@ -31,7 +31,18 @@ the visitors name in the queue, so that the agent greeting them knows who they a
 
 ###### The Admin panel
 
+Surfly's admin panel allows you to track your users and your agents, and can be customised to suit your needs.
 
+The buttons on the admin panel are:
+
+ - The 'start' button, this allows you to immediatly start co-browsing.  When you click on this link you are asked to invite someone to join your session, by either sending them the session url 
+   directly, or via email.  
+ - The 'queue' button, which gives you a list of queue'd users.  You can add metadata to this so that the agent knows more information about the user.
+ - The 'history' button gives an overview of your sessions, the agent that took them and the duration.  You can also choose to add chat logs to the history panel.
+ - The 'agent' button allows you to add agents to your account, and also review the amount of sessions each agent has joined.
+ - The 'settings' button lets you change your profile settings, and also includes your account details. Here, you can review your account plan, billing and personal information.
+   The settings button also contains your integration information, the Surfly code snippet and the REST API key. 
+ - The 'log out' button lets you exit the admin panel.
 
 The tutorial covers:
 
