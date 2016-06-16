@@ -285,7 +285,7 @@ There are three main ways in which to protect your users during a Surfly session
 Field masking allows you to protect your users data during the Surfly session. If at some point, the user is required to enter sensitive information, such as payment details, into your website,
 you can hide that input from the session followers. Whilst the leader is able to read what they are typing into the form, the followers will only see a series of x's.
 
-| [![Leader field masking](https://raw.github.com/surfly/tutorial/master/alterations/Leader_fieldmasking.png)](The leader) | [![Follower field masking](https://raw.github.com/surfly/tutorial/alterations/screens/follower_fieldmasking.png)](The follower) |
+| [![Leader field masking](https://raw.github.com/surfly/tutorial/alterations/screens/Leader_fieldmasking.png)](The leader) | [![Follower field masking](https://raw.github.com/surfly/tutorial/alterations/screens/follower_fieldmasking.png)](The follower) |
 |:---:|:---:|
 | The leader | The follower |
 
