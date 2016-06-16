@@ -283,14 +283,22 @@ There are three main ways in which to protect your users during a Surfly session
 ##### Field masking
 
 Field masking allows you to protect your users data during the Surfly session. If at some point, the user is required to enter sensitive information, such as payment details, into your website,
-you can hide the input from the session followers. 
+you can hide that input from the session followers. Whilst the leader is able to read what they are typing into the form, the followers will only see a series of x's.
+
+| [![Leader field masking](https://raw.github.com/surfly/tutorial/master/screens/Leader_fieldmasking.png)](The leader) | [![Second Example](https://raw.github.com/surfly/tutorial/master/screens/follower_fieldmasking.png)](The follower) |
+|:---:|:---:|
+| The leader | The follower |
+
+###### Please note: 
+
+Whilst the leader can hide their data inputs from the followers, the followers cannot hide their details from the leader.
 
 <a name="blacklist_whitelist"></a>
 ##### Blacklisting and Whitelisting
 
 Please note: This option is only available to enterprise clients.
 
-Blacklisting is used in order to deny users access from a select few webpages. If you want more control over what your users can access, whitelisting may be the most viable option.
+Blacklisting is used in order to deny users access from a select few webpages. If you want more control over what your users cannot access, whitelisting may be the most viable option.
 Whitelisting allows access only to the pages specified in the code snippet. 
 
 Users who do attempt to access the restricted url can be redirected to another page of your choice, or referred back to the original page where they had clicked the link. Otherwise, if 
@@ -311,7 +319,7 @@ request it from the leader. This could be useful for when users require further 
 
 As can be seen in the above image, the hand button is now bold, which means the agent can now use it to take, or request, control.
 
- 
+
 <a name="rest_api"></a>
 #### The REST API
 
@@ -321,8 +329,7 @@ Using the REST API allows for a more programmatical approach towards integration
 <a name="reseller information"></a>
 #### Resellers 
 
-Resellers can create new Surfly clients, through the use of the REST API.  You may invoice the clients directly, or let Surfly do this for you. 
-The REST API allows you to manage your clients by letting you create, delete, and get information about the client.
+Resellers can create new Surfly clients, through the use of the REST API.  This allows you to manage your clients by letting you create, delete, and get information about the client.
 
 <a name="examples"></a>
 ### Examples use cases
