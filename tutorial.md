@@ -2,22 +2,30 @@
 
 ### Introduction
 
+
 ###### Welcome to Surfly!
 
 Surfly enables you to integrate our co-browsing technology fully into your own website. The appearance of the co-browsing session can be fully customised to allow for a seamless addition to 
 your website. Surfly is easy to set up, as it only requires a small addition to your website's source code. You may also adapt the functionality of the session, by enabling the options you 
 wish to include, or disabling those you wish to remove.  
 
-You can either use Surfly as a feature on your own website, or integrate some (or all) of the functionalities into your own product.  For example, you may already have video chat on your website, and wish to add only the co-browsing functionality.
+You can either use Surfly as a feature on your own website, or integrate some (or all) of the functionality into your own product. For example, you may already have video chat on your website, 
+and wish to add only the co-browsing functionality.
 
-###### What is a Surfly session?
 
-A Surfly session allows you to share your browser with others. Typically, a visitor to your website will request a session and be queue'd until an agent (the person who receives the call)
-joins them. The passive member of the session is referred to as the follower, and the active member is the leader.  The leader will navigate the site, and the follower can help guide them 
-through it. Initially the agent is the follower, and the website visitor is the leader, however you can choose to swap control during the session. 
+###### How a Surfly session works
 
-Communication within the session can be done via text or video chat, and followers may highlight areas they wish to draw attention to with the drawing functionality. You may also share documents 
-and invite others to join your session by sharing the session url or sending an email. Each session has its own ID, which has been formatted to be easily communicated over the phone.   
+Typically, a visitor to your website will request a session and be queue'd until an agent (the person who receives the call) joins them. The passive member of the
+session is referred to as the follower, and the active member is the leader. The leader will navigate the site, and the follower can help guide them through it. 
+Initially the agent is the follower, and the website visitor is the leader, however you can choose to swap control during the session.
+
+
+###### During the session
+
+A Surfly session allows you to share your browser with others. During the session, the mouse arrows from all users will be visable. Only the leader can select or click items on the page,
+and if the leader decides to navigate to another url, the followers screens will be synchronised so that they can also see the new ul. The followers can take advantage of the drawing tool in
+order to highlight areas on the screen. Communication within the session can be done via text or video chat, or you may choose to disallow that functionality entirely. The users may also
+share documents and invite others to join them, if they wish.
 
 
 ###### Taking a session
@@ -27,6 +35,7 @@ they have been waiting. To take a session, the agent simply presses the "take ca
 the visitors name in the queue, so that the agent greeting them knows who they are.
 
 ![The Queue panel](https://raw.github.com/surfly/tutorial/master/screens/queue_panel.png)
+
 
 ###### The Admin panel
 
@@ -43,7 +52,7 @@ The buttons on the admin panel are:
    The settings button also contains your integration information, the Surfly code snippet and the REST API key. 
  - The 'log out' button lets you exit the admin panel.
 
-The tutorial covers:
+###### The tutorial covers:
 
  - [Session Modification](#session_modification)
  - [Add Surfly to your website](#add_surfly)
@@ -109,9 +118,23 @@ logs, or download them.
 <a name="video_chat"></a>
 #### Video chat
 
+<<<<<<< HEAD
 Surfly also allows you communicate within the session via video chat. You can also maximise the video to full screen, or
 restrict the video quality. However, if you do not want to use it, it can be easily disabled.
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+Surfly also allows you communicate within the session via video chat. You can also maximise the video to full screen, or
+restrict the video quality. However, if you do not want to use it, it can be easily disabled.
+=======
+Surfly also allows you to communicate in your session with video chat. You can also maximise the video to full screen, or restrict the video quality. However, if you do not want to use it, it can be easily disabled.
+>>>>>>> master
+=======
+Surfly also allows you to communicate in your session with video chat. You can also maximise the video to full screen, or restrict the video quality. However, if you do not want to use it, it can be easily disabled.
+
+>>>>>>> e5117235af952fd5bd2e8b23da32a2120622785b
+>>>>>>> master
 
 <a name="document_sharing"></a>
 #### Document sharing 
@@ -253,8 +276,25 @@ As shown in the image below, this unique session ID will also be shown in the qu
 
 #### Integrate with existing chat solutions
 
+<<<<<<< HEAD
 It is also possible to customise your session and to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want to add Surfly's co-browsing functionality to this. In this case, Surfly can be integrated in such a way so that it acts as a transparent addition to your product and allow you to entirely customise the appearance of the session. 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want add Surfly's co-browsing 
+functionality to this. Surfly can be integrated in such a way so that it acts as a transparent addition to your product.
+=======
+It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want to add Surfly's co-browsing 
+functionality. Surfly can be integrated in such a way so that it acts as a transparent addition to your product.
+>>>>>>> master
+=======
+
+It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want to add Surfly's co-browsing 
+functionality. Surfly can be integrated in such a way so that it acts as a transparent addition to your product.
+
+>>>>>>> e5117235af952fd5bd2e8b23da32a2120622785b
+>>>>>>> master
 
 #### Create your own invite page
 
@@ -331,9 +371,26 @@ Whilst the leader can mask their data, and hide it from the followers, the follo
 
 Please note: This option is only available to enterprise clients.
 
+<<<<<<< HEAD
 
 Blacklisting is used in order to deny users access from a select few webpages. If you want more control over what your users cannot access, whitelisting may be the most viable option.
 Whitelisting allows access only to the pages specified in the code snippet. 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+Blacklisting is used in order to deny users access from a select few webpages. If you want more control over what your users cannot access, whitelisting may be the most viable option.
+Whitelisting allows access only to the pages specified in the code snippet. 
+=======
+Blacklisting is used in order to deny users access from a select few pages. If you want more control over what your users can access, whitelisting may be the most viable option.
+Whitelisting allows access only to the pages specified in the code snippet.
+>>>>>>> master
+=======
+
+Blacklisting is used in order to deny users access from a select few pages. If you want more control over what your users can access, whitelisting may be the most viable option.
+Whitelisting allows access only to the pages specified in the code snippet.
+
+>>>>>>> e5117235af952fd5bd2e8b23da32a2120622785b
+>>>>>>> master
 
 Users who do attempt to access the restricted url can be redirected to another page of your choice, or referred back to the original page where they had clicked the link. Otherwise, if 
 the redirect url is not specified, the user will be redirected to Surfly's default page. 
