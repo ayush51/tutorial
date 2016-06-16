@@ -29,6 +29,9 @@ the visitors name in the queue, so that the agent greeting them knows who they a
 
 ![The Queue panel](https://raw.github.com/surfly/tutorial/master/screens/queue_panel.png)
 
+###### The Admin panel
+
+
 
 The tutorial covers:
 
@@ -230,7 +233,12 @@ The button, by default, will only be shown if an agent is logged in to the Surfl
 <a name="session_id"></a>
 #### The session ID approach
 
-The session ID approach enables a small, discrete icon to be added to your website. When a visitor clicks on this icon, they will start a Surfly session.
+The session ID approach is especially useful if you are already in contact with a customer via another medium. If the customer needs help navigating a website, the 
+agent can direct them to start a co-browsing session. The customer will click on the link, and have a unique ID assigned to them, which they can give to the agent. 
+As shown in the image below, this unique session ID will also be shown in the queue panel, allowing the agent to identify the customer, and join the session.
+
+![The Queue panel](https://raw.github.com/surfly/tutorial/master/screens/queue_panel.png)
+
 
 #### Integrate with existing chat solutions
 
@@ -238,6 +246,8 @@ It is also possible to integrate Surfly with existing chat solutions. For exampl
 functionality to this. Surfly can be integrated in such a way so that it acts as a transparent addition to your product.
 
 #### Create your own invite page
+
+You can fully customise the page for inviting people to start surfly and also add metadata so that the agents know information about the user before they start a session
 
 <a name="advanced_options"></a>
 ### Advanced options
@@ -248,7 +258,10 @@ This section covers:
  - [Adding custom metadata to queue requests](#custom_metadata)
  - [Security Features](#security_features)
  - [Customise control switching](#customise_control_switching)
- - [The REST API](#rest_api)
+
+Sufly and 3rd party cookies
+
+Top level domains do not work with iframe - can do a c-name/ open a new tab
 
 <a name="session_continuation"></a>
 #### Session continuation
@@ -322,18 +335,6 @@ request it from the leader. This could be useful for when users require further 
 ![request control](https://raw.github.com/surfly/tutorial/master/screens/agent_request.png)
 
 As can be seen in the above image, the hand button is now bold, which means the agent can now use it to take, or request, control.
-
-
-<a name="rest_api"></a>
-#### The REST API
-
-The REST API allows you to tightly integrate Surfly into your website. You can delete, create, update and retrieve information on your agents, sessions and the incoming queue.
-Using the REST API allows for a more programmatical approach towards integration, and can be used to add the co-browsing technology into your own product. 
-
-<a name="reseller information"></a>
-#### Resellers 
-
-Resellers can create new Surfly clients, through the use of the REST API.  This allows you to manage your clients by letting you create, delete, and get information about the client.
 
 <a name="examples"></a>
 ### Examples use cases
