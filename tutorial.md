@@ -367,8 +367,15 @@ Please note: This option is only available to enterprise clients.
 Blacklisting is used in order to deny users access from a select few webpages. If you want more control over what your users cannot access, whitelisting may be the most viable option.
 Whitelisting allows access only to the pages specified in the code snippet. 
 
-Users who do attempt to access the restricted url can be redirected to another page of your choice, or referred back to the original page where they had clicked the link. Otherwise, if 
-the redirect url is not specified, the user will be redirected to Surfly's default page. 
+The format for blacklisting or whitelisting is a string representation of a JSON array.  You need to specify the restricted url, and then can optionally decide whether to add a redirect url
+and a restriction type. If the redirect url is not specified, the user will be redirected to Surfly's default page. 
+
+```
+blacklist: JSON.stringify([{"pattern": ".*/restricted.*", "redirect": "{{referer}}#restricted"}])
+```
+
+In the above example, the pattern will prevent access to any url which includes 'restricted'.  If a user tries to access this page, they will be redirected to the home page with the 
+#restricted anchor added.
 
 <a name="session_log_info"></a>
 #### Add information to the session log
