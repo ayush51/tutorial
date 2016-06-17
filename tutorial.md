@@ -263,8 +263,10 @@ As shown in the image below, this unique session ID will also be shown in the qu
 
 #### Integrate with existing chat solutions
 
+
 It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want to add Surfly's co-browsing 
 functionality. Surfly can be integrated in such a way so that it acts as a transparent addition to your product.
+
 
 #### Create your own invite page
 
@@ -340,6 +342,7 @@ Whilst the leader can mask their data, and hide it from the followers, the follo
 ##### Blacklisting and Whitelisting
 
 Please note: This option is only available to enterprise clients.
+
 
 Blacklisting is used in order to deny users access from a select few pages. If you want more control over what your users can access, whitelisting may be the most viable option.
 Whitelisting allows access only to the pages specified in the code snippet.
