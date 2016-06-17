@@ -4,9 +4,10 @@
 
 ###### Welcome to Surfly!
 
-Surfly provides a co-browsing functionality which allows you to share your browsing session with other users.
-You can start a Surfly session just by clicking on a button and then send a link to other people so they can join you. This is the easiest and quickest way to co-browse and does not require any configuration.
-However, if you wish to use Surfly as a feature on your own website, you can also add a Surfly button to your website. By doing this, you will be able to fully customise your session and use as much or as little of Surfly's functionalities into your own product.
+Surfly provides co-browsing, which allows you to share your browsing session with other users.
+You can start a Surfly session simply by entering the url of the website you want to browse into the 'start session' panel on your admin page.  You can then invite people to join you by sharing
+the session url with them. This is the easiest and quickest way to co-browse and does not require any configuration.
+However, if you wish to use Surfly as a feature on your own website, you can also add a Surfly button to your website. By doing this, you will be able to fully customise your session and use as much or as little of Surfly's functionalty within your own product.
 
 ###### During the session
 
@@ -15,7 +16,8 @@ and if the leader decides to navigate to another url, the followers' screens wil
 
 ###### Website Integration
 
-If you wish to integrate Surfly to your website, visitors to your website will be able to click the "get live help" to request a session. They will then be queue'd until an agent (the person who receives the call) joins them. The passive member of the session is referred to as the follower, and the active member is the leader. The leader will navigate the site, and the follower can help guide them through it. Initially the agent is the follower, and the website visitor is the leader, however you can choose to swap control at any time during the session.
+If you wish to integrate Surfly to your website, visitors to your website will be able to click the "get live help" to request a session. They will then be queue'd until an agent (the person who receives the call) joins them. The passive member of the session is referred to as the follower, and the active member is the leader.
+The leader will navigate the site, and the follower can help guide them through it. Initially the agent is the follower, and the website visitor is the leader, however you can choose to swap control at any time during the session.
 
 ###### Responding to incoming requests
 
@@ -38,21 +40,16 @@ The buttons on the admin panel are:
 
 ###### The tutorial covers:
 
-<<<<<<< HEAD
+
  - [Session Modification](#session_modification)
  - [Integration](#add_surfly)
  - [Integration options](#advanced_options)
-=======
- - [A Surfly session](#session_modification)
- - [Add Surfly to your website](#add_surfly)
- - [Advanced options](#advanced_options)
->>>>>>> revised_tutorial
  - [Example use cases](#examples)
 
 <a name="session_modification"></a>
 ### A Surfly session
 
-During a Surfly session, you will have access to several functionalities allowing you to communicate efficiently with other users. 
+Surfly comes with several different options for communicating with other users. You may decide to video or text chat, and followers can highlight areas with the drawing tool. 
 If Surfly is integrated to your website, you can adapt the way a session starts, looks and behaves by changing the default settings. This is easily accomplished by specifying your prefences in the Surfly widget.  
 If you would like greater control over the user interface, you can also fully customise it through the API (please see the documentation for further details).
 
@@ -96,7 +93,7 @@ You can also choose to minimise the chat window, and display only the icons in a
 
 ![docked_only](https://raw.github.com/surfly/tutorial/master/screens/docked_only.png)
 
-Morevover, if you want to monitor the conversations between the agents and the users, you can choose to store the chat logs. You can access them by navigating to 'History' in your Surfly admin panel. The chat log section will have two icons inside, allowing you to either view the 
+If you want to monitor the conversations between the agents and the users, you can choose to store the chat logs. You can access them by navigating to 'History' in your Surfly admin panel. The chat log section will have two icons inside, allowing you to either view the 
 logs, or download them.  
 
 ![chatlogs](https://raw.github.com/surfly/tutorial/master/screens/logged_icon.png)
