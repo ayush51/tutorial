@@ -155,7 +155,7 @@ As can be seen in the above image, the hand button is now bold, which means the 
 
 
 <a name="add_surfly"></a>
-### Integation
+### Integration
 
 To start an inbound Surfly session, you need to add the Surfly code snippet into your websites source code. The default parameters within the code snippet can be modified to allow for a 
 seamless integration into your website. 
