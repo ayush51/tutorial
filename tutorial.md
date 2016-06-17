@@ -58,8 +58,8 @@ The buttons on the admin panel are:
 ###### The tutorial covers:
 
  - [Session Modification](#session_modification)
- - [Add Surfly to your website](#add_surfly)
- - [Advanced options](#advanced_options)
+ - [Integration](#add_surfly)
+ - [Integration options](#advanced_options)
  - [Example use cases](#examples)
 
 <a name="session_modification"></a>
@@ -77,6 +77,7 @@ The main points covered in the session modification section are:
  - [The window size options](#window_size)
  - [The drawing mode](#drawing_mode)
  - [Ending a session to display another page, or redirect to another page](#popupurl)
+ - [Control switching](#customise_control_switching)
 
 <a name="chat_box"></a>
 ####Chat box
@@ -177,9 +178,22 @@ The user can exit the popup window by clicking on the cross to the top right of 
 
 ![Popup url](https://raw.github.com/surfly/tutorial/master/screens/popup_example.png)
 
+<a name="customise_control_switching"></a>
+#### Customise control switching
+
+If you want to be able to switch control between the leader and the follower, you can chose between either allowing the agent to take control, or to
+request it from the leader. This could be useful for when users require further guidance through the website.
+
+![request control](https://raw.github.com/surfly/tutorial/master/screens/agent_request.png)
+
+As can be seen in the above image, the hand button is now bold, which means the agent can now use it to take, or request, control.
+
 
 <a name="add_surfly"></a>
-### Add Surfly to your website
+### Integation
+
+To start an inbound Surfly session, you need to add the Surfly code snippet into your websites source code. The default parameters within the code snippet can be modified to allow for a 
+seamless integration into your website. 
 
 #### The Surfly Code Snippet
 
@@ -244,7 +258,18 @@ If you prefer, you can also adapt the default "get live help" button that Surfly
 The button appearance can be adapted by changing where it appears on your screen, and the colors and size of it. The position of the button can be moved to either the bottom right of the screen,
 or to the middle left. You can further adapt the button to suit your needs by specifying the color of the button along with the font size and font color.
 
-As you can see below, in the example website, we changed the position and the style of the button.  The default color of the button was changed to black, which suits the theme 
+As you can see below, in the example website, we changed the position and the style of the button. This was achieved with a simple change to the code snippet.
+
+```javascript
+
+position:"middleright"
+theme_font_background:"#000000",
+theme_font_color:"#ffffff",
+theme_font_size:"16",
+
+```
+
+The default color of the button was changed to black, which suits the theme 
 of our example  website. The font color remains white, but the size of the font has increased to size 16, which also increases the size of the support button.
 
 ![example website with adapted Surfly button](https://raw.github.com/surfly/tutorial/master/screens/adapted_surfly_button.png)
@@ -272,8 +297,8 @@ You can fully customise the page from which you want to invite users to start a 
 queue panel.  This allows you to pass information to your agents, such as name or email address. You also do not have to use the Surfly url for the session and can redirect your clients to a customised landing page.
 
 
-<a name="advanced_options"></a>
-### Advanced options
+<a name="integration_options"></a>
+### Integration Options
 
 This section covers:
 
@@ -281,13 +306,14 @@ This section covers:
  - [Session continuation](#session_continuation)
  - [Adding custom metadata to queue requests](#custom_metadata)
  - [Security Features](#security_features)
- - [Customise control switching](#customise_control_switching)
-
+ - [Add information to a session log](#session_log_info)
+ - [Customising the website appearance depending on who is in control](#customise_appearance_for_user)
 
 <a name="third_party_cookies"></a>
 #### Surfly and third party cookies
 
-Top level domains do not transfer third party cookies to the iframe, so instead you may choose to open a session in a new tab, or to use a CNAME.
+When integrating Surfly into your website, it is important to know that top level domains do not transfer third party cookies to the iframe, so instead you may choose to open a session in a 
+new tab, or to use a CNAME.
 
 <a name="session_continuation"></a>
 #### Session continuation
@@ -314,10 +340,9 @@ You can also track the queue status from the clients side, so you can monitor th
 #### Security Features
 
 Surfly's security features allow you the option to protect users data during the session, and, if required, restrict access to selected webpages. 
- 
- - [Blacklisting and Whitelisting](#blacklist_whitelist)
+
  - [Field masking](#field_masking)
- - [Auditlog](#auditlog)
+ - [Blacklisting and Whitelisting](#blacklist_whitelist)
 
 <a name="field_masking"></a>
 ##### Field masking
@@ -342,18 +367,27 @@ Please note: This option is only available to enterprise clients.
 Blacklisting is used in order to deny users access from a select few webpages. If you want more control over what your users cannot access, whitelisting may be the most viable option.
 Whitelisting allows access only to the pages specified in the code snippet. 
 
-Users who do attempt to access the restricted url can be redirected to another page of your choice, or referred back to the original page where they had clicked the link. Otherwise, if 
-the redirect url is not specified, the user will be redirected to Surfly's default page. 
+The format for blacklisting or whitelisting is a string representation of a JSON array.  You need to specify the restricted url, and then can optionally decide whether to add a redirect url
+and a restriction type. If the redirect url is not specified, the user will be redirected to Surfly's default page. 
 
-<a name="customise_control_switching"></a>
-#### Customise control switching 
+```
+blacklist: JSON.stringify([{"pattern": ".*/restricted.*", "redirect": "{{referer}}#restricted"}])
+```
 
-If you want to be able to switch control between the leader and the follower, you can chose between either allowing the agent to take control, or to
-request it from the leader. This could be useful for when users require further guidance through the website.
+In the above example, the pattern will prevent access to any url which includes 'restricted'.  If a user tries to access this page, they will be redirected to the home page with the 
+#restricted anchor added.
 
-![request control](https://raw.github.com/surfly/tutorial/master/screens/agent_request.png)
+<a name="session_log_info"></a>
+#### Add information to the session log
 
-As can be seen in the above image, the hand button is now bold, which means the agent can now use it to take, or request, control.
+You can use the REST API to add additional information to the session log.  This is especially useful if you want to be able to monitor your agents, for example, you could log individual sales
+You can also create custom log messages using the Surfly.log() function. 
+
+<a name="customise_appearance_for_user></a>
+#### Customise website appearance depending on who is in control
+
+Surfly sessions are always comprised of one leader, and one or more followers. The leader is the only person who can click or type during the session, but you can switch control between
+the leaders and the followers, if required.  You can specify the features you want to give to the leader and the follower during the session by enabling or disabling icons in the dock. 
 
 <a name="examples"></a>
 ### Examples use cases
