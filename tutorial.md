@@ -2,8 +2,10 @@
 
 ### Introduction
 
-
 ###### Welcome to Surfly!
+
+There are two ways in which you can use Surfly, for outbound uses (the link on the website), or inbound uses (full integration). The simplist way in which to use Surfly is the outbound case, 
+you can simply type the website you want to browse, and invite others to join you by sending them the url. 
 
 Surfly enables you to integrate our co-browsing technology fully into your own website. The appearance of the co-browsing session can be fully customised to allow for a seamless addition to 
 your website. Surfly is easy to set up, as it only requires a small addition to your website's source code. You may also adapt the functionality of the session, by enabling the options you 
@@ -12,12 +14,6 @@ wish to include, or disabling those you wish to remove.
 You can either use Surfly as a feature on your own website, or integrate some (or all) of the functionality into your own product. For example, you may already have video chat on your website, 
 and wish to add only the co-browsing functionality.
 
-
-###### How a Surfly session works
-
-Typically, a visitor to your website will request a session and be queue'd until an agent (the person who receives the call) joins them. The passive member of the
-session is referred to as the follower, and the active member is the leader. The leader will navigate the site, and the follower can help guide them through it. 
-Initially the agent is the follower, and the website visitor is the leader, however you can choose to swap control during the session.
 
 
 ###### During the session
@@ -28,13 +24,20 @@ order to highlight areas on the screen. Communication within the session can be 
 share documents and invite others to join them, if they wish.
 
 
-###### Taking a session
+###### Website Integration
+
+Typically, a visitor to your website will request a session and be queue'd until an agent (the person who receives the call) joins them. The passive member of the
+session is referred to as the follower, and the active member is the leader. The leader will navigate the site, and the follower can help guide them through it. 
+Initially the agent is the follower, and the website visitor is the leader, however you can choose to swap control during the session.
+
+
+###### Responding to incoming requests
 
 To take a session, log in to your Surfly account, and navigate to the Queue panel. Here, agents can see how many users they have queue'd up, their location, and the time 
 they have been waiting. To take a session, the agent simply presses the "take call" button. If your visitors are logged in on your website already, you can also display metadata, such as
 the visitors name in the queue, so that the agent greeting them knows who they are.
 
-![The Queue panel](https://raw.github.com/surfly/tutorial/master/screens/queue_panel.png "The Queue panel") 
+![The Queue panel](https://raw.github.com/surfly/tutorial/master/screens/queue_panel.png)
 
 
 ###### The Admin panel
@@ -60,7 +63,7 @@ The buttons on the admin panel are:
  - [Example use cases](#examples)
 
 <a name="session_modification"></a>
-### Session Modification
+### A Surfly session
 
 You can adapt the way a session starts, looks and behaves by changing the default settings to meet your needs. This is easy to accomplish by specifying your prefences in the Surfly widget.  If 
 you would like greater control over the user interface, you can also fully customise it through the API. (please see the documentation for further details).
