@@ -155,7 +155,7 @@ As can be seen in the above image, the hand button is now bold, which means the 
 
 
 <a name="add_surfly"></a>
-### Integation
+### Integration
 
 To start an inbound Surfly session, you need to add the Surfly code snippet into your websites source code. The default parameters within the code snippet can be modified to allow for a 
 seamless integration into your website. 
@@ -348,7 +348,7 @@ In the above example, the pattern will prevent access to any url which includes 
 You can use the REST API to add additional information to the session log.  This is especially useful if you want to be able to monitor your agents, for example, you could log individual sales
 You can also create custom log messages using the Surfly.log() function. 
 
-<a name="customise_appearance_for_user></a>
+<a name="customise_appearance_for_user"></a>
 #### Customise website appearance depending on who is in control
 
 Surfly sessions are always comprised of one leader, and one or more followers. The leader is the only person who can click or type during the session, but you can switch control between
