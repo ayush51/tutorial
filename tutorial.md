@@ -118,23 +118,7 @@ logs, or download them.
 <a name="video_chat"></a>
 #### Video chat
 
-<<<<<<< HEAD
-Surfly also allows you communicate within the session via video chat. You can also maximise the video to full screen, or
-restrict the video quality. However, if you do not want to use it, it can be easily disabled.
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-Surfly also allows you communicate within the session via video chat. You can also maximise the video to full screen, or
-restrict the video quality. However, if you do not want to use it, it can be easily disabled.
-=======
 Surfly also allows you to communicate in your session with video chat. You can also maximise the video to full screen, or restrict the video quality. However, if you do not want to use it, it can be easily disabled.
->>>>>>> master
-=======
-Surfly also allows you to communicate in your session with video chat. You can also maximise the video to full screen, or restrict the video quality. However, if you do not want to use it, it can be easily disabled.
-
->>>>>>> e5117235af952fd5bd2e8b23da32a2120622785b
->>>>>>> master
 
 <a name="document_sharing"></a>
 #### Document sharing 
@@ -276,25 +260,7 @@ As shown in the image below, this unique session ID will also be shown in the qu
 
 #### Integrate with existing chat solutions
 
-<<<<<<< HEAD
 It is also possible to customise your session and to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want to add Surfly's co-browsing functionality to this. In this case, Surfly can be integrated in such a way so that it acts as a transparent addition to your product and allow you to entirely customise the appearance of the session. 
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want add Surfly's co-browsing 
-functionality to this. Surfly can be integrated in such a way so that it acts as a transparent addition to your product.
-=======
-It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want to add Surfly's co-browsing 
-functionality. Surfly can be integrated in such a way so that it acts as a transparent addition to your product.
->>>>>>> master
-=======
-
-It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want to add Surfly's co-browsing 
-functionality. Surfly can be integrated in such a way so that it acts as a transparent addition to your product.
-
->>>>>>> e5117235af952fd5bd2e8b23da32a2120622785b
->>>>>>> master
 
 #### Create your own invite page
 
@@ -329,10 +295,8 @@ session. Once the session has finished, the information is sent back to the webs
 
 There are two main ways to set up session continuation:
 
- - Full session continuation allows the transfer of all data, including (unlike soft session continuation), cookies with a HttpOnly tag. This requires a change in the load balance configuration
-   of the host website. 
- - Soft session continuation does not require a change in the load balance configuration, but is more limited.  A Surfly widget needs to be present on all pages you wish to transfer cookies from, 
-   and excludes cookies with a HttpOnly tag.
+ - Full session continuation allows the transfer of all data, including (unlike soft session continuation), cookies with a HttpOnly tag.
+ - Soft session continuation is more limited, and excludes cookies with a HttpOnly tag.
 
 <a name="custom_metadata"></a>
 #### Add custom metadata to Queue request
@@ -371,34 +335,11 @@ Whilst the leader can mask their data, and hide it from the followers, the follo
 
 Please note: This option is only available to enterprise clients.
 
-<<<<<<< HEAD
-
 Blacklisting is used in order to deny users access from a select few webpages. If you want more control over what your users cannot access, whitelisting may be the most viable option.
 Whitelisting allows access only to the pages specified in the code snippet. 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-Blacklisting is used in order to deny users access from a select few webpages. If you want more control over what your users cannot access, whitelisting may be the most viable option.
-Whitelisting allows access only to the pages specified in the code snippet. 
-=======
-Blacklisting is used in order to deny users access from a select few pages. If you want more control over what your users can access, whitelisting may be the most viable option.
-Whitelisting allows access only to the pages specified in the code snippet.
->>>>>>> master
-=======
-
-Blacklisting is used in order to deny users access from a select few pages. If you want more control over what your users can access, whitelisting may be the most viable option.
-Whitelisting allows access only to the pages specified in the code snippet.
-
->>>>>>> e5117235af952fd5bd2e8b23da32a2120622785b
->>>>>>> master
 
 Users who do attempt to access the restricted url can be redirected to another page of your choice, or referred back to the original page where they had clicked the link. Otherwise, if 
 the redirect url is not specified, the user will be redirected to Surfly's default page. 
-
-<a name="auditlog"></a>
-##### Auditlog
-
-This allows you to create custom log messages, and to list and review all the session logs.
 
 <a name="customise_control_switching"></a>
 #### Customise control switching 
