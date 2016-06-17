@@ -339,8 +339,7 @@ and a restriction type. If the redirect url is not specified, the user will be r
 blacklist: JSON.stringify([{"pattern": ".*/restricted.*", "redirect": "{{referer}}#restricted"}])
 ```
 
-In the above example, the pattern will prevent access to any url which includes 'restricted'.  If a user tries to access this page, they will be redirected to the home page with the 
-#restricted anchor added.
+In the above example, the pattern will prevent access to any url which includes 'restricted'.  If a user tries to access this page, they will be redirected to the home page with the restricted anchor added.
 
 <a name="session_log_info"></a>
 #### Add information to the session log
