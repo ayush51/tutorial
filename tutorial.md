@@ -15,14 +15,9 @@ However, if you wish to use Surfly as a feature on your own website, you can als
 A Surfly session allows you to share your browser with others. During the session, the mouse arrows from all users will be visible. Only the leader can select or click items on the page,
 and if the leader decides to navigate to another url, the followers' screens will be synchronised so that they can also see this new page. The followers can take advantage of the drawing tool provided in order to highlight areas on the screen. During the session, users can communicate via text or video chat, share documents and invite others to join them.
 
-###### Website Integration
-
-If you wish to integrate Surfly to your website, visitors to your website will be able to click the 'get live help' button to request a session. They will then be queue'd until an agent (the person who receives the call) joins them. The passive member of the session is referred to as the follower, and the active member is the leader.
-The leader will navigate the site, and the follower can help guide them through it. Initially the agent is the follower, and the website visitor is the leader, however you can choose to swap control at any time during the session.
-
 ###### Responding to incoming requests
 
-To take a session, log in to your Surfly account, and navigate to the 'Queue' panel. Here, agents can see how many users they have queue'd up, their location, and the time they have been waiting. To take a session, the agent simply presses the "take call" button. If your visitors are logged in on your website already, you can also display metadata, such as the visitors name in the queue, so that the agent greeting them knows who they are.
+To accept an incoming request, log in to your Surfly account, and navigate to the 'Queue' panel. Here, agents can see how many users they have queue'd up, their location, and the time they have been waiting. To answer, the agent simply presses the 'take call' button. If your visitors are logged in on your website already, you can also display metadata, such as the visitors name in the queue, so that the agent greeting them knows who they are.
 
 ![The Queue panel](https://raw.github.com/surfly/tutorial/master/screens/queue_panel.png)
 
@@ -39,13 +34,6 @@ The buttons on the admin panel are:
  - The 'settings' button lets you change your profile settings, and also includes your account details. Here, you can review your account plan, billing and personal information. The settings button also contains your integration information, the Surfly code snippet and the REST API key. 
  - The 'log out' button lets you exit the admin panel.
 
-###### The tutorial covers:
-
-
- - [Session Modification](#session_modification)
- - [Integration](#add_surfly)
- - [Integration options](#advanced_options)
- - [Example use cases](#examples)
 
 <a name="session_modification"></a>
 ### A Surfly session
@@ -62,8 +50,8 @@ The main points covered in the session modification section are:
  - [Document sharing](#document_sharing)
  - [The window size options](#window_size)
  - [The drawing mode](#drawing_mode)
- - [Ending a session to display another page, or redirect to another page](#popupurl)
  - [Control switching](#customise_control_switching)
+ - [Ending a session to display another page, or redirect to another page](#popupurl)
 
 <a name="invite_user"></a>
 #### Inviting a user to join your session
@@ -76,7 +64,7 @@ Both of these methods will load the following screen:
 
 ![invite_user](https://raw.github.com/surfly/tutorial/master/screens/invite_user.png)
 
-You can then decide to either share the url of the session, or send an email to the user you wish to invite. 
+You can then decide to either share the url of the session, or send an email to the users you wish to invite. During a session, there is always a sole leader at any given time but there can be multiple followers.
 
 <a name="chat_box"></a>
 ####Chat box
@@ -119,8 +107,8 @@ If you wish, you may also disable the document sharing tool.
 #### Window Size options
 
 The window is normally set to the person with the smallest screen, as this allows for a smooth transition into the Surfly session. If you see blank edges at the side of your screen, it is 
-only because your screen is larger than the person you are co-browsing with. However, you can also decide to set a maximum or minimum size for the window.  Alternatively you may decide to remove the
-set to smallest screen functionality altogether.
+only because your screen is larger than the person you are co-browsing with. However, you can also decide to set a maximum or minimum size for the window.  
+Alternatively you may decide to remove the set to smallest screen functionality altogether. In this case, the window will be set to the size of the leader's screen.
 
 <a name="drawing_mode"></a>
 #### Options for the drawing mode
@@ -133,6 +121,16 @@ The green drawings underscoring the button are clearly visible to the leader of 
 
 ![changed drawing color](https://raw.github.com/surfly/tutorial/master/screens/drawing.png)
 
+<a name="customise_control_switching"></a>
+#### Customise control switching
+
+If you want to be able to switch control between the leader and the follower, you can choose between either allowing the agent to take control, or to
+request it from the leader. This could be useful for when users require further guidance through the website.
+
+![request control](https://raw.github.com/surfly/tutorial/master/screens/agent_request.png)
+
+As can be seen in the above image, the hand button is now bold, which means the agent can now use it to take, or request, control.
+
 <a name="popupurl"></a>
 #### Exiting the session display or redirect to another page
 
@@ -144,21 +142,13 @@ The user can exit the popup window by clicking on the cross to the top right of 
 
 ![Popup url](https://raw.github.com/surfly/tutorial/master/screens/popup_example.png)
 
-<a name="customise_control_switching"></a>
-#### Customise control switching
-
-If you want to be able to switch control between the leader and the follower, you can choose between either allowing the agent to take control, or to
-request it from the leader. This could be useful for when users require further guidance through the website.
-
-![request control](https://raw.github.com/surfly/tutorial/master/screens/agent_request.png)
-
-As can be seen in the above image, the hand button is now bold, which means the agent can now use it to take, or request, control.
-
 
 <a name="add_surfly"></a>
 ### Integration
 
-To start an inbound Surfly session, you need to add the Surfly code snippet into your websites source code. The default parameters within the code snippet can be modified to allow for a 
+If you wish to integrate Surfly to your website, visitors to your website will be able to click the 'get live help' button to request a session. They will then be queue'd until an agent (the person who receives the call) joins them. The person who initiated the session is referred to as the leader and the people joining in will be followers. 
+The leader will navigate the site, and the follower can help guide them through it. Initially the agent is the follower, and the website visitor is the leader, however you can choose to swap control at any time during the session.
+To integrate Surfly, you need to add the Surfly code snippet into your websites source code. The default parameters within the code snippet can be modified to allow for a 
 seamless integration into your website. 
 
 #### The Surfly Code Snippet
@@ -184,35 +174,12 @@ You can answer this request via the Surfly admin panel.
 ### Starting a session
 
 You can start a session in the following ways:
- - [The auto_start option](#auto_start)
- - [Customise your own button](#surflystart_anchor)
+ - [Button appearance](#button_appearance)
  - [Stealth mode](#stealth_mode)
-
-
-<a name="auto_start"></a>
-#### Auto start a session
-
-If you enable auto start, it means the webpage including the code snippet will immediatly start a Surfly session. The page will, by default, display a red banner asking the
-visitor to wait for an agent to join their session, and the queue pin number.
-Auto start is especially useful if you want to display a certain webpage whilst the visitor is waiting for an agent to join them.  In our example webpage we have enabled autostart and
-have customised the page so that the user is aware that they are in the queue.
-
-![auto_start](https://raw.github.com/surfly/tutorial/master/screens/auto_start.png)
-
-<a name="surflystart_anchor"></a>
-#### Customise your own button
-
-If you want to create your own button, you can use the #surflystart anchor, which can be integrated into your website's source code. You can choose the text you wish to write 
-onto the button, and it can be fully styled with css so that it compliments your website design.  As you can see in the image below, we created our own start button. If a visitor to the website
-clicks on it, it will lead them to a Surfly session.
-
-![The end result](https://raw.github.com/surfly/tutorial/master/screens/Surflystart_anchor.png)
-
-<a name="stealth_mode"></a>
-#### Start a session in stealth mode
-
-If you do not wish to have a visual button or link on your webpage, then you can use stealth mode. This allows visitors to initiate a Surfly session simply 
-by pressing CTRL+ENTER.  The visitor will then be queue'd, and the Surfly session will start as normal.
+ - [Customise your own button](#surflystart_anchor)
+ - [Session ID](#session_id)
+ - [Create an invite page](#auto_start)
+ - [Integrate with existing chat solutions](#integrate_chat)
 
 <a name="button_appearance"></a>
 #### Button Appearance
@@ -242,6 +209,21 @@ of our example  website. The font color remains white, but the size of the font 
 
 The button, by default, will only be shown if an agent is logged into the Surfly admin page. This can also be disabled, if you wish.
 
+<a name="stealth_mode"></a>
+#### Start a session in stealth mode
+
+If you do not wish to have a visual button or link on your webpage, then you can use stealth mode. This allows visitors to initiate a Surfly session simply 
+by pressing CTRL+ENTER.  The visitor will then be queue'd, and the Surfly session will start as normal.
+
+<a name="surflystart_anchor"></a>
+#### Customise your own button
+
+If you want to create your own button, you can use the #surflystart anchor, which can be integrated into your website's source code. You can choose the text you wish to write 
+onto the button, and it can be fully styled with css so that it compliments your website design.  As you can see in the image below, we created our own start button. If a visitor to the website
+clicks on it, it will lead them to a Surfly session.
+
+![The end result](https://raw.github.com/surfly/tutorial/master/screens/Surflystart_anchor.png)
+
 <a name="session_id"></a>
 #### The session ID approach
 
@@ -251,20 +233,23 @@ As shown in the image below, this unique session ID will also be shown in the qu
 
 ![The Queue panel](https://raw.github.com/surfly/tutorial/master/screens/queue_panel.png)
 
+<a name="auto_start"></a>
+#### Create an invite page
 
+If you enable auto start, it means the webpage including the code snippet will immediatly start a Surfly session. The page will, by default, display a red banner asking the
+visitor to wait for an agent to join their session, and the queue pin number.
+Auto start is especially useful if you want to display a specific webpage whilst the visitor is waiting for an agent to join them. You can therefore fully customise the page from which you want to invite users to start a session. In our example webpage we have enabled autostart and create our own invite page so that the user is aware that they are in the queue.
+
+![auto_start](https://raw.github.com/surfly/tutorial/master/screens/auto_start.png)
+
+<a name="integrate_chat"></a>
 #### Integrate with existing chat solutions
-
 
 It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want to add Surfly's co-browsing functionality to this.
 In this case, Surfly can be integrated in such a way so that it acts as a transparent addition to your product and allow you to entirely customise the appearance of the session. 
 As can be seen in the image below, the chat solutions are given a higher z-index than Surfly, so are stacked on top of the co-browsing session.  
 
 ![Chat solutions](https://raw.github.com/surfly/tutorial/master/screens/chat_solutions.png)
-
-#### Create your own invite page
-
-You can fully customise the page from which you want to invite users to start a session.  If your user has logged in to your website, you can also decide to add metadata to your
-queue panel.  This allows you to pass information to your agents, such as name or email address. You also do not have to use the Surfly url for the session and can redirect your clients to a customised landing page.
 
 
 <a name="integration_options"></a>
