@@ -4,7 +4,7 @@
 
 ###### Welcome to Surfly!
 
-Surfly provides co-browsing, this enables you to share your browsing session with others..
+Surfly provides co-browsing, this enables you to share your browsing session with others.
 You can start a Surfly session simply by entering the url of the website you want to browse into the 'start session' panel on your admin page.  You can then invite people to join you by sharing
 the session url with them. This is the easiest and quickest way to co-browse and does not require any configuration.
 However, if you wish to use Surfly as a feature on your own website, you can also add a Surfly button to your website. By doing this, you will be able to fully customise your session and use as much or as little of Surfly's functionalty within your own product.
@@ -16,7 +16,7 @@ and if the leader decides to navigate to another url, the followers' screens wil
 
 ###### Website Integration
 
-If you wish to integrate Surfly to your website, visitors to your website will be able to click the "get live help" to request a session. They will then be queue'd until an agent (the person who receives the call) joins them. The passive member of the session is referred to as the follower, and the active member is the leader.
+If you wish to integrate Surfly to your website, visitors to your website will be able to click the 'get live help' button to request a session. They will then be queue'd until an agent (the person who receives the call) joins them. The passive member of the session is referred to as the follower, and the active member is the leader.
 The leader will navigate the site, and the follower can help guide them through it. Initially the agent is the follower, and the website visitor is the leader, however you can choose to swap control at any time during the session.
 
 ###### Responding to incoming requests
@@ -50,7 +50,7 @@ The buttons on the admin panel are:
 ### A Surfly session
 
 Surfly comes with several different options for communicating with other users. You may decide to video or text chat, and followers can highlight areas with the drawing tool. 
-If Surfly is integrated to your website, you can adapt the way a session starts, looks and behaves by changing the default settings. This is easily accomplished by specifying your prefences in the Surfly widget.  
+If Surfly is integrated to your website, you can adapt the way a session starts, looks and behaves by changing the default settings. This is easily accomplished by specifying your preferences in the Surfly widget.  
 If you would like greater control over the user interface, you can also fully customise it through the API (please see the documentation for further details).
 
 The main points covered in the session modification section are: 
@@ -128,7 +128,7 @@ The drawing option allows the followers within the Surfly session to highlight t
 a magic marker. By default, the drawings are temporary (they will fade out) and the color of the drawing tool is set to yellow. Of course, if you would prefer to have something different, both of these parameters can be changed, or you can turn the drawing function off entirely. 
 
 In our example website we adapted the code so that the drawing mode would be permanent, and that the color of the drawings would be a vibrant green:
-The green drawings underscoring the button are clearly visable to the leader of the session:
+The green drawings underscoring the button are clearly visible to the leader of the session:
 
 ![changed drawing color](https://raw.github.com/surfly/tutorial/master/screens/drawing.png)
 
@@ -146,7 +146,7 @@ The user can exit the popup window by clicking on the cross to the top right of 
 <a name="customise_control_switching"></a>
 #### Customise control switching
 
-If you want to be able to switch control between the leader and the follower, you can chose between either allowing the agent to take control, or to
+If you want to be able to switch control between the leader and the follower, you can choose between either allowing the agent to take control, or to
 request it from the leader. This could be useful for when users require further guidance through the website.
 
 ![request control](https://raw.github.com/surfly/tutorial/master/screens/agent_request.png)
@@ -216,7 +216,7 @@ by pressing CTRL+ENTER.  The visitor will then be queue'd, and the Surfly sessio
 <a name="button_appearance"></a>
 #### Button Appearance
 
-If you prefer, you can also adapt the default "get live help" button that Surfly provides. The buttons default appearance is red, with white text and sits to the bottom left of the screen. 
+If you prefer, you can also adapt the default 'get live help' button that Surfly provides. The buttons default appearance is red, with white text and sits to the bottom left of the screen. 
 
 ![default button appearance](https://raw.github.com/surfly/tutorial/master/screens/default_button.png)
 
@@ -239,7 +239,7 @@ of our example  website. The font color remains white, but the size of the font 
 
 ![example website with adapted Surfly button](https://raw.github.com/surfly/tutorial/master/screens/adapted_surfly_button.png)
 
-The button, by default, will only be shown if an agent is logged in to the Surfly admin page. This can also be disabled, if you wish.
+The button, by default, will only be shown if an agent is logged into the Surfly admin page. This can also be disabled, if you wish.
 
 <a name="session_id"></a>
 #### The session ID approach
@@ -362,7 +362,7 @@ You can also create custom log messages using the Surfly.log() function.
 #### Customise website appearance depending on who is in control
 
 Surfly sessions are always comprised of one leader, and one or more followers. The leader is the only person who can click or type during the session, but you can switch control between
-the leaders and the followers, if required.  You can specify the features you want to give to the leader and the follower during the session by enabling or disabling icons in the dock. 
+the leader and the followers, if required.  You can specify the features you want to give to the leader and the followers during the session by enabling or disabling icons in the dock. 
 
 <a name="examples"></a>
 ### Examples use cases
