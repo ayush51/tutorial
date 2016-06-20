@@ -44,7 +44,7 @@ The buttons on the admin panel are:
 
  - [Session Modification](#session_modification)
  - [Integration](#add_surfly)
- - [Integration options](#advanced_options)
+ - [Integration options](#integration_options)
  - [Example use cases](#examples)
 
 <a name="session_modification"></a>
