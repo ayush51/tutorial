@@ -12,7 +12,7 @@ However, if you wish to use Surfly as a feature on your own website, you can als
 
 ###### During the session
 
-A Surfly session allows you to share your browser with others. During the session, the mouse arrows from all users will be visible. Only the leader can select or click items on the page,
+A Surfly session allows you to share your browser with others. During the session, the mouse arrows from all users will be visible. The leader will navigate the site, and the follower can help guide them through it. Only the leader can select or click items on the page,
 and if the leader decides to navigate to another url, the followers' screens will be synchronised so that they can also see this new page. The followers can take advantage of the drawing tool provided in order to highlight areas on the screen. During the session, users can communicate via text or video chat, share documents and invite others to join them.
 
 ###### Responding to incoming requests
@@ -100,7 +100,7 @@ If you wish to share documents during the Surfly session, you can click the pape
 ![share documents](https://raw.github.com/surfly/tutorial/master/screens/share_document.png)
 
 Once you have clicked on it, you can upload a document from your desktop. The default for document sharing is that they can only be viewed, and not downloaded. However, you can change the settings
-so that the files can be downloaded. It is also possible to share documents by dragging the directly to the chat box. 
+so that the files can be downloaded. It is also possible to share documents by dragging them directly to the chat box. 
 If you wish, you may also disable the document sharing tool. 
 
 <a name="window_size"></a>
@@ -116,8 +116,7 @@ Alternatively you may decide to remove the set to smallest screen functionality 
 The drawing option allows the followers within the Surfly session to highlight the areas on the screen that they wish to bring attention to. It works in a similar way to a highlighter, or 
 a magic marker. By default, the drawings are temporary (they will fade out) and the color of the drawing tool is set to yellow. Of course, if you would prefer to have something different, both of these parameters can be changed, or you can turn the drawing function off entirely. 
 
-In our example website we adapted the code so that the drawing mode would be permanent, and that the color of the drawings would be a vibrant green:
-The green drawings underscoring the button are clearly visible to the leader of the session:
+In our example website we adapted the code so that the drawing mode would be permanent, and that the color of the drawings would be a vibrant green. The green drawings underscoring the button are clearly visible to the leader of the session:
 
 ![changed drawing color](https://raw.github.com/surfly/tutorial/master/screens/drawing.png)
 
@@ -142,15 +141,13 @@ The user can exit the popup window by clicking on the cross to the top right of 
 
 ![Popup url](https://raw.github.com/surfly/tutorial/master/screens/popup_example.png)
 
-This can be especially useful if you wish to receive feedback by asking your visitors to fill out a survey.
+This can be especially useful if you wish to receive feedback by asking your visitors to fill out a survey when the session ends.
 
 <a name="add_surfly"></a>
 ### Integration
 
-If you wish to integrate Surfly on your website, visitors to your website will be able to click the 'get live help' button to request a session. They will then be queue'd until an agent (the person who receives the call) joins them. The person who initiated the session is referred to as the leader and the people joining in will be followers. 
-The leader will navigate the site, and the follower can help guide them through it. Initially the agent is the follower, and the website visitor is the leader, however you can choose to swap control at any time during the session.
-To integrate Surfly, you need to add the Surfly code snippet into your websites source code. The default parameters within the code snippet can be modified to allow for a 
-seamless integration into your website. 
+If you wish to integrate Surfly on your website, visitors to your website will be able to click the 'get live help' button to request a session. They will then be queue'd until an agent (the person who receives the call) joins them. By default, the person who initiated the session is the leader and the agent joining in will be the follower, however you can choose to swap control at any time during the session.
+To integrate Surfly, you need to add the Surfly code snippet into your website's source code. The default parameters within the code snippet can be modified to allow for a seamless integration into your website. 
 
 #### The Surfly Code Snippet
 
@@ -174,7 +171,6 @@ You can answer this request via the Surfly admin panel.
 <a name="start_session"></a>
 ### Starting a session
 
-You can start a session in the following ways:
  - [Button appearance](#button_appearance)
  - [Stealth mode](#stealth_mode)
  - [Customise your own button](#surflystart_anchor)
@@ -185,14 +181,14 @@ You can start a session in the following ways:
 <a name="button_appearance"></a>
 #### Button appearance
 
-If you prefer, you can also adapt the default 'get live help' button that Surfly provides. The buttons default appearance is red, with white text and sits to the bottom left of the screen. 
+If you prefer, you can also adapt the default 'get live help' button that Surfly provides. The button's default appearance is red, with white text and sits to the bottom left of the screen. 
 
 ![default button appearance](https://raw.github.com/surfly/tutorial/master/screens/default_button.png)
 
 The button appearance can be adapted by changing where it appears on your screen, and the colors and size of it. The position of the button can be moved to either the bottom right of the screen,
 or to the middle left. You can further adapt the button to suit your needs by specifying the color of the button along with the font size and font color.
 
-As you can see below, in the example website, we changed the position and the style of the button. This was achieved with a simple change to the code snippet.
+As you can see below, in the example website, we changed the position and the style of the button. This was achieved with a simple change to the code snippet:
 
 ```javascript
 
@@ -228,7 +224,7 @@ clicks on it, it will lead them to a Surfly session.
 <a name="session_id"></a>
 #### The session ID approach
 
-The session ID approach is especially useful if you are already in contact with a customer via another medium. If the customer needs help navigating a website, the 
+The session ID approach is especially useful if you are already in contact with a customer via phone. If the customer needs help navigating a website, the 
 agent can direct them to start a co-browsing session. The customer will click on the link, and have a unique ID assigned to them, which they can give to the agent. 
 As shown in the image below, this unique session ID will also be shown in the queue panel, allowing the agent to identify the customer, and join the session.
 
@@ -247,7 +243,7 @@ Auto start is especially useful if you want to display a specific webpage whilst
 #### Integrate with existing chat solutions
 
 It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want to add Surfly's co-browsing functionality to this.
-In this case, Surfly can be integrated in such a way so that it acts as a transparent addition to your product and allow you to entirely customise the appearance of the session. 
+In this case, Surfly can be integrated in such a way so that it acts as a transparent addition to your product and allows you to entirely customise the appearance of the session. 
 As can be seen in the image below, the chat solutions are given a higher z-index than Surfly, so are stacked on top of the co-browsing session.  
 
 ![Chat solutions](https://raw.github.com/surfly/tutorial/master/screens/chat_solutions.png)
@@ -274,7 +270,7 @@ new tab, or to use a CNAME.
 <a name="session_continuation"></a>
 #### Session continuation
 
-Please Note: This is only supported for sessions started with the Surfly widget.
+Please note: This is only supported for sessions started with the Surfly widget.
 
 Cookies can be carried over from your website, and into the Surfly session. For example, if a user is logged into your website, they will remain logged in for the duration of the 
 session. Once the session has finished, the information is sent back to the website. This allows a smooth transition into, and out of, the session.
@@ -290,7 +286,7 @@ There are two main ways to set up session continuation:
 Adding custom metadata to the Queue requests allows you to give extra information about the user to the agent. For example, if the user is logged in to your website, then you can pass on some 
 of this data, such as name and address, to the agent. Surfly will also use the name in order to display this in the chatbox, and the email in order to match the correct gravitar to the user.
 
-You can also track the queue status from the clients side, so you can monitor the behaviour of the client when they leave, rejoin, or are waiting in the queue.
+You can also track the queue status from the client's side, so you can monitor the behaviour of the client when they leave, rejoin, or are waiting in the queue.
 
 <a name="security_features"></a>
 #### Security Features
