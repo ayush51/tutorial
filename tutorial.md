@@ -39,7 +39,7 @@ The buttons on the admin panel are:
 ### A Surfly session
 
 Surfly comes with several different options for communicating with other users. You may decide to video or text chat, and followers can highlight areas with the drawing tool. 
-If Surfly is integrated to your website, you can adapt the way a session starts, looks and behaves by changing the default settings. This is easily accomplished by specifying your preferences in the Surfly widget.  
+If Surfly is integrated on your website, you can adapt the way a session starts, looks and behaves by changing the default settings. This is easily accomplished by specifying your preferences in the Surfly widget.  
 If you would like greater control over the user interface, you can also fully customise it through the API (please see the documentation for further details).
 
 The main points covered in the session modification section are: 
@@ -48,13 +48,13 @@ The main points covered in the session modification section are:
  - [Chat box](#chat_box)
  - [Video chat](#video_chat)
  - [Document sharing](#document_sharing)
- - [The window size options](#window_size)
- - [The drawing mode](#drawing_mode)
+ - [Window size options](#window_size)
+ - [Drawing mode](#drawing_mode)
  - [Control switching](#customise_control_switching)
- - [Ending a session to display another page, or redirect to another page](#popupurl)
+ - [Ending the session display or redirect to another page](#popupurl)
 
 <a name="invite_user"></a>
-#### Inviting a user to join your session
+#### Inviting users to join your session
 
 You can invite a user to join your session from your Surfly admin panel or from within a Surfly session: 
  - To start a session from the Surfly admin panel, navigate to the "start" button at the top left of your screen. 
@@ -104,14 +104,14 @@ so that the files can be downloaded. It is also possible to share documents by d
 If you wish, you may also disable the document sharing tool. 
 
 <a name="window_size"></a>
-#### Window Size options
+#### Window size options
 
 The window is normally set to the person with the smallest screen, as this allows for a smooth transition into the Surfly session. If you see blank edges at the side of your screen, it is 
 only because your screen is larger than the person you are co-browsing with. However, you can also decide to set a maximum or minimum size for the window.  
 Alternatively you may decide to remove the set to smallest screen functionality altogether. In this case, the window will be set to the size of the leader's screen.
 
 <a name="drawing_mode"></a>
-#### Options for the drawing mode
+#### Drawing mode
 
 The drawing option allows the followers within the Surfly session to highlight the areas on the screen that they wish to bring attention to. It works in a similar way to a highlighter, or 
 a magic marker. By default, the drawings are temporary (they will fade out) and the color of the drawing tool is set to yellow. Of course, if you would prefer to have something different, both of these parameters can be changed, or you can turn the drawing function off entirely. 
@@ -122,7 +122,7 @@ The green drawings underscoring the button are clearly visible to the leader of 
 ![changed drawing color](https://raw.github.com/surfly/tutorial/master/screens/drawing.png)
 
 <a name="customise_control_switching"></a>
-#### Customise control switching
+#### Control switching
 
 If you want to be able to switch control between the leader and the follower, you can choose between either allowing the agent to take control, or to
 request it from the leader. This could be useful for when users require further guidance through the website.
@@ -142,11 +142,12 @@ The user can exit the popup window by clicking on the cross to the top right of 
 
 ![Popup url](https://raw.github.com/surfly/tutorial/master/screens/popup_example.png)
 
+This can be especially useful if you wish to receive feedback by asking your visitors to fill out a survey.
 
 <a name="add_surfly"></a>
 ### Integration
 
-If you wish to integrate Surfly to your website, visitors to your website will be able to click the 'get live help' button to request a session. They will then be queue'd until an agent (the person who receives the call) joins them. The person who initiated the session is referred to as the leader and the people joining in will be followers. 
+If you wish to integrate Surfly on your website, visitors to your website will be able to click the 'get live help' button to request a session. They will then be queue'd until an agent (the person who receives the call) joins them. The person who initiated the session is referred to as the leader and the people joining in will be followers. 
 The leader will navigate the site, and the follower can help guide them through it. Initially the agent is the follower, and the website visitor is the leader, however you can choose to swap control at any time during the session.
 To integrate Surfly, you need to add the Surfly code snippet into your websites source code. The default parameters within the code snippet can be modified to allow for a 
 seamless integration into your website. 
@@ -182,7 +183,7 @@ You can start a session in the following ways:
  - [Integrate with existing chat solutions](#integrate_chat)
 
 <a name="button_appearance"></a>
-#### Button Appearance
+#### Button appearance
 
 If you prefer, you can also adapt the default 'get live help' button that Surfly provides. The buttons default appearance is red, with white text and sits to the bottom left of the screen. 
 
