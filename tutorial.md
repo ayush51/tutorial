@@ -259,7 +259,7 @@ It is also possible to integrate Surfly with existing chat solutions. For exampl
 In this case, Surfly can be integrated in such a way so that it acts as a transparent addition to your product and allow you to entirely customise the appearance of the session. 
 As can be seen in the image below, the chat solutions are given a higher z-index than Surfly, so are stacked on top of the co-browsing session.  
 
-![Chat solutions](chat_solutions.png)
+![Chat solutions](https://raw.github.com/surfly/tutorial/master/screens/chat_solutions.png)
 
 #### Create your own invite page
 
