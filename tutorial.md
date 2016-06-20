@@ -4,7 +4,7 @@
 
 ###### Welcome to Surfly!
 
-Surfly provides co-browsing, which allows you to share your browsing session with other users.
+Surfly provides co-browsing, this enables you to share your browsing session with others..
 You can start a Surfly session simply by entering the url of the website you want to browse into the 'start session' panel on your admin page.  You can then invite people to join you by sharing
 the session url with them. This is the easiest and quickest way to co-browse and does not require any configuration.
 However, if you wish to use Surfly as a feature on your own website, you can also add a Surfly button to your website. By doing this, you will be able to fully customise your session and use as much or as little of Surfly's functionalty within your own product.
@@ -73,7 +73,7 @@ You can invite a user to join your session from your Surfly admin panel or from 
 
 Both of these methods will load the following screen:
 
-![invite_user](https://raw.github.com/surfly/tutorial/alterations/screens/invite_user.png)
+![invite_user](https://raw.github.com/surfly/tutorial/master/screens/invite_user.png)
 
 You can then decide to either share the url of the session, or send an email to the user you wish to invite. 
 
@@ -218,7 +218,7 @@ by pressing CTRL+ENTER.  The visitor will then be queue'd, and the Surfly sessio
 
 If you prefer, you can also adapt the default "get live help" button that Surfly provides. The buttons default appearance is red, with white text and sits to the bottom left of the screen. 
 
-![default button appearance](https://raw.github.com/surfly/tutorial/alterations/screens/default_button.png)
+![default button appearance](https://raw.github.com/surfly/tutorial/master/screens/default_button.png)
 
 The button appearance can be adapted by changing where it appears on your screen, and the colors and size of it. The position of the button can be moved to either the bottom right of the screen,
 or to the middle left. You can further adapt the button to suit your needs by specifying the color of the button along with the font size and font color.
@@ -254,7 +254,11 @@ As shown in the image below, this unique session ID will also be shown in the qu
 #### Integrate with existing chat solutions
 
 
-It is also possible to customise your session and to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want to add Surfly's co-browsing functionality to this. In this case, Surfly can be integrated in such a way so that it acts as a transparent addition to your product and allow you to entirely customise the appearance of the session. 
+It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want to add Surfly's co-browsing functionality to this.
+In this case, Surfly can be integrated in such a way so that it acts as a transparent addition to your product and allow you to entirely customise the appearance of the session. 
+As can be seen in the image below, the chat solutions are given a higher z-index than Surfly, so are stacked on top of the co-browsing session.  
+
+![Chat solutions](https://raw.github.com/surfly/tutorial/master/screens/chat_solutions.png)
 
 #### Create your own invite page
 
@@ -316,9 +320,15 @@ Field masking allows you to protect the leaders data during the Surfly session. 
 you can hide that input from the session followers. As shown in the images below, the leader is still able to read what they are typing into the form, but the followers (including the
 agent) will only see a series of x's.
 
-| [![Leader field masking](https://raw.github.com/surfly/tutorial/alterations/screens/Leader_fieldmasking.png)](The leader) | [![Follower field masking](https://raw.github.com/surfly/tutorial/alterations/screens/follower_fieldmasking.png)](The follower) |
+| [![Leader field masking](https://raw.github.com/surfly/tutorial/master/screens/Leader_fieldmasking.png)](The leader) | [![Follower field masking](https://raw.github.com/surfly/tutorial/master/screens/follower_fieldmasking.png)](The follower) |
 |:---:|:---:|
 | The leader | The follower |
+
+To enable field masking, you need to add surfly_private to the form element in your html file, for example:
+
+```
+<input type = "text" name = "Login" surfly_private>
+```
 
 ###### Please note: 
 
@@ -344,7 +354,8 @@ In the above example, the pattern will prevent access to any url which includes 
 <a name="session_log_info"></a>
 #### Add information to the session log
 
-You can use the REST API to add additional information to the session log.  This is especially useful if you want to be able to monitor your agents, for example, you could log individual sales
+You can use the REST API to add additional information to the session log.  This is especially useful if you want to be able to monitor your agents, for example, you could log 
+your agents individual sales.  
 You can also create custom log messages using the Surfly.log() function. 
 
 <a name="customise_appearance_for_user"></a>
