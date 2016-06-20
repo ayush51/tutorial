@@ -4,7 +4,7 @@
 
 ###### Welcome to Surfly!
 
-Surfly enables you to share a browsing session with others via co-browsing.
+Surfly provides co-browsing, this enables you to share your browsing session with others..
 You can start a Surfly session simply by entering the url of the website you want to browse into the 'start session' panel on your admin page.  You can then invite people to join you by sharing
 the session url with them. This is the easiest and quickest way to co-browse and does not require any configuration.
 However, if you wish to use Surfly as a feature on your own website, you can also add a Surfly button to your website. By doing this, you will be able to fully customise your session and use as much or as little of Surfly's functionalty within your own product.
@@ -254,10 +254,11 @@ As shown in the image below, this unique session ID will also be shown in the qu
 #### Integrate with existing chat solutions
 
 
-It is also possible to customise your session and to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want to add Surfly's co-browsing functionality to this.
-Surfly will be placed on your webpage, and the existing chat solutions will be given a higher z-index, and so will be stacked on top of this.
+It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want to add Surfly's co-browsing functionality to this.
 In this case, Surfly can be integrated in such a way so that it acts as a transparent addition to your product and allow you to entirely customise the appearance of the session. 
+As can be seen in the image below, the chat solutions are given a higher z-index than Surfly, so are stacked on top of the co-browsing session.  
 
+![Chat solutions](https://raw.github.com/surfly/tutorial/master/screens/chat_solutions.png)
 
 #### Create your own invite page
 
