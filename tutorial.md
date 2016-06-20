@@ -324,6 +324,12 @@ agent) will only see a series of x's.
 |:---:|:---:|
 | The leader | The follower |
 
+To enable field masking, you need to add surfly_private to the form element in your html file, for example:
+
+```
+<input type = "text" name = "Login" surfly_private>
+```
+
 ###### Please note: 
 
 Whilst the leader can mask their data, and hide it from the followers, the followers cannot hide their data from the leader.
