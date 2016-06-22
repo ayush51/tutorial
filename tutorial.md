@@ -351,6 +351,7 @@ In our example website, we wanted to track the amount of times an agent had made
            </script>
 ```
 
+We matched the "Sales complete" message to the agent's id and counted the amount of times that this message had been logged using the REST API.  
 
 
 <a name="customise_appearance_for_user"></a>
