@@ -351,7 +351,10 @@ In our example website, we wanted to track the amount of times an agent had made
            </script>
 ```
 
-We matched the "Sales complete" message to the agent's id and counted the amount of times that this message had been logged using the REST API.  
+We matched the "Sales complete" message to the agent's id and counted the amount of times that this message had been logged using the REST API. A page could then be created showing the amount 
+of sales the agent had made
+
+![Agent sales](https://raw.github.com/surfly/tutorial/master/screens/agents_table.png)
 
 
 <a name="customise_appearance_for_user"></a>
@@ -372,6 +375,10 @@ window.addEventListener('surflycontrolchange', function (event) {
 });
 ```
 As can be seen above, we simply check whether the leader is in control when the control is switched from within a Surfly session (which fires the 'surflycontrolchange' event). If the leader is indeed in control, we enable the button and otherwise we disable it.
+
+When the leader has control, the element is in bold, and can be selected. Otherwise, the element is disabled.
+
+![Enabled button](https://raw.github.com/surfly/tutorial/master/screens/button_able.png) ![Disabled button](https://raw.github.com/surfly/tutorial/master/screens/button_disable.png)
 
 <a name="examples"></a>
 ### Examples use cases
