@@ -1,3 +1,4 @@
+
 # The Surfly Tutorial
 
 ### Introduction
@@ -147,6 +148,7 @@ This can be especially useful if you wish to receive feedback by asking your vis
 
 If you wish to integrate Surfly on your website, visitors to your website will be able to click the 'get live help' button to request a session. They will then be queue'd until an agent (the person who receives the call) joins them. By default, the person who initiated the session is the leader and the agent joining in will be the follower, however you can choose to swap control at any time during the session.
 To integrate Surfly, you need to add the Surfly code snippet into your website's source code. The default parameters within the code snippet can be modified to allow for a seamless integration into your website. 
+The code snippet will allow you to customise the way the session looks and behaves, if you wish a deeper integration, you can use the REST API, which gives you control over the backend.
 
 #### The Surfly Code Snippet
 
@@ -337,8 +339,9 @@ In the above example, the pattern will prevent access to any url which includes 
 #### Add information to the session log
 
 You can use the REST API to add additional information to the session log.  This is especially useful if you want to be able to monitor your agents, for example, you could log 
-your agents individual sales.  
-You can also create custom log messages using the Surfly.log() function. 
+your agents individual sales.  This can be done using the Surfly.log() function.  This creates an object with the details of the agent and the custom log message. The REST API allows you to 
+retrieve the logs, and you can filter by the custom log message. If you wanted to track agents that made a sale, you would first add "sale complete" to the log message, and then retrieve the logs
+to determine which agent made the sale, and how many they made.
 
 <a name="customise_appearance_for_user"></a>
 #### Customise website appearance depending on who is in control
