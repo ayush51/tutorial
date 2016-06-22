@@ -358,6 +358,7 @@ window.addEventListener('surflycontrolchange', function (event) {
     }
 });
 ```
+As can be seen above, we simply check whether the leader is in control when the control is switched from within a Surfly session. If the leader is indeed in control, we enable the button and otherwise we disable it.
 
 <a name="examples"></a>
 ### Examples use cases
