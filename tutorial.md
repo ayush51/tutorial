@@ -346,6 +346,19 @@ You can also create custom log messages using the Surfly.log() function.
 
 Surfly sessions are always comprised of one leader, and one or more followers. The leader is the only person who can click or type during the session, but you can switch control between
 the leader and the followers, if required.  You can specify the features you want to give to the leader and the followers during the session by enabling or disabling icons in the dock. 
+Moreover, you can adapt the status of the elements of a page depending on who is in control. For instance, if you wish to make a button clickable only when the leader (the person who initiated the session) is in control, it is possible to do so fairly easily: 
+
+```
+window.addEventListener('surflycontrolchange', function (event) {
+    var element = document.getElementById("log_button");
+    if (event.leaderHasControl) {
+    	element.disabled = false;
+    } else {
+        element.disabled = true;
+    }
+});
+```
+As can be seen above, we simply check whether the leader is in control when the control is switched from within a Surfly session. If the leader is indeed in control, we enable the button and otherwise we disable it.
 
 <a name="examples"></a>
 ### Examples use cases
