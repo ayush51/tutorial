@@ -340,6 +340,20 @@ You can use the REST API to add additional information to the session log.  This
 your agents individual sales.  This can be done through the use of the Surfly.log function, which allows you to add a custom message to the logs.  With the use of the REST API you can 
 retrieve the logs and filter by the custom message, tracking the agents that the message applies to.
 
+In our example website, we wanted to track the amount of times an agent had made a sale.  Everytime the "buy" button is clicked, we create a log message indicating that the sale had been completed.
+
+```
+    <button id="log_button" onclick="logSale()">Buy</button>
+           <script type="text/javascript">
+             function logSale(){
+             Surfly.log("Sales complete");
+             }
+           </script>
+```
+
+We matched the "Sales complete" message to the agent's id and counted the amount of times that this message had been logged using the REST API.  
+
+
 <a name="customise_appearance_for_user"></a>
 #### Customise website appearance depending on who is in control
 
