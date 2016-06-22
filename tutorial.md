@@ -4,8 +4,7 @@
 
 ###### Welcome to Surfly!
 
-
-Surfly provides co-browsing, this enables you to share your browsing session with others.
+Surfly's co-browsing technology enables you to share your browser with others, clarifying communication online.
 You can start a Surfly session simply by entering the url of the website you want to browse into the 'start session' panel on your admin page.  You can then invite people to join you by sharing
 the session url with them. This is the easiest and quickest way to co-browse and does not require any configuration.
 However, if you wish to use Surfly as a feature on your own website, you can also add a Surfly button to your website. By doing this, you will be able to fully customise your session and use as much or as little of Surfly's functionality within your own product.
@@ -338,8 +337,8 @@ In the above example, the pattern will prevent access to any url which includes 
 #### Add information to the session log
 
 You can use the REST API to add additional information to the session log.  This is especially useful if you want to be able to monitor your agents, for example, you could log 
-your agents individual sales.  
-You can also create custom log messages using the Surfly.log() function. 
+your agents individual sales.  This can be done through the use of the Surfly.log function, which allows you to add a custom message to the logs.  With the use of the REST API you can 
+retrieve the logs and filter by the custom message, tracking the agents that the message applies to.
 
 <a name="customise_appearance_for_user"></a>
 #### Customise website appearance depending on who is in control
