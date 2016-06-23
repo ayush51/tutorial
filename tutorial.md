@@ -222,6 +222,10 @@ As shown in the image below, this unique session ID will also be shown in the qu
 
 ![The Queue panel](https://raw.github.com/surfly/tutorial/master/screens/queue_panel.png)
 
+By default, the session ID is also formatted so that it is easy to communicate it over the phone. You can see on the right what an unformatted session ID looks like. This session ID can be directly used to connect to the session as a viewer.
+
+![Formatted Session ID](https://raw.github.com/surfly/tutorial/master/screens/formatted_session_id.png) ![Unformatted Session ID](https://raw.github.com/surfly/tutorial/master/screens/non-formatted.png)
+
 <a name="auto_start"></a>
 #### Create an invite page
 
