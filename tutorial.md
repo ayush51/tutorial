@@ -251,6 +251,11 @@ As can be seen in the image below, the chat solutions are given a higher z-index
 
 ![Chat solutions](https://raw.github.com/surfly/tutorial/master/screens/chat_solutions.png)
 
+Simply add the code snippet to the page including your chat solutions, and alter the code snippet to either remove the user interface entirely, or to display a dock with session control options.
+(more information on the docked_only option can be found [here](#chat_box).  
+
+Removing the user_interface leaves you with purely the co-browsing functionality as an addition to your own chat solutions.  You can use blacklisting to create an "end session" button. This 
+button could be a restricted url, which, when clicked, triggers an end-session event, and redirects the user to another url.  To read more about blacklisting, click [here](#blacklist_whitelist)
 
 <a name="integration_options"></a>
 ### Integration Options
@@ -340,14 +345,15 @@ In the above example, the pattern will prevent access to any url which includes 
 <a name="session_log_info"></a>
 #### Add information to the session log
 
-You can use the REST API to add additional information to the session log.  This is especially useful if you want to be able to monitor your agents, for example, you could log 
-your agents individual sales.  This can be done through the use of the Surfly.log function, which allows you to add a custom message to the logs.  With the use of the REST API you can 
-retrieve the logs and filter by the custom message, tracking the agents that the message applies to.
+You can use the REST API to add additional information to the session log.  This is especially useful if you want to be able to monitor your agents, for example, you could use the logs to track 
+your agents individual sales.  To add a custom message to the session logs, use the Surfly.log function.  With the use of the REST API you can retrieve the log history and filter by the 
+custom message.
 
 In our example website, we wanted to track the amount of times an agent had made a sale.  Everytime the "buy" button is clicked, we create a log message indicating that the sale had been completed.
 
 ```
     <button id="log_button" onclick="logSale()">Buy</button>
+
            <script type="text/javascript">
              function logSale(){
              Surfly.log("Sales complete");
