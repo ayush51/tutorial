@@ -336,14 +336,15 @@ In the above example, the pattern will prevent access to any url which includes 
 <a name="session_log_info"></a>
 #### Add information to the session log
 
-You can use the REST API to add additional information to the session log.  This is especially useful if you want to be able to monitor your agents, for example, you could log 
-your agents individual sales.  This can be done through the use of the Surfly.log function, which allows you to add a custom message to the logs.  With the use of the REST API you can 
-retrieve the logs and filter by the custom message, tracking the agents that the message applies to.
+You can use the REST API to add additional information to the session log.  This is especially useful if you want to be able to monitor your agents, for example, you could use the logs to track 
+your agents individual sales.  To add a custom message to the session logs, use the Surfly.log function.  With the use of the REST API you can retrieve the log history and filter by the 
+custom message.
 
 In our example website, we wanted to track the amount of times an agent had made a sale.  Everytime the "buy" button is clicked, we create a log message indicating that the sale had been completed.
 
 ```
     <button id="log_button" onclick="logSale()">Buy</button>
+
            <script type="text/javascript">
              function logSale(){
              Surfly.log("Sales complete");
