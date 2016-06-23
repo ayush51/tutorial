@@ -135,7 +135,7 @@ As can be seen in the above image, the hand button is now bold, which means the 
 You may want to show a user another page after the session has finished. You can either show a popup window within the host website, or you can 
 send them to another webpage.
 
-In the example below, we have chosen to show the leader a popup url within their screen after the session has finished.  
+In the example below, we have chosen to show the leader a popup url within their screen after the session has finished.
 The user can exit the popup window by clicking on the cross to the top right of the window.
 
 ![Popup url](https://raw.github.com/surfly/tutorial/master/screens/popup_example.png)
@@ -145,7 +145,7 @@ This can be especially useful if you wish to receive feedback by asking your vis
 <a name="add_surfly"></a>
 ### Integration
 
-If you wish to integrate Surfly on your website, visitors to your website will be able to click the 'get live help' button to request a session. They will then be queue'd until an agent (the person who receives the call) joins them. By default, the person who initiated the session is the leader and the agent joining in will be the follower, however you can choose to swap control at any time during the session.
+If you integrate Surfly with your website, visitors will be able to click the 'get live help' button to request a session. They will then be queue'd until an agent (the person who receives the call) joins them. By default, the person who initiated the session is the leader and the agent joining in will be the follower, however you can choose to swap control at any time during the session.
 To integrate Surfly, you need to add the Surfly code snippet into your website's source code. The default parameters within the code snippet can be modified to allow for a seamless integration into your website. 
 
 #### The Surfly Code Snippet
@@ -159,8 +159,7 @@ You should now be looking at:
 ![The integration page](https://raw.github.com/surfly/tutorial/master/screens/snippet_initial_screen.png)
 
 
-In the 'domain names' section on the integration page, you need to specify the domains on which you want to show the Surfly button. This is easily set up,
-if your website is hosted on "https://example.com", simply add "example.com" to the domain name list.
+In the 'domain names' section on the integration page, you need to specify the domains on which you want to show the Surfly button. For instance, if your website is hosted on "https://example.com", simply add "example.com" to the domain name list.
 
 Finally, copy the code snippet and add it to the source code of your website.
 
@@ -180,14 +179,11 @@ You can answer this request via the Surfly admin panel.
 <a name="button_appearance"></a>
 #### Button appearance
 
-If you prefer, you can also adapt the default 'get live help' button that Surfly provides. The button's default appearance is red, with white text and sits to the bottom left of the screen. 
+If you prefer, you can adapt the 'get live help' button that Surfly provides. The button's default appearance is red, with white text and sits to the bottom left of the screen. 
 
 ![default button appearance](https://raw.github.com/surfly/tutorial/master/screens/default_button.png)
 
-The button appearance can be adapted by changing where it appears on your screen, and the colors and size of it. The position of the button can be moved to either the bottom right of the screen,
-or to the middle left. You can further adapt the button to suit your needs by specifying the color of the button along with the font size and font color.
-
-As you can see below, in the example website, we changed the position and the style of the button. This was achieved with a simple change to the code snippet:
+You can adapt the button appearance by changing its position, colors and size. As you can see below, in the example website, we changed the position and the style of the button. This was achieved with a simple change to the code snippet:
 
 ```javascript
 
@@ -198,8 +194,7 @@ theme_font_size:"16",
 
 ```
 
-The default color of the button was changed to black, which suits the theme 
-of our example  website. The font color remains white, but the size of the font has increased to size 16, which also increases the size of the support button.
+The default color of the button was changed to black, which suits the theme of our example  website. The font color remains white, but the size of the font has increased to size 16, which also increases the size of the support button.
 
 ![example website with adapted Surfly button](https://raw.github.com/surfly/tutorial/master/screens/adapted_surfly_button.png)
 
@@ -214,9 +209,7 @@ by pressing CTRL+ENTER.  The visitor will then be queue'd, and the Surfly sessio
 <a name="surflystart_anchor"></a>
 #### Customise your own button
 
-If you want to create your own button, you can use the #surflystart anchor, which can be integrated into your website's source code. You can choose the text you wish to write 
-onto the button, and it can be fully styled with css so that it compliments your website design.  As you can see in the image below, we created our own start button. If a visitor to the website
-clicks on it, it will lead them to a Surfly session.
+If you want to create your own button, you can use the #surflystart anchor, which can be integrated into your website's source code. You can choose the text you wish to write onto the button, and it can be fully styled with css so that it compliments your website design.  As you can see in the image below, we created our own start button. If a visitor to the website clicks on it, it will lead them to a Surfly session.
 
 ![The end result](https://raw.github.com/surfly/tutorial/master/screens/Surflystart_anchor.png)
 
