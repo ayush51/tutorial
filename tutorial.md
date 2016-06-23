@@ -4,15 +4,13 @@
 
 ###### Welcome to Surfly!
 
-Surfly's co-browsing technology enables you to share your browser with others, clarifying communication online.
-You can start a Surfly session simply by entering the url of the website you want to browse into the 'start session' panel on your admin page.  You can then invite people to join you by sharing
-the session url with them. This is the easiest and quickest way to co-browse and does not require any configuration.
+Surfly's co-browsing technology enables you to share your browser with others, synchronising your screens, mouse clicks and typing.
+You can start a Surfly session simply by entering the url of the website you want to browse into the 'start session' panel on your admin page.  You can then invite people to join you by sharing the session url with them. This is the easiest and quickest way to co-browse and does not require any configuration.
 However, if you wish to use Surfly as a feature on your own website, you can also add a Surfly button to your website. By doing this, you will be able to fully customise your session and use as much or as little of Surfly's functionality within your own product.
 
 ###### During the session
 
-A Surfly session allows you to share your browser with others. During the session, the mouse arrows from all users will be visible. The leader will navigate the site, and the follower can help guide them through it. Only the leader can select or click items on the page,
-and if the leader decides to navigate to another url, the followers' screens will be synchronised so that they can also see this new page. The followers can take advantage of the drawing tool provided in order to highlight areas on the screen. During the session, users can communicate via text or video chat, share documents and invite others to join them.
+A Surfly session allows you to share your browser with others. During the session, the mouse arrows from all users will be visible. The leader will navigate the site, and the follower can help guide them through it. There can only be one leader, but you can have multiple followers, and switch control between the different users during the session. Only the leader can select or click items on the page,cand if the leader decides to navigate to another url, the followers' screens will be synchronised so that they can also see this new page. The followers can take advantage of the drawing tool provided in order to highlight areas on the screen. During the session, users can communicate via text or video chat, share documents and invite others to join them.
 
 ###### Responding to incoming requests
 
@@ -26,7 +24,7 @@ Surfly's admin panel allows you to track your users and your agents, and can be 
 
 The buttons on the admin panel are:
 
- - The 'start' button, this allows you to immediatly start co-browsing.  When you click on this link you are asked to invite someone to join your session, by either sending them the session url directly, or via email.  
+ - The 'start' button, this allows you to immediatly start co-browsing.  When you click on this link you are asked to invite someone to join your session, by either sending them the session url directly, or via email.
  - The 'queue' button, which gives you a list of queue'd users.  You can add metadata to this so that the agent knows more information about the user.
  - The 'history' button gives an overview of your sessions, the agent that took them and the duration.  You can also choose to add chat logs to the history panel.
  - The 'agent' button allows you to add agents to your account, and also gives you access to some information about agents such as their ID and the amount of sessions they have joined.
@@ -38,7 +36,7 @@ The buttons on the admin panel are:
 ### A Surfly session
 
 Surfly comes with several different options for communicating with other users. You may decide to video or text chat, share documents and followers can highlight areas with the drawing tool. 
-If Surfly is integrated into your website, you can adapt the way a session starts, looks and behaves by changing the default settings. This is easily accomplished by specifying your preferences in the Surfly widget.  
+If Surfly is integrated into your website, you can adapt the way a session starts, looks and behaves by changing the default settings. This is easily accomplished by specifying your preferences in the Surfly widget.
 If you would like greater control over the user interface, you can also fully customise it through the API (please see the documentation for further details).
 
 The main points covered in the session modification section are: 
@@ -69,20 +67,19 @@ You can then decide to either share the url of the session, or send an email to 
 ####Chat box
 
 Surfly provides a chat box which can be used to communicate with other users. 
-The default chatbox color is a soft red, however, this can be altered to match your website's theme. As can be seen in the image on the right, we changed the icons at the top of the chatbox from a light red to purple, which is more suited to our example website:
+The default chatbox color is a soft red, however, this can be altered to match your website's theme. As can be seen in the image on the right, we changed the icons at the top of the chatbox from a light red to purple:
 
 ![Default changed color](https://raw.github.com/surfly/tutorial/master/screens/red_default_chat.png)  ![Changed chatbox colors](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)
 
-Modifying the chat box can not only change its appearance, but also limit or extend the amount of control that the leader and the followers can have. By default, every user is able to exit the session but if you would like to allow your visitors full control over the session duration, you can choose to disable the exit icon from the agents' dock. 
+Modifying the chat box can not only change its appearance, but also limit or extend the amount of control that the leader and the followers can have. By default, every user is able to exit the session, but, if you would like to allow your visitors full control over the session duration, you can choose to disable the exit icon from the agents' dock. 
 
 ![agent cannot exit](https://raw.github.com/surfly/tutorial/master/screens/agent_cannot_end.png)
 
-You can also choose to minimise the chat window, and display only the icons in a dock. By deciding to use only the dock, you will also disable document sharing. 
+You can also choose to minimise the chat window, and display the icons in a dock. By deciding to use the dock, you will also disable document sharing. 
 
 ![docked_only](https://raw.github.com/surfly/tutorial/master/screens/docked_only.png)
 
-If you want to monitor the conversations between the agents and the users, you can choose to store the chat logs. You can access them by navigating to 'History' in your Surfly admin panel. The chat log section will have two icons inside, allowing you to either view the 
-logs, or download them.  
+If you want to monitor the conversations between the agents and the users, you can choose to store the chat logs. You can access them by navigating to 'History' in your Surfly admin panel. The chat log section will have two icons inside, allowing you to either view the logs, or download them.
 
 ![chatlogs](https://raw.github.com/surfly/tutorial/master/screens/logged_icon.png)
 
@@ -98,15 +95,13 @@ If you wish to share documents during the Surfly session, you can click the pape
 
 ![share documents](https://raw.github.com/surfly/tutorial/master/screens/share_document.png)
 
-Once you have clicked on it, you can upload a document from your desktop. The default for document sharing is that they can only be viewed, and not downloaded. However, you can change the settings
-so that the files can be downloaded. It is also possible to share documents by dragging them directly to the chat box. 
+Once you have clicked on it, you can upload a document from your desktop. The default for document sharing is that they can only be viewed, and not downloaded. However, you can change the settings so that the files can be downloaded. It is also possible to share documents by dragging them directly to the chat box. 
 If you wish, you may also disable the document sharing tool. 
 
 <a name="window_size"></a>
 #### Window size options
 
-The window is normally set to the person with the smallest screen, as this allows for a smooth transition into the Surfly session. If you see blank edges at the side of your screen, it is 
-only because your screen is larger than the person you are co-browsing with. However, you can also decide to set a maximum or minimum size for the window.  
+The window is normally set to the person with the smallest screen, as this allows for a smooth transition into the Surfly session. If you see blank edges at the side of your screen, it is only because your screen is larger than the person you are co-browsing with. However, you can also decide to set a maximum or minimum size for the window.
 Alternatively, you may decide to remove the set to smallest screen functionality altogether. In this case, the window will be set to the size of the leader's screen.
 
 <a name="drawing_mode"></a>
