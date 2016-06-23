@@ -16,7 +16,7 @@ and if the leader decides to navigate to another url, the followers' screens wil
 
 ###### Responding to incoming requests
 
-To accept an incoming request, log in to your Surfly account, and navigate to the 'Queue' panel. Here, agents can see how many users they have queue'd up, their location, and the time they have been waiting. To answer, the agent simply presses the 'take call' button. If your visitors are logged in on your website already, you can also display metadata, such as the visitors name in the queue, so that the agent greeting them knows who they are.
+To accept an incoming request, log in to your Surfly account, and navigate to the 'Queue' panel. Here, agents can see how many users they have queue'd up, their location, and the time they have been waiting. To answer, the agent simply has to press the 'take call' button. If your visitors are logged in on your website already, you can also display metadata, such as the visitor's name in the queue, so that the agent greeting them knows who they are.
 
 ![The Queue panel](https://raw.github.com/surfly/tutorial/master/screens/queue_panel.png)
 
@@ -37,8 +37,8 @@ The buttons on the admin panel are:
 <a name="session_modification"></a>
 ### A Surfly session
 
-Surfly comes with several different options for communicating with other users. You may decide to video or text chat, and followers can highlight areas with the drawing tool. 
-If Surfly is integrated on your website, you can adapt the way a session starts, looks and behaves by changing the default settings. This is easily accomplished by specifying your preferences in the Surfly widget.  
+Surfly comes with several different options for communicating with other users. You may decide to video or text chat, share documents and followers can highlight areas with the drawing tool. 
+If Surfly is integrated into your website, you can adapt the way a session starts, looks and behaves by changing the default settings. This is easily accomplished by specifying your preferences in the Surfly widget.  
 If you would like greater control over the user interface, you can also fully customise it through the API (please see the documentation for further details).
 
 The main points covered in the session modification section are: 
@@ -73,7 +73,7 @@ The default chatbox color is a soft red, however, this can be altered to match y
 
 ![Default changed color](https://raw.github.com/surfly/tutorial/master/screens/red_default_chat.png)  ![Changed chatbox colors](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)
 
-Modifying the chat box can not only change its appearance, but also limit or extend the amount of control that the leader and the follower can have. By default, every user is able to exit the session but if you would like to allow your visitors full control over the session duration, you can choose to disable the exit icon from the agents' dock. 
+Modifying the chat box can not only change its appearance, but also limit or extend the amount of control that the leader and the followers can have. By default, every user is able to exit the session but if you would like to allow your visitors full control over the session duration, you can choose to disable the exit icon from the agents' dock. 
 
 ![agent cannot exit](https://raw.github.com/surfly/tutorial/master/screens/agent_cannot_end.png)
 
@@ -107,7 +107,7 @@ If you wish, you may also disable the document sharing tool.
 
 The window is normally set to the person with the smallest screen, as this allows for a smooth transition into the Surfly session. If you see blank edges at the side of your screen, it is 
 only because your screen is larger than the person you are co-browsing with. However, you can also decide to set a maximum or minimum size for the window.  
-Alternatively you may decide to remove the set to smallest screen functionality altogether. In this case, the window will be set to the size of the leader's screen.
+Alternatively, you may decide to remove the set to smallest screen functionality altogether. In this case, the window will be set to the size of the leader's screen.
 
 <a name="drawing_mode"></a>
 #### Drawing mode
@@ -132,8 +132,7 @@ As can be seen in the above image, the hand button is now bold, which means the 
 <a name="popupurl"></a>
 #### Exiting the session display or redirect to another page
 
-You may want to show a user another page after the session has finished. You can either show a popup window within the host website, or you can 
-send them to another webpage.
+You may want to show a user another page after the session has finished. In this case, you can either show a popup window within the host website, or you can send them to another webpage.
 
 In the example below, we have chosen to show the leader a popup url within their screen after the session has finished.  
 The user can exit the popup window by clicking on the cross to the top right of the window.
