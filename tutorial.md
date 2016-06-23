@@ -247,6 +247,11 @@ As can be seen in the image below, the chat solutions are given a higher z-index
 
 ![Chat solutions](https://raw.github.com/surfly/tutorial/master/screens/chat_solutions.png)
 
+To disable Surfly's video and/ or text chat, you can alter the code snippet to either remove the user interface entirely, or to leave a dock with session control options. (more information on 
+the docked_only option can be found [here](#chat_box).  
+
+Removing the user_interface leaves you with purely the co-browsing functionality as an addition to your own chat solutions.  You can use blacklisting to create an "end session" button. This 
+button could be a restricted url, which, when clicked, triggers an end-session event, and redirects the user to another url.  To read more about blacklisting, click [here](#blacklist_whitelist)
 
 <a name="integration_options"></a>
 ### Integration Options
