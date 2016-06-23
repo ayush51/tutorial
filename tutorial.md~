@@ -4,8 +4,7 @@
 
 ###### Welcome to Surfly!
 
-
-Surfly provides co-browsing, this enables you to share your browsing session with others.
+Surfly's co-browsing technology enables you to share your browser with others, clarifying communication online.
 You can start a Surfly session simply by entering the url of the website you want to browse into the 'start session' panel on your admin page.  You can then invite people to join you by sharing
 the session url with them. This is the easiest and quickest way to co-browse and does not require any configuration.
 However, if you wish to use Surfly as a feature on your own website, you can also add a Surfly button to your website. By doing this, you will be able to fully customise your session and use as much or as little of Surfly's functionality within your own product.
@@ -230,6 +229,10 @@ As shown in the image below, this unique session ID will also be shown in the qu
 
 ![The Queue panel](https://raw.github.com/surfly/tutorial/master/screens/queue_panel.png)
 
+By default, the session ID is also formatted so that it is easy to communicate it over the phone. You can see on the right what an unformatted session id looks like.
+
+![Formatted Session ID](https://raw.github.com/surfly/tutorial/master/screens/formatted_session_id.png) ![Unformatted Session ID](https://raw.github.com/surfly/tutorial/master/screens/non-formatted.png)
+
 <a name="auto_start"></a>
 #### Create an invite page
 
@@ -338,8 +341,25 @@ In the above example, the pattern will prevent access to any url which includes 
 #### Add information to the session log
 
 You can use the REST API to add additional information to the session log.  This is especially useful if you want to be able to monitor your agents, for example, you could log 
-your agents individual sales.  
-You can also create custom log messages using the Surfly.log() function. 
+your agents individual sales.  This can be done through the use of the Surfly.log function, which allows you to add a custom message to the logs.  With the use of the REST API you can 
+retrieve the logs and filter by the custom message, tracking the agents that the message applies to.
+
+In our example website, we wanted to track the amount of times an agent had made a sale.  Everytime the "buy" button is clicked, we create a log message indicating that the sale had been completed.
+
+```
+    <button id="log_button" onclick="logSale()">Buy</button>
+           <script type="text/javascript">
+             function logSale(){
+             Surfly.log("Sales complete");
+             }
+           </script>
+```
+
+We matched the "Sales complete" message to the agent's id and counted the amount of times that this message had been logged using the REST API. A page could then be created showing the amount 
+of sales the agent had made
+
+![Agent sales](https://raw.github.com/surfly/tutorial/master/screens/agents_table.png)
+
 
 <a name="customise_appearance_for_user"></a>
 #### Customise website appearance depending on who is in control
@@ -358,7 +378,11 @@ window.addEventListener('surflycontrolchange', function (event) {
     }
 });
 ```
-As can be seen above, we simply check whether the leader is in control when the control is switched from within a Surfly session. If the leader is indeed in control, we enable the button and otherwise we disable it.
+As can be seen above, we simply check whether the leader is in control when the control is switched from within a Surfly session (which fires the 'surflycontrolchange' event). If the leader is indeed in control, we enable the button and otherwise we disable it.
+
+When the leader has control, the element is in bold, and can be selected. Otherwise, the element is disabled.
+
+![Enabled button](https://raw.github.com/surfly/tutorial/master/screens/button_able.png) ![Disabled button](https://raw.github.com/surfly/tutorial/master/screens/button_disable.png)
 
 <a name="examples"></a>
 ### Examples use cases
