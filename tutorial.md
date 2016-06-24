@@ -224,10 +224,39 @@ Please note: the default is a formatted session ID
 <a name="auto_start"></a>
 #### Create an invite page
 
-Enabling auto_start in the code snippet means that the webpage will immediatly start a Surfly session. The page will, by default, display a red banner asking the visitor to wait for an agent to join their session, and the queue pin number.
-Auto start is especially useful if you want to display a specific webpage whilst the visitor is waiting for an agent to join them and allows you to fully customise your invite page. In our example webpage we have enabled autostart and created our own invite page so that the user is aware that they are in the queue.
+Enabling auto_start in the code snippet means that the webpage will immediatly start a Surfly session. The page will, by default, display a red banner asking the visitor to wait for an agent to join their session, and the queue pin number. 
+Auto start is especially useful if you want to display a specific webpage whilst the visitor is waiting for an agent to join them, and allows you to fully customise your invite page. In our example webpage we have enabled autostart and created our own invite page so that the user is aware that they are in the queue.
 
 ![auto_start](https://raw.github.com/surfly/tutorial/master/screens/auto_start.png)
+
+Further customisation is also possible through the use of the REST API. For example, you can use it to detect whether a Surfly session has started or not, and alter your websites appearance based on this.  The red banner may also be removed, if you prefer.
+
+In the following example, we have enabled auto_start in the code snippet, and use the REST API to double check that the session has indeed started.  If it has not, we display a banner reading "Wait for your ID...", and if it has started, we reveal the unique queue code that identifies the user in the queue. 
+
+```javascript
+
+<button class="button" id="id_button">Waiting for ID...</button>
+
+        <script type="text/javascript">
+        var request = new XMLHttpRequest();
+
+        request.open('GET', 'https://api.surfly.com/v2/sessions/?api_key=your_REST_API_key_here&active_session=true');
+
+        request.onreadystatechange = function () {
+          if (this.readyState === 4) {
+            if(window.__surfly){
+                    var body = this.responseText;
+                    var index = body.indexOf("queue_id");
+                    var id = body.substring(index+10, body.length-2);
+
+                    document.getElementById("id_button").innerHTML=id;
+            }
+          }
+        };
+
+        request.send();
+        </script>
+```
 
 <a name="integrate_chat"></a>
 #### Integrate with existing chat solutions
