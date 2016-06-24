@@ -235,11 +235,10 @@ Auto start is especially useful if you want to display a specific webpage whilst
 
 The red banner may also be removed through a simple change to the code snippet. Just set the "block_until_agent_joins" parameter to "false".
 
-Further customisation is also possible through the use of the REST API. For example, you can use it to detect whether a Surfly session has started or not, and alter your websites' appearance based on this. In the following code example, we use the REST API to check whether a Surfly session has started. If it has not, we display our own custom banner reading "Wait for your ID...", and, if it has started, we reveal the unique queue code that identifies the user in the queue. 
+Further customisation is also possible through the use of the REST API. For example, you can use it to detect whether a Surfly session has started or not, and alter your websites' appearance based on this. In the following code example, we use the REST API to check whether a Surfly session has started. If it has started, we reveal the unique queue code that identifies the user in the queue. 
 
 
 ```javascript
-
        <script type="text/javascript">
         var request = new XMLHttpRequest();
 
@@ -263,7 +262,7 @@ Further customisation is also possible through the use of the REST API. For exam
 
 We were then able to set up our own invite page with our own custom banner:
 
-![Queue ID](https://raw.github.com/surfly/tutorial/master/screens/queue_id.png
+![Queue ID](https://raw.github.com/surfly/tutorial/master/screens/queue_id.png)
 
 
 <a name="integrate_chat"></a>
