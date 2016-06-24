@@ -213,9 +213,9 @@ If you want to create your own button, you can use the #surflystart anchor, whic
 <a name="session_id"></a>
 #### The session ID approach
 
-The session ID approach is especially useful if you are already in contact with a customer via the phone. If the customer needs help navigating a website, the agent can direct them to start a co-browsing session.   
+The session ID approach is especially useful if you are already in contact with a customer via the phone. If the customer needs help navigating a website, the agent can direct them to start a co-browsing session. 
 You can use the REST API to access the session ID and display it. The user can then communicate this ID to the agent so that they will be able to join the session and help them.
-The image to the left shows a formatted session ID, and the image on the right shows an unformatted session ID.  
+The image to the left shows a formatted session ID, and the image on the right shows an unformatted session ID. 
 
 ![Formatted Session ID](https://raw.github.com/surfly/tutorial/master/screens/formatted_session_id.png) ![Unformatted Session ID](https://raw.github.com/surfly/tutorial/master/screens/non-formatted.png)
 
@@ -229,15 +229,14 @@ Auto start is especially useful if you want to display a specific webpage whilst
 
 ![auto_start](https://raw.github.com/surfly/tutorial/master/screens/auto_start.png)
 
-Further customisation is also possible through the use of the REST API. For example, you can use it to detect whether a Surfly session has started or not, and alter your websites appearance based on this.  The red banner may also be removed, if you prefer.
+The red banner may also be removed through a simple change to the code snippet. Just set the "block_until_agent_joins" parameter to "false".
 
-In the following example, we have enabled auto_start in the code snippet, and use the REST API to double check that the session has indeed started.  If it has not, we display a banner reading "Wait for your ID...", and if it has started, we reveal the unique queue code that identifies the user in the queue. 
+Further customisation is also possible through the use of the REST API. For example, you can use it to detect whether a Surfly session has started or not, and alter your websites' appearance based on this. In the following code example, we use the REST API to check whether a Surfly session has started. If it has not, we display our own custom banner reading "Wait for your ID...", and, if it has started, we reveal the unique queue code that identifies the user in the queue. 
+
 
 ```javascript
 
-<button class="button" id="id_button">Waiting for ID...</button>
-
-        <script type="text/javascript">
+       <script type="text/javascript">
         var request = new XMLHttpRequest();
 
         request.open('GET', 'https://api.surfly.com/v2/sessions/?api_key=your_REST_API_key_here&active_session=true');
@@ -257,6 +256,11 @@ In the following example, we have enabled auto_start in the code snippet, and us
         request.send();
         </script>
 ```
+
+We were then able to set up our own invite page with our own custom banner:
+
+![Queue ID](https://raw.github.com/surfly/tutorial/master/screens/queue_id.png
+
 
 <a name="integrate_chat"></a>
 #### Integrate with existing chat solutions
