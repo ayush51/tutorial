@@ -41,6 +41,7 @@ If you would like greater control over the user interface, you can also fully cu
 The main points covered in this section are: 
 
  - [Inviting users to join your session](#invite_user)
+ - [Navigating to a new website](#invite_user)
  - [Chat box](#chat_box)
  - [Video chat](#video_chat)
  - [Document sharing](#document_sharing)
@@ -61,6 +62,13 @@ Both of these methods will load the following screen:
 ![invite_user](https://raw.github.com/surfly/tutorial/master/screens/invite_user.png)
 
 You can then decide to either share the url of the session, or send an email to the users you wish to invite. During a session, there is always one leader at any given time, but there can be multiple followers.
+
+<a name="new_url"></a>
+#### Navigating to a new website 
+
+At any given time during a Surfly session, the leader can decide to surf to another website within the co-browsing session. In order to do so, you can use the "navigate to new url" button in the chat box. You will then see the following screen asking you to enter the new url:
+
+![new_url](https://raw.github.com/surfly/tutorial/master/screens/new_url.png)
 
 <a name="chat_box"></a>
 ####Chat box
