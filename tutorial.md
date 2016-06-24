@@ -354,7 +354,7 @@ As can be seen above, we simply check whether the leader is in control when the 
 
 When the leader has control, the element is in bold, and can be selected. If not, the element is disabled.
 
-![Enabled button](https://raw.github.com/surfly/tutorial/master/screens/button_able.png) ![Disabled button](https://raw.github.com/surfly/tutorial/master/screens/button_disable.png)
+![Enabled button](https://raw.github.com/surfly/tutorial/alterations/screens/button_able.png) ![Disabled button](https://raw.github.com/surfly/tutorial/alterations/screens/button_disable.png)
 
 <a name="examples"></a>
 ### Examples use cases
