@@ -401,12 +401,20 @@ When the leader has control, the element is in bold, and can be selected. If not
 ### Examples use cases
 
 
-#### Using the Session Id approach
+#### Using the Session ID approach
 
-In this example, the agent is already in communication with the customer over the phone.  In order to give them extra support, they direct them to start a Surfly session via a discrete button at 
-the bottom of the webpage. The button auto_starts a Surfly session, and the customer is queue'd.  
+The session ID approach is primarily for those who are already in communication with the customer over the phone, as the ID is used by the agent to ensure that they are joining the correct session.
+You can choose to pass the session ID to the agent in several ways, either by showing the customer a popup window and getting them to communicate this to the agent, or by adding it to the 
+metadata in the agents queue panel. 
 
-As can be seen from the code below, we retrieve the session id using the REST API, and display it in a popup window for the customer to read.
+Once the agent has the session ID, they can simply enter this into the start session panel on the Surfly admin page.  
+
+![Start Surfly](https://raw.github.com/surfly/tutorial/alterations/screens/enter_session_id.png)
+ 
+In this example, the agent is already in communication with the customer over the phone.  In order to give the customer extra support, the agent directs them to start a Surfly session via a discrete button at 
+the bottom of the webpage. The button auto_starts a Surfly session, and the customer is queue'd until the agent joins their session.  
+
+As can be seen from the code below, we retrieve the session ID using the REST API, and display it in a popup window for the customer to read. This ID will then be communicated to the agent over the phone.
 
 ``` javascript
 
@@ -440,4 +448,3 @@ As can be seen from the code below, we retrieve the session id using the REST AP
     </script>
 ```
 
-The customer tells the agent their unique session ID over the phone. This allows the agent to enter it straight into the "start session" panel from the Surfly admin page, and to join the customer in a co-browsing session.
