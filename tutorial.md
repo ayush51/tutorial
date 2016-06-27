@@ -420,14 +420,14 @@ As can be seen from the code below, we retrieve the session ID using the REST AP
 
      <script type="text/javascript">
      function getId(){
-      // gets the session ID
+      // gets the session ID from the body string
       var request = new XMLHttpRequest();
       request.open('GET', 'https://api.surfly.com/v2/sessions/?api_key=*your_key_here*&active_session=true');
       request.onreadystatechange = function () {
         if (this.readyState === 4) {
           if(window.__surfly){
             var body = this.responseText;
-            // retrieves the start and end point of the session id string
+            // retrieves the start and end point of the session id substring
             var index = body.indexOf("viewer_link");
             var index_end = body.indexOf("start_time");
             var session_url = body.substring(index+14, index_end-4);
@@ -436,12 +436,7 @@ As can be seen from the code below, we retrieve the session ID using the REST AP
             window.alert("your session id is:" + id);
           }
         }
-       // stores the session url and id so it can be displayed on a seperate page
-       // transfer this via custom metadata to the admin panel
-       sessionStorage.setItem('current_session_url', session_url);
-       sessionStorage.setItem('current_session_id', id);
       };
-
       request.send();
     }
 
