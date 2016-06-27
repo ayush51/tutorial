@@ -399,3 +399,10 @@ When the leader has control, the element is in bold, and can be selected. If not
 
 <a name="examples"></a>
 ### Examples use cases
+
+
+#### Using the Session Id approach
+
+In this example, the agent is already in communication with the customer over the phone.  In order to give them extra support, they direct them to start a Surfly session via a discrete button at 
+the bottom of the webpage. The button auto_starts a Surfly session, and the customer is queue'd.  The session ID is retrieved, and shown in a pop-up window. The customer tells the agent their 
+unique session ID over the phone. This allows the agent to enter it straight into the "start session" panel from the Surfly admin page, and to join the customer in a co-browsing session.
