@@ -404,5 +404,40 @@ When the leader has control, the element is in bold, and can be selected. If not
 #### Using the Session Id approach
 
 In this example, the agent is already in communication with the customer over the phone.  In order to give them extra support, they direct them to start a Surfly session via a discrete button at 
-the bottom of the webpage. The button auto_starts a Surfly session, and the customer is queue'd.  The session ID is retrieved, and shown in a pop-up window. The customer tells the agent their 
-unique session ID over the phone. This allows the agent to enter it straight into the "start session" panel from the Surfly admin page, and to join the customer in a co-browsing session.
+the bottom of the webpage. The button auto_starts a Surfly session, and the customer is queue'd.  
+
+As can be seen from the code below, we retrieve the session id using the REST API, and display it in a popup window for the customer to read.
+
+``` javascript
+
+     <script type="text/javascript">
+     function getId(){
+      // gets the session ID
+      var request = new XMLHttpRequest();
+      request.open('GET', 'https://api.surfly.com/v2/sessions/?api_key=*your_key_here*&active_session=true');
+      request.onreadystatechange = function () {
+        if (this.readyState === 4) {
+          if(window.__surfly){
+            var body = this.responseText;
+            // retrieves the start and end point of the session id string
+            var index = body.indexOf("viewer_link");
+            var index_end = body.indexOf("start_time");
+            var session_url = body.substring(index+14, index_end-4);
+            var id = body.substring(index+33, index_end-4);
+            // creates a popup window displaying the session id
+            window.alert("your session id is:" + id);
+          }
+        }
+       // stores the session url and id so it can be displayed on a seperate page
+       // transfer this via custom metadata to the admin panel
+       sessionStorage.setItem('current_session_url', session_url);
+       sessionStorage.setItem('current_session_id', id);
+      };
+
+      request.send();
+    }
+
+    </script>
+```
+
+The customer tells the agent their unique session ID over the phone. This allows the agent to enter it straight into the "start session" panel from the Surfly admin page, and to join the customer in a co-browsing session.
