@@ -4,8 +4,8 @@
 
 ###### Welcome to Surfly!
 
-Surfly's co-browsing technology enables you to share your browser with others. You can start a Surfly session simply by entering the url of the website you want to browse into the 'start session' panel on your admin page.  You can then invite people to join you by sharing the session url with them. This is the easiest and quickest way to co-browse and does not require any configuration.
-However, if you wish to use Surfly as a feature on your own website, you can also add a Surfly button to your website. By doing this, you will be able to fully customise your session and use as much or as little of Surfly's functionality within your own product.
+Surfly's co-browsing technology enables you to share your browser with others. You can start a Surfly session simply by entering the url of the website you want to browse into the 'start session' panel on your admin page.  Invite people to join you by sharing the session url with them. This is the easiest and quickest way to co-browse and does not require any configuration.
+However, if you wish to use Surfly as a feature on your own website, you can also add a Surfly button to your website. By doing this, you will be able to fully customise your session and use as much, or as little, of Surfly's functionality within your own product.
 
 ###### During the session
 
@@ -24,7 +24,7 @@ Surfly's admin panel allows you to track your users and your agents, and can be 
 The buttons on the admin panel are:
 
  - The 'start' button, this allows you to immediatly start co-browsing.  When you click on this link you are asked to invite someone to join your session, by either sending them the session url directly, or via email.
- - The 'queue' button, which gives you a list of queue'd users.  You can add metadata to this so that the agent knows more information about the user.
+ - The 'queue' button, which gives you a list of queue'd users.  You can add metadata to this panel so that the agent knows more information about the user.
  - The 'history' button gives a brief overview of your session. You can also choose to record the chat logs which will then be accessible from the history panel.
  - The 'agent' button allows you to add agents to your account, and also gives you access to some information about agents such as their ID and the amount of sessions they have joined.
  - The 'settings' button lets you change your profile settings, and also includes your account details. Here, you can review your account plan, billing and personal information. The settings button also contains your integration information, the Surfly code snippet and the REST API key. 
@@ -415,3 +415,41 @@ When the leader has control, the element is in bold, and can be selected. If not
 
 <a name="examples"></a>
 ### Examples use cases
+
+
+#### Using the Session ID approach
+
+The session ID approach is primarily for those who are already in communication with the customer over the phone, as the ID can be used by the agent to ensure that they are joining the correct session.
+The customer will pass the session ID to the agent, as, when the click the on the correct link, the session id can show a pop-up with the id on it.
+Once the agent has the session ID, they can simply enter this into the start session panel on the Surfly admin page, and will immediatly join the session.
+
+![Start Surfly](https://raw.github.com/surfly/tutorial/alterations/screens/enter_session_id.png)
+
+As can be seen from the code below, we retrieve the session ID using the REST API, and display it in a popup window for the customer to read. This ID will then be communicated to the agent over the phone.
+
+``` javascript
+
+     <script type="text/javascript">
+     function getId(){
+      // gets the session ID from the body string
+      var request = new XMLHttpRequest();
+      request.open('GET', 'https://api.surfly.com/v2/sessions/?api_key=*your_REST_API_key_here*&active_session=true');
+      request.onreadystatechange = function () {
+        if (this.readyState === 4) {
+          if(window.__surfly){
+            var body = this.responseText;
+            // retrieves the start and end point of the session id substring
+            var index = body.indexOf("viewer_link");
+            var index_end = body.indexOf("start_time");
+            var session_url = body.substring(index+14, index_end-4);
+            var id = body.substring(index+33, index_end-4);
+            // creates a popup window displaying the session id
+            window.alert("your session id is:" + id);
+          }
+        }
+      };
+      request.send();
+    }
+
+    </script>
+```
