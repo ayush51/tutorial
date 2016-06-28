@@ -138,8 +138,11 @@ As can be seen in the above image, the hand button is now bold, which means the 
 
 <a name="metadata"></a>
 #### Adding metadata to the queue
-When a user is being queue'd, you may want to add some information to their incoming request so that the agents know a bit more about the clients or might be able to identify a specific client. For instance, you might need to pass on the customer's name or phone number to your agents.
-This can be easily accomplished by setting the QUEUE_METADATA_CALLBACK option to a function returning the information you are interested in.
+When a user is being queue'd, you may want to pass some information to the agents, allowing them to know a bit more about the clients, or to identify a specific client. For instance, you could choose to pass on the customer's name or phone number to your agents.
+Surfly will also use the users' name in order to display this in the chatbox, and the email in order to match the correct gravitar to the user.
+
+To add metadata to the queue, set the QUEUE_METADATA_CALLBACK option to a function returning the information you are interested in.
+
 
 ```
 QUEUE_METADATA_CALLBACK: new Function('return {"name": "John Doe","email": "john.doe@example.com"}')
@@ -231,12 +234,44 @@ If you want to create your own button, you can use the #surflystart anchor, whic
 #### The session ID approach
 
 The session ID approach is especially useful if you are already in contact with a customer via the phone. If the customer needs help navigating a website, the agent can direct them to start a co-browsing session. 
-You can use the REST API to access the session ID and display it. The user can then communicate this ID to the agent so that they will be able to join the session and help them.
-The image to the left shows a formatted session ID, and the image on the right shows an unformatted session ID. 
+As can be seen in the code example below, you can use the REST API to access the session ID and display it (in this case we use a popup window). The user can then communicate this ID to the agent so that they will be able to join the session and help them.
+
+``` javascript
+
+     <script type="text/javascript">
+     function getId(){
+      // gets the session ID from the body string
+      var request = new XMLHttpRequest();
+      request.open('GET', 'https://api.surfly.com/v2/sessions/?api_key=*your_REST_API_key_here*&active_session=true');
+      request.onreadystatechange = function () {
+        if (this.readyState === 4) {
+          if(window.__surfly){
+            var body = this.responseText;
+            // retrieves the start and end point of the session id substring
+            var index = body.indexOf("viewer_link");
+            var index_end = body.indexOf("start_time");
+            var session_url = body.substring(index+14, index_end-4);
+            var id = body.substring(index+33, index_end-4);
+            // creates a popup window displaying the session id
+            window.alert("your session id is:" + id);
+          }
+        }
+      };
+      request.send();
+    }
+
+    </script>
+```
+
+You can format the session ID so that it is easy to communicate over the phone.  The image to the left shows a formatted session ID, and the image on the right shows an unformatted session ID. 
 
 ![Formatted Session ID](https://raw.github.com/surfly/tutorial/master/screens/formatted_session_id.png) ![Unformatted Session ID](https://raw.github.com/surfly/tutorial/master/screens/non-formatted.png)
 
 Please note: the default is a formatted session ID
+
+Once the agent has the session ID, they can simply enter this into the start session panel on the Surfly admin page, and will immediatly join the session.
+
+![Start Surfly](https://raw.github.com/surfly/tutorial/master/screens/enter_session_id.png)
 
 <a name="auto_start"></a>
 #### Create an invite page
@@ -298,7 +333,6 @@ This section covers:
 
  - [Surfly and third party cookies](#third_party_cookies)
  - [Session continuation](#session_continuation)
- - [Adding custom metadata to queue requests](#custom_metadata)
  - [Security Features](#security_features)
  - [Add information to a session log](#session_log_info)
  - [Customising the website appearance depending on who is in control](#customise_appearance_for_user)
@@ -319,13 +353,6 @@ There are two main ways to set up session continuation:
 
  - Full session continuation allows the transfer of all data, including (unlike soft session continuation), cookies with a HttpOnly tag.
  - Soft session continuation is more limited, and excludes cookies with a HttpOnly tag.
-
-<a name="custom_metadata"></a>
-#### Add custom metadata to Queue request
-
-Adding custom metadata to the Queue requests allows you to give extra information about the user to the agent. For example, if the user is logged in to your website, you can pass on some of this data, such as name and address, to the agent. Surfly will also use the name in order to display this in the chatbox, and the email in order to match the correct gravitar to the user.
-
-You can also track the queue status from the client's side, so you can monitor the behaviour of the client when they leave, rejoin, or are waiting in the queue.
 
 <a name="security_features"></a>
 #### Security Features
@@ -413,43 +440,3 @@ When the leader has control, the element is in bold, and can be selected. If not
 
 ![Enabled button](https://raw.github.com/surfly/tutorial/master/screens/button_able.png) ![Disabled button](https://raw.github.com/surfly/tutorial/master/screens/button_disable.png)
 
-<a name="examples"></a>
-### Examples use cases
-
-
-#### Using the Session ID approach
-
-The session ID approach is primarily for those who are already in communication with the customer over the phone, as the ID can be used by the agent to ensure that they are joining the correct session.
-The customer will pass the session ID to the agent, as, when the click the on the correct link, the session id can show a pop-up with the id on it.
-Once the agent has the session ID, they can simply enter this into the start session panel on the Surfly admin page, and will immediatly join the session.
-
-![Start Surfly](https://raw.github.com/surfly/tutorial/alterations/screens/enter_session_id.png)
-
-As can be seen from the code below, we retrieve the session ID using the REST API, and display it in a popup window for the customer to read. This ID will then be communicated to the agent over the phone.
-
-``` javascript
-
-     <script type="text/javascript">
-     function getId(){
-      // gets the session ID from the body string
-      var request = new XMLHttpRequest();
-      request.open('GET', 'https://api.surfly.com/v2/sessions/?api_key=*your_REST_API_key_here*&active_session=true');
-      request.onreadystatechange = function () {
-        if (this.readyState === 4) {
-          if(window.__surfly){
-            var body = this.responseText;
-            // retrieves the start and end point of the session id substring
-            var index = body.indexOf("viewer_link");
-            var index_end = body.indexOf("start_time");
-            var session_url = body.substring(index+14, index_end-4);
-            var id = body.substring(index+33, index_end-4);
-            // creates a popup window displaying the session id
-            window.alert("your session id is:" + id);
-          }
-        }
-      };
-      request.send();
-    }
-
-    </script>
-```
