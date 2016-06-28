@@ -282,7 +282,6 @@ This section covers:
 
  - [Surfly and third party cookies](#third_party_cookies)
  - [Session continuation](#session_continuation)
- - [Adding custom metadata to queue requests](#custom_metadata)
  - [Security Features](#security_features)
  - [Add information to a session log](#session_log_info)
  - [Customising the website appearance depending on who is in control](#customise_appearance_for_user)
@@ -303,13 +302,6 @@ There are two main ways to set up session continuation:
 
  - Full session continuation allows the transfer of all data, including (unlike soft session continuation), cookies with a HttpOnly tag.
  - Soft session continuation is more limited, and excludes cookies with a HttpOnly tag.
-
-<a name="custom_metadata"></a>
-#### Add custom metadata to Queue request
-
-Adding custom metadata to the Queue requests allows you to give extra information about the user to the agent. For example, if the user is logged in to your website, you can pass on some of this data, such as name and address, to the agent. Surfly will also use the name in order to display this in the chatbox, and the email in order to match the correct gravitar to the user.
-
-You can also track the queue status from the client's side, so you can monitor the behaviour of the client when they leave, rejoin, or are waiting in the queue.
 
 <a name="security_features"></a>
 #### Security Features
