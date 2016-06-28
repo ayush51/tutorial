@@ -138,9 +138,10 @@ As can be seen in the above image, the hand button is now bold, which means the 
 
 <a name="metadata"></a>
 #### Adding metadata to the queue
-When a user is being queue'd, you may want to add some information to their incoming request so that the agents know a bit more about the clients or might be able to identify a specific client. For instance, you might need to pass on the customer's name or phone number to your agents. Surfly will also use the name in order to display this in the chatbox, and the email in order to match the correct gravitar to the user.
+When a user is being queue'd, you may want to pass some information to the agents, allowing them to know a bit more about the clients, or to identify a specific client. For instance, you could choose to pass on the customer's name or phone number to your agents.
+Surfly will also use the users' name in order to display this in the chatbox, and the email in order to match the correct gravitar to the user.
 
-This can be easily accomplished by setting the QUEUE_METADATA_CALLBACK option to a function returning the information you are interested in.
+To add metadata to the queue, set the QUEUE_METADATA_CALLBACK option to a function returning the information you are interested in.
 
 
 ```
