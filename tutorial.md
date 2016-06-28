@@ -138,7 +138,7 @@ As can be seen in the above image, the hand button is now bold, which means the 
 
 <a name="metadata"></a>
 #### Adding metadata to the queue
-When a user is being queue'd, you may want to add some information to their incoming request so that the agents know a bit more about the client or might be able to identify a specific client. For instance, you might need to pass on the customer's name or phone number to your agents.
+When a user is being queue'd, you may want to add some information to their incoming request so that the agents know a bit more about the clients or might be able to identify a specific client. For instance, you might need to pass on the customer's name or phone number to your agents.
 This can be easily accomplished by setting the QUEUE_METADATA_CALLBACK option to a function returning the information you are interested in.
 
 ```
