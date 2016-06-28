@@ -4,8 +4,8 @@
 
 ###### Welcome to Surfly!
 
-Surfly's co-browsing technology enables you to share your browser with others. You can start a Surfly session simply by entering the url of the website you want to browse into the 'start session' panel on your admin page.  You can then invite people to join you by sharing the session url with them. This is the easiest and quickest way to co-browse and does not require any configuration.
-However, if you wish to use Surfly as a feature on your own website, you can also add a Surfly button to your website. By doing this, you will be able to fully customise your session and use as much or as little of Surfly's functionality within your own product.
+Surfly's co-browsing technology enables you to share your browser with others. You can start a Surfly session simply by entering the url of the website you want to browse into the 'start session' panel on your admin page.  Invite people to join you by sharing the session url with them. This is the easiest and quickest way to co-browse and does not require any configuration.
+However, if you wish to use Surfly as a feature on your own website, you can also add a Surfly button to your website. By doing this, you will be able to fully customise your session and use as much, or as little, of Surfly's functionality within your own product.
 
 ###### During the session
 
@@ -24,7 +24,7 @@ Surfly's admin panel allows you to track your users and your agents, and can be 
 The buttons on the admin panel are:
 
  - The 'start' button, this allows you to immediatly start co-browsing.  When you click on this link you are asked to invite someone to join your session, by either sending them the session url directly, or via email.
- - The 'queue' button, which gives you a list of queue'd users.  You can add metadata to this so that the agent knows more information about the user.
+ - The 'queue' button, which gives you a list of queue'd users.  You can add metadata to this panel so that the agent knows more information about the user.
  - The 'history' button gives a brief overview of your session. You can also choose to record the chat logs which will then be accessible from the history panel.
  - The 'agent' button allows you to add agents to your account, and also gives you access to some information about agents such as their ID and the amount of sessions they have joined.
  - The 'settings' button lets you change your profile settings, and also includes your account details. Here, you can review your account plan, billing and personal information. The settings button also contains your integration information, the Surfly code snippet and the REST API key. 
@@ -48,6 +48,7 @@ The main points covered in this section are:
  - [Window size options](#window_size)
  - [Drawing mode](#drawing_mode)
  - [Control switching](#customise_control_switching)
+ - [Adding metadata to the queue](#metadata)
  - [Ending the session display or redirect to another page](#popupurl)
 
 <a name="invite_user"></a>
@@ -69,6 +70,10 @@ You can then decide to either share the url of the session, or send an email to 
 At any given time during a Surfly session, the leader can decide to surf to another website within the co-browsing session. In order to do so, you can use the "navigate to new url" button in the chat box. You will then see the following screen asking you to enter the new url:
 
 ![new_url](https://raw.github.com/surfly/tutorial/master/screens/new_url.png)
+
+However, if you wish to open a new tab you can simply hold Ctrl and click on the link you want to open. When the last tab has been closed, the normal Surfly session will resume.
+
+Please note: the standard Ctrl + T shortcut to open a new tab will not open a tab within the Surfly session
 
 <a name="chat_box"></a>
 ####Chat box
@@ -130,6 +135,18 @@ request it from the leader. This could be useful for when users require further 
 ![request control](https://raw.github.com/surfly/tutorial/master/screens/agent_request.png)
 
 As can be seen in the above image, the hand button is now bold, which means the agent can now use it to take, or request, control.
+
+<a name="metadata"></a>
+#### Adding metadata to the queue
+When a user is being queue'd, you may want to add some information to their incoming request so that the agents know a bit more about the clients or might be able to identify a specific client. For instance, you might need to pass on the customer's name or phone number to your agents.
+This can be easily accomplished by setting the QUEUE_METADATA_CALLBACK option to a function returning the information you are interested in.
+
+```
+QUEUE_METADATA_CALLBACK: new Function('return {"name": "John Doe","email": "john.doe@example.com"}')
+```
+In this example, we have simply set this option to a function returning the name and email of the client. Of course, you can also use this to pass on other data (like a user's username if they are logged in).
+
+![queue metadata](https://raw.github.com/surfly/tutorial/master/screens/queue_metadata.png)
 
 <a name="popupurl"></a>
 #### Exiting the session display or redirect to another page
@@ -213,9 +230,9 @@ If you want to create your own button, you can use the #surflystart anchor, whic
 <a name="session_id"></a>
 #### The session ID approach
 
-The session ID approach is especially useful if you are already in contact with a customer via the phone. If the customer needs help navigating a website, the agent can direct them to start a co-browsing session.   
+The session ID approach is especially useful if you are already in contact with a customer via the phone. If the customer needs help navigating a website, the agent can direct them to start a co-browsing session. 
 You can use the REST API to access the session ID and display it. The user can then communicate this ID to the agent so that they will be able to join the session and help them.
-The image to the left shows a formatted session ID, and the image on the right shows an unformatted session ID.  
+The image to the left shows a formatted session ID, and the image on the right shows an unformatted session ID. 
 
 ![Formatted Session ID](https://raw.github.com/surfly/tutorial/master/screens/formatted_session_id.png) ![Unformatted Session ID](https://raw.github.com/surfly/tutorial/master/screens/non-formatted.png)
 
@@ -224,10 +241,42 @@ Please note: the default is a formatted session ID
 <a name="auto_start"></a>
 #### Create an invite page
 
-Enabling auto_start in the code snippet means that the webpage will immediatly start a Surfly session. The page will, by default, display a red banner asking the visitor to wait for an agent to join their session, and the queue pin number.
-Auto start is especially useful if you want to display a specific webpage whilst the visitor is waiting for an agent to join them and allows you to fully customise your invite page. In our example webpage we have enabled autostart and created our own invite page so that the user is aware that they are in the queue.
+Enabling auto_start in the code snippet means that the webpage will immediatly start a Surfly session. The page will, by default, display a red banner asking the visitor to wait for an agent to join their session, and the queue pin number. 
+Auto start is especially useful if you want to display a specific webpage whilst the visitor is waiting for an agent to join them, and allows you to fully customise your invite page. In our example webpage we have enabled autostart and created our own invite page so that the user is aware that they are in the queue.
 
 ![auto_start](https://raw.github.com/surfly/tutorial/master/screens/auto_start.png)
+
+The red banner may also be removed through a simple change to the code snippet. Just set the "block_until_agent_joins" parameter to "false".
+
+Further customisation is also possible through the use of the REST API. For example, you can use it to detect whether a Surfly session has started or not, and alter your websites' appearance based on this. In the following code example, we use the REST API to check whether a Surfly session has started. If it has started, we reveal the unique queue code that identifies the user in the queue. 
+
+
+```javascript
+       <script type="text/javascript">
+        var request = new XMLHttpRequest();
+
+        request.open('GET', 'https://api.surfly.com/v2/sessions/?api_key=your_REST_API_key_here&active_session=true');
+
+        request.onreadystatechange = function () {
+          if (this.readyState === 4) {
+            if(window.__surfly){
+                    var body = this.responseText;
+                    var index = body.indexOf("queue_id");
+                    var id = body.substring(index+10, body.length-2);
+
+                    document.getElementById("id_button").innerHTML=id;
+            }
+          }
+        };
+
+        request.send();
+        </script>
+```
+
+We were then able to set up our own invite page with our own custom banner:
+
+![Queue ID](https://raw.github.com/surfly/tutorial/master/screens/queue_id.png)
+
 
 <a name="integrate_chat"></a>
 #### Integrate with existing chat solutions
@@ -270,13 +319,6 @@ There are two main ways to set up session continuation:
 
  - Full session continuation allows the transfer of all data, including (unlike soft session continuation), cookies with a HttpOnly tag.
  - Soft session continuation is more limited, and excludes cookies with a HttpOnly tag.
-
-<a name="custom_metadata"></a>
-#### Add custom metadata to Queue request
-
-Adding custom metadata to the Queue requests allows you to give extra information about the user to the agent. For example, if the user is logged in to your website, you can pass on some of this data, such as name and address, to the agent. Surfly will also use the name in order to display this in the chatbox, and the email in order to match the correct gravitar to the user.
-
-You can also track the queue status from the client's side, so you can monitor the behaviour of the client when they leave, rejoin, or are waiting in the queue.
 
 <a name="security_features"></a>
 #### Security Features
@@ -364,5 +406,45 @@ When the leader has control, the element is in bold, and can be selected. If not
 
 ![Enabled button](https://raw.github.com/surfly/tutorial/master/screens/button_able.png) ![Disabled button](https://raw.github.com/surfly/tutorial/master/screens/button_disable.png)
 
+![Button gif](https://raw.github.com/surfly/tutorial/revised_tutorial/screens/gif_button.gif "Gif button")
+
 <a name="examples"></a>
 ### Examples use cases
+
+
+#### Using the Session ID approach
+
+The session ID approach is primarily for those who are already in communication with the customer over the phone, as the ID can be used by the agent to ensure that they are joining the correct session.
+The customer will pass the session ID to the agent, as, when the click the on the correct link, the session id can show a pop-up with the id on it.
+Once the agent has the session ID, they can simply enter this into the start session panel on the Surfly admin page, and will immediatly join the session.
+
+![Start Surfly](https://raw.github.com/surfly/tutorial/alterations/screens/enter_session_id.png)
+
+As can be seen from the code below, we retrieve the session ID using the REST API, and display it in a popup window for the customer to read. This ID will then be communicated to the agent over the phone.
+
+``` javascript
+
+     <script type="text/javascript">
+     function getId(){
+      // gets the session ID from the body string
+      var request = new XMLHttpRequest();
+      request.open('GET', 'https://api.surfly.com/v2/sessions/?api_key=*your_REST_API_key_here*&active_session=true');
+      request.onreadystatechange = function () {
+        if (this.readyState === 4) {
+          if(window.__surfly){
+            var body = this.responseText;
+            // retrieves the start and end point of the session id substring
+            var index = body.indexOf("viewer_link");
+            var index_end = body.indexOf("start_time");
+            var session_url = body.substring(index+14, index_end-4);
+            var id = body.substring(index+33, index_end-4);
+            // creates a popup window displaying the session id
+            window.alert("your session id is:" + id);
+          }
+        }
+      };
+      request.send();
+    }
+
+    </script>
+```
