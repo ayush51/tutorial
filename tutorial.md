@@ -403,16 +403,11 @@ When the leader has control, the element is in bold, and can be selected. If not
 
 #### Using the Session ID approach
 
-The session ID approach is primarily for those who are already in communication with the customer over the phone, as the ID is used by the agent to ensure that they are joining the correct session.
-You can choose to pass the session ID to the agent in several ways, either by showing the customer a popup window and getting them to communicate this to the agent, or by adding it to the 
-metadata in the agents queue panel. 
-
-Once the agent has the session ID, they can simply enter this into the start session panel on the Surfly admin page.  
+The session ID approach is primarily for those who are already in communication with the customer over the phone, as the ID can be used by the agent to ensure that they are joining the correct session.
+The customer will pass the session ID to the agent, as, when the click the on the correct link, the session id can show a pop-up with the id on it.
+Once the agent has the session ID, they can simply enter this into the start session panel on the Surfly admin page, and will immediatly join the session.
 
 ![Start Surfly](https://raw.github.com/surfly/tutorial/alterations/screens/enter_session_id.png)
- 
-In this example, the agent is already in communication with the customer over the phone.  In order to give the customer extra support, the agent directs them to start a Surfly session via a discrete button at 
-the bottom of the webpage. The button auto_starts a Surfly session, and the customer is queue'd until the agent joins their session.  
 
 As can be seen from the code below, we retrieve the session ID using the REST API, and display it in a popup window for the customer to read. This ID will then be communicated to the agent over the phone.
 
@@ -422,7 +417,7 @@ As can be seen from the code below, we retrieve the session ID using the REST AP
      function getId(){
       // gets the session ID from the body string
       var request = new XMLHttpRequest();
-      request.open('GET', 'https://api.surfly.com/v2/sessions/?api_key=*your_key_here*&active_session=true');
+      request.open('GET', 'https://api.surfly.com/v2/sessions/?api_key=*your_REST_API_key_here*&active_session=true');
       request.onreadystatechange = function () {
         if (this.readyState === 4) {
           if(window.__surfly){
@@ -442,4 +437,3 @@ As can be seen from the code below, we retrieve the session ID using the REST AP
 
     </script>
 ```
-
