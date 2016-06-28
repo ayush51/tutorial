@@ -406,7 +406,7 @@ When the leader has control, the element is in bold, and can be selected. If not
 
 ![Enabled button](https://raw.github.com/surfly/tutorial/master/screens/button_able.png) ![Disabled button](https://raw.github.com/surfly/tutorial/master/screens/button_disable.png)
 
-![](https://imgur.com/AYm0XAW)
+![Button gif](https://raw.github.com/surfly/tutorial/revised_tutorial/screens/gif_button.gif "Gif button")
 
 <a name="examples"></a>
 ### Examples use cases
