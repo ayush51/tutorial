@@ -48,6 +48,7 @@ The main points covered in this section are:
  - [Window size options](#window_size)
  - [Drawing mode](#drawing_mode)
  - [Control switching](#customise_control_switching)
+ - [Adding metadata to the queue](#metadata)
  - [Ending the session display or redirect to another page](#popupurl)
 
 <a name="invite_user"></a>
@@ -134,6 +135,18 @@ request it from the leader. This could be useful for when users require further 
 ![request control](https://raw.github.com/surfly/tutorial/master/screens/agent_request.png)
 
 As can be seen in the above image, the hand button is now bold, which means the agent can now use it to take, or request, control.
+
+<a name="metadata"></a>
+#### Adding metadata to the queue
+When a user is being queue'd, you may want to add some information to their incoming request so that the agents know a bit more about the client or might be able to identify a specific client. For instance, you might need to pass on the customer's name or phone number to your agents.
+This can be easily accomplished by setting the QUEUE_METADATA_CALLBACK option to a function returning the information you are interested in.
+
+```
+QUEUE_METADATA_CALLBACK: new Function('return {"name": "John Doe","email": "john.doe@example.com"}')
+```
+In this example, we have simply set this option to a function returning the name and email of the client. Of course, you can also use this to pass on other data (like a user's username if they are logged in).
+
+![queue metadata](https://raw.github.com/surfly/tutorial/master/screens/queue_metadata.png)
 
 <a name="popupurl"></a>
 #### Exiting the session display or redirect to another page
