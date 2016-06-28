@@ -48,6 +48,7 @@ The main points covered in this section are:
  - [Window size options](#window_size)
  - [Drawing mode](#drawing_mode)
  - [Control switching](#customise_control_switching)
+ - [Adding metadata to the queue](#metadata)
  - [Ending the session display or redirect to another page](#popupurl)
 
 <a name="invite_user"></a>
@@ -69,6 +70,10 @@ You can then decide to either share the url of the session, or send an email to 
 At any given time during a Surfly session, the leader can decide to surf to another website within the co-browsing session. In order to do so, you can use the "navigate to new url" button in the chat box. You will then see the following screen asking you to enter the new url:
 
 ![new_url](https://raw.github.com/surfly/tutorial/master/screens/new_url.png)
+
+However, if you wish to open a new tab you can simply hold Ctrl and click on the link you want to open. When the last tab has been closed, the normal Surfly session will resume.
+
+Please note: the standard Ctrl + T shortcut to open a new tab will not open a tab within the Surfly session
 
 <a name="chat_box"></a>
 ####Chat box
@@ -130,6 +135,18 @@ request it from the leader. This could be useful for when users require further 
 ![request control](https://raw.github.com/surfly/tutorial/master/screens/agent_request.png)
 
 As can be seen in the above image, the hand button is now bold, which means the agent can now use it to take, or request, control.
+
+<a name="metadata"></a>
+#### Adding metadata to the queue
+When a user is being queue'd, you may want to add some information to their incoming request so that the agents know a bit more about the clients or might be able to identify a specific client. For instance, you might need to pass on the customer's name or phone number to your agents.
+This can be easily accomplished by setting the QUEUE_METADATA_CALLBACK option to a function returning the information you are interested in.
+
+```
+QUEUE_METADATA_CALLBACK: new Function('return {"name": "John Doe","email": "john.doe@example.com"}')
+```
+In this example, we have simply set this option to a function returning the name and email of the client. Of course, you can also use this to pass on other data (like a user's username if they are logged in).
+
+![queue metadata](https://raw.github.com/surfly/tutorial/master/screens/queue_metadata.png)
 
 <a name="popupurl"></a>
 #### Exiting the session display or redirect to another page
@@ -231,11 +248,10 @@ Auto start is especially useful if you want to display a specific webpage whilst
 
 The red banner may also be removed through a simple change to the code snippet. Just set the "block_until_agent_joins" parameter to "false".
 
-Further customisation is also possible through the use of the REST API. For example, you can use it to detect whether a Surfly session has started or not, and alter your websites' appearance based on this. In the following code example, we use the REST API to check whether a Surfly session has started. If it has not, we display our own custom banner reading "Wait for your ID...", and, if it has started, we reveal the unique queue code that identifies the user in the queue. 
+Further customisation is also possible through the use of the REST API. For example, you can use it to detect whether a Surfly session has started or not, and alter your websites' appearance based on this. In the following code example, we use the REST API to check whether a Surfly session has started. If it has started, we reveal the unique queue code that identifies the user in the queue. 
 
 
 ```javascript
-
        <script type="text/javascript">
         var request = new XMLHttpRequest();
 
@@ -259,7 +275,7 @@ Further customisation is also possible through the use of the REST API. For exam
 
 We were then able to set up our own invite page with our own custom banner:
 
-![Queue ID](https://raw.github.com/surfly/tutorial/master/screens/queue_id.png
+![Queue ID](https://raw.github.com/surfly/tutorial/master/screens/queue_id.png)
 
 
 <a name="integrate_chat"></a>
@@ -387,7 +403,7 @@ As can be seen above, we simply check whether the leader is in control when the 
 
 When the leader has control, the element is in bold, and can be selected. If not, the element is disabled.
 
-![Enabled button](https://raw.github.com/surfly/tutorial/alterations/screens/button_able.png) ![Disabled button](https://raw.github.com/surfly/tutorial/alterations/screens/button_disable.png)
+![Enabled button](https://raw.github.com/surfly/tutorial/master/screens/button_able.png) ![Disabled button](https://raw.github.com/surfly/tutorial/master/screens/button_disable.png)
 
 <a name="examples"></a>
 ### Examples use cases
