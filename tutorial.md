@@ -320,13 +320,6 @@ There are two main ways to set up session continuation:
  - Full session continuation allows the transfer of all data, including (unlike soft session continuation), cookies with a HttpOnly tag.
  - Soft session continuation is more limited, and excludes cookies with a HttpOnly tag.
 
-<a name="custom_metadata"></a>
-#### Add custom metadata to Queue request
-
-Adding custom metadata to the Queue requests allows you to give extra information about the user to the agent. For example, if the user is logged in to your website, you can pass on some of this data, such as name and address, to the agent. Surfly will also use the name in order to display this in the chatbox, and the email in order to match the correct gravitar to the user.
-
-You can also track the queue status from the client's side, so you can monitor the behaviour of the client when they leave, rejoin, or are waiting in the queue.
-
 <a name="security_features"></a>
 #### Security Features
 
@@ -412,6 +405,8 @@ As can be seen above, we simply check whether the leader is in control when the 
 When the leader has control, the element is in bold, and can be selected. If not, the element is disabled.
 
 ![Enabled button](https://raw.github.com/surfly/tutorial/master/screens/button_able.png) ![Disabled button](https://raw.github.com/surfly/tutorial/master/screens/button_disable.png)
+
+[![Button gif](https://imgflip.com/gif/16kmhz)](https://imgflip.com/)
 
 <a name="examples"></a>
 ### Examples use cases
