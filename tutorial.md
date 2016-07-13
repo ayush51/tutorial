@@ -1,11 +1,13 @@
-# The Surfly Tutorial
+# Introducing Surfly 
 
 ### Introduction
 
 ###### Welcome to Surfly!
 
-Surfly's co-browsing technology enables you to share your browser with others. You can start a Surfly session simply by entering the url of the website you want to browse into the 'start session' panel on your admin page.  Invite people to join you by sharing the session url with them. This is the easiest and quickest way to co-browse and does not require any configuration.
+Surfly's co-browsing technology enables you to share your browser with others, synchronising mose clicks and key events. You can start a Surfly session simply by entering the url of the website you want to browse into the 'start session' panel on your admin page. Then, invite people to join you by sharing the session url with them. This is the easiest and quickest way to co-browse and does not require any configuration.
 However, if you wish to use Surfly as a feature on your own website, you can also add a Surfly button to your website. By doing this, you will be able to fully customise your session and use as much, or as little, of Surfly's functionality within your own product.
+
+The introduction gives an overview of what Surfly is, and outlines the various ways in which it can be integrated and adapted for your own needs. More information on how to make these changes can be found in the Surfly tutorial and in the API documentation. 
 
 ###### During the session
 
@@ -138,16 +140,8 @@ As can be seen in the above image, the hand button is now bold, which means the 
 
 <a name="metadata"></a>
 #### Adding metadata to the queue
-When a user is being queue'd, you may want to pass some information to the agents, allowing them to know a bit more about the clients, or to identify a specific client. For instance, you could choose to pass on the customer's name or phone number to your agents.
-Surfly will also use the users' name in order to display this in the chatbox, and the email in order to match the correct gravitar to the user.
+When a user is being queue'd, you may want to pass some information to the agents, allowing them to know a bit more about the clients, or to identify a specific client. For instance, if a user has logged in to your site, you could pass some of that information to the agent. As shown in the image, the information is added to the 'meta data' section in the queue panel. 
 
-To add metadata to the queue, set the QUEUE_METADATA_CALLBACK option to a function returning the information you are interested in.
-
-
-```
-QUEUE_METADATA_CALLBACK: new Function('return {"name": "John Doe","email": "john.doe@example.com"}')
-```
-In this example, we have simply set this option to a function returning the name and email of the client. Of course, you can also use this to pass on other data (like a user's username if they are logged in).
 
 ![queue metadata](https://raw.github.com/surfly/tutorial/master/screens/queue_metadata.png)
 
@@ -201,16 +195,7 @@ If you prefer, you can adapt the 'get live help' button that Surfly provides. Th
 
 ![default button appearance](https://raw.github.com/surfly/tutorial/master/screens/default_button.png)
 
-You can adapt the button appearance by changing its position, colors and size. As you can see below, in the example website, we changed the position and the style of the button. This was achieved with a simple change to the code snippet:
-
-```javascript
-
-position:"middleright"
-theme_font_background:"#000000",
-theme_font_color:"#ffffff",
-theme_font_size:"16",
-
-```
+You can adapt the button appearance by changing its position, colors and size. As you can see below, in the example website, we changed the position and the style of the button. 
 
 The color of the button was changed to black, which suits the theme of our example  website. The font color remains white, but the size of the font has increased to size 16, which also increases the size of the support button.
 
@@ -233,35 +218,8 @@ If you want to create your own button, you can use the #surflystart anchor, whic
 <a name="session_id"></a>
 #### The session ID approach
 
-The session ID approach is especially useful if you are already in contact with a customer via the phone. If the customer needs help navigating a website, the agent can direct them to start a co-browsing session. 
-As can be seen in the code example below, you can use the REST API to access the session ID and display it (in this case we use a popup window). The user can then communicate this ID to the agent so that they will be able to join the session and help them.
+The session ID approach is especially useful if you are already in contact with a customer via the phone. If the customer needs help navigating a website, the agent can direct them to start a co-browsing session. The user can then communicate this ID to the agent so that they will be able to join the session and help them.
 
-``` javascript
-
-     <script type="text/javascript">
-     function getId(){
-      // gets the session ID from the body string
-      var request = new XMLHttpRequest();
-      request.open('GET', 'https://api.surfly.com/v2/sessions/?api_key=*your_REST_API_key_here*&active_session=true');
-      request.onreadystatechange = function () {
-        if (this.readyState === 4) {
-          if(window.__surfly){
-            var body = this.responseText;
-            // retrieves the start and end point of the session id substring
-            var index = body.indexOf("viewer_link");
-            var index_end = body.indexOf("start_time");
-            var session_url = body.substring(index+14, index_end-4);
-            var id = body.substring(index+33, index_end-4);
-            // creates a popup window displaying the session id
-            window.alert("your session id is:" + id);
-          }
-        }
-      };
-      request.send();
-    }
-
-    </script>
-```
 
 You can format the session ID so that it is easy to communicate over the phone.  The image to the left shows a formatted session ID, and the image on the right shows an unformatted session ID. 
 
@@ -283,35 +241,6 @@ Auto start is especially useful if you want to display a specific webpage whilst
 
 The red banner may also be removed through a simple change to the code snippet. Just set the "block_until_agent_joins" parameter to "false".
 
-Further customisation is also possible through the use of the REST API. For example, you can use it to detect whether a Surfly session has started or not, and alter your websites' appearance based on this. In the following code example, we use the REST API to check whether a Surfly session has started. If it has started, we reveal the unique queue code that identifies the user in the queue. 
-
-
-```javascript
-       <script type="text/javascript">
-        var request = new XMLHttpRequest();
-
-        request.open('GET', 'https://api.surfly.com/v2/sessions/?api_key=your_REST_API_key_here&active_session=true');
-
-        request.onreadystatechange = function () {
-          if (this.readyState === 4) {
-            if(window.__surfly){
-                    var body = this.responseText;
-                    var index = body.indexOf("queue_id");
-                    var id = body.substring(index+10, body.length-2);
-
-                    document.getElementById("id_button").innerHTML=id;
-            }
-          }
-        };
-
-        request.send();
-        </script>
-```
-
-We were then able to set up our own invite page with our own custom banner:
-
-![Queue ID](https://raw.github.com/surfly/tutorial/master/screens/queue_id.png)
-
 
 <a name="integrate_chat"></a>
 #### Integrate with existing chat solutions
@@ -324,7 +253,7 @@ As can be seen in the image below, Surfly sits transparently behind the existing
 
 Simply add the code snippet to the page including your chat solutions, and alter it to either remove the user interface entirely, or to display a dock with session control options (more information on the docked_only option can be found [here](#chat_box)).
 
-If you remove the user interface, you can use the co-browsing functionality in addition to your own chat solutions.  You can use blacklisting to create an "end session" button. This button could be a restricted url, which, when clicked, triggers an end-session event, and redirects the user to another url.  To read more about blacklisting, click [here](#blacklist_whitelist).
+If you remove the user interface, you can use the co-browsing functionality in addition to your own chat solutions. 
 
 <a name="integration_options"></a>
 ### Integration Options
@@ -371,11 +300,6 @@ Field masking allows you to protect the leader's data during the Surfly session.
 |:---:|:---:|
 | The leader | The follower |
 
-To enable field masking, you need to add surfly_private to the form element in your html file, for example:
-
-```
-<input type = "text" name = "Login" surfly_private>
-```
 
 ###### Please note: 
 
@@ -388,13 +312,6 @@ Please note: This option is only available to enterprise clients.
 
 Blacklisting is used to ban users from a select few webpages, whereas whitelisting is more restrictive, and allows access only to the pages specified in the code snippet. 
 
-The format for blacklisting or whitelisting is a string representation of a JSON array.  You need to specify the restricted url, and then can optionally decide whether to add a redirect url and a restriction type. If the redirect url is not specified, the user will be redirected to Surfly's default page. 
-
-```
-blacklist: JSON.stringify([{"pattern": ".*/restricted.*", "redirect": "{{referer}}#restricted"}])
-```
-
-In the above example, the pattern will prevent access to any url which includes 'restricted'.  If a user tries to access this page, they will be redirected to the home page with the restricted anchor added.
 
 <a name="session_log_info"></a>
 #### Add information to the session log
@@ -422,21 +339,7 @@ We matched the "Sale completed" message to the agent's id and counted the amount
 #### Customise website appearance depending on who is in control
 
 Surfly sessions are always comprised of one leader, and one or more followers. The leader is the only person who can click or type during the session, but you can switch control between the leader and the followers, if required.  You can specify the features you want to give to the leader and the followers during the session by enabling or disabling icons in the dock. 
-Moreover, you can adapt the status of the elements of a page depending on who is in control. For instance, if you wish to make a button clickable only when the leader (the person who initiated the session) is in control, it is possible to do so fairly easily: 
-
-```
-window.addEventListener('surflycontrolchange', function (event) {
-    var element = document.getElementById("log_button");
-    if (event.leaderHasControl) {
-    	element.disabled = false;
-    } else {
-        element.disabled = true;
-    }
-});
-```
-As can be seen above, we simply check whether the leader is in control when the control is switched from within a Surfly session (which fires the 'surflycontrolchange' event). If the leader does indeed have the session control, we enable the button. Otherwise we disable it.
-
-When the leader has control, the element is in bold, and can be selected. If not, the element is disabled.
+Moreover, you can adapt the status of the elements of a page depending on who is in control. For example, you may want to make a button clickable only when the leader (the person who initiated the session) is in control
 
 ![Enabled button](https://raw.github.com/surfly/tutorial/master/screens/button_able.png) ![Disabled button](https://raw.github.com/surfly/tutorial/master/screens/button_disable.png)
 
