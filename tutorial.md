@@ -79,9 +79,9 @@ Please note: the standard Ctrl + T shortcut to open a new tab will not open a ta
 ####Chat box
 
 Surfly provides a chat box which can be used to communicate with other users. 
-The default chatbox color is a soft red, however, this can be altered to match your website's theme. As can be seen in the images below, we changed the icons at the top of the chatbox from a light red to purple:
+The default chatbox color is a soft red, however, this can be altered to match your website's theme. As can be seen in the images below, we changed the icons at the top of the chatbox from a light red to blue:
 
-![Default changed color](https://raw.github.com/surfly/tutorial/master/screens/red_default_chat.png)  ![Changed chatbox colors](https://raw.github.com/surfly/tutorial/master/screens/changed_chatbox_colour.png)
+![Default changed color](https://raw.github.com/surfly/tutorial/master/screens/red_default_chat.png)  ![Changed chatbox colors](https://raw.github.com/surfly/tutorial/master/screens/chatbox-colour.png)
 
 Modifying the chat box can not only change its appearance, but also limit or extend the amount of control that the leader and the followers can have. By default, every user is able to exit the session, but, if you would like to allow your visitors full control over the session duration, you can choose to disable the exit icon from the agents' dock. 
 
