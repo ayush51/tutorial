@@ -159,7 +159,7 @@ You may want to show a user another page after the session has finished. In this
 In the example below, we have chosen to show the leader a popup url within their screen after the session has finished.
 The user can exit the popup window by clicking on the cross to the top right of the window.
 
-![Popup url](https://raw.github.com/surfly/tutorial/master/screens/popup_example.png)
+![Popup url](https://raw.github.com/surfly/tutorial/master/screens/popup-cake.png)
 
 This can be especially useful if you wish to receive feedback by asking your visitors to fill out a survey when the session ends.
 
@@ -199,7 +199,7 @@ When you open your webpage, you should see a 'get live help' button at the botto
 
 If you prefer, you can adapt the 'get live help' button that Surfly provides. The button's default appearance is red, with white text and sits to the bottom left of the screen. 
 
-![default button appearance](https://raw.github.com/surfly/tutorial/master/screens/default_button.png)
+![default button appearance](https://raw.github.com/surfly/tutorial/master/screens/default-button.png)
 
 You can adapt the button appearance by changing its position, colors and size. As you can see below, in the example website, we changed the position and the style of the button. This was achieved with a simple change to the code snippet:
 
@@ -226,9 +226,9 @@ If you do not wish to have a visual button or link on your webpage, then you can
 <a name="surflystart_anchor"></a>
 #### Customise your own button
 
-If you want to create your own button, you can use the #surflystart anchor, which can be integrated into your website's source code. You can choose the text you wish to write onto the button, and it can be fully styled with css so that it compliments your website design.  As you can see in the image below, we created our own start button. If a visitor to the website clicks on it, it will lead them to a Surfly session.
+If you want to create your own button, you can use the #surflystart anchor, which can be integrated into your website's source code. You can choose the text you wish to write onto the button, and it can be fully styled with css so that it compliments your website design.  As you can see in the image below, we chose to use the image of a cake as a button. If a visitor to the website clicks on it, it will lead them to a Surfly session.
 
-![The end result](https://raw.github.com/surfly/tutorial/master/screens/Surflystart_anchor.png)
+![The end result](https://raw.github.com/surfly/tutorial/master/screens/cake-button.png)
 
 <a name="session_id"></a>
 #### The session ID approach
@@ -256,9 +256,9 @@ The red banner may also be removed through a simple change to the code snippet. 
 
 Further customisation is also possible through the use of the REST API. For example, you can use it to detect whether a Surfly session has started or not, and alter your websites' appearance based on this. For instance, if we're in a Surfly session, we can get the unique queue code which identifies the user who initiated the session and display it.
 
-As can be seen above, we were then able to set up our own invite page with our own custom banner:
+As can be seen above, we were then able to set up our own invite page:
 
-![Queue ID](https://raw.github.com/surfly/tutorial/master/screens/queue_id.png)
+![Queue ID](https://raw.github.com/surfly/tutorial/master/screens/custom-lp.png)
 
 
 <a name="integrate_chat"></a>
