@@ -265,12 +265,8 @@ As can be seen above, we were then able to set up our own invite page with our o
 #### Integrate with existing chat solutions
 
 It is also possible to integrate Surfly with existing chat solutions. For example, if you have already established your own video or text chat, you may want to add Surfly's co-browsing functionality to this. In this case, Surfly can be integrated in such a way so that it acts as a transparent addition to your product and allows you to entirely customise the appearance of the session.
- 
-As can be seen in the image below, Surfly sits transparently behind the existing chat solutions.
 
-![Chat solutions](https://raw.github.com/surfly/tutorial/master/screens/chat_solutions.png)
-
-Simply add the code snippet to the page including your chat solutions, and alter it to either remove the user interface entirely, or to display a dock with session control options (more information on the docked_only option can be found [here](#chat_box)). You will then be able to use Surfly's co-browsing functionality in addition to your own chat solution.
+Simply add the code snippet to the page including your chat solution, and alter it to either remove the user interface entirely, or to display a dock with session control options (more information on the docked_only option can be found [here](#chat_box)). You will then be able to use Surfly's co-browsing functionality in addition to your own chat solution.
 
 <a name="integration_options"></a>
 ### Integration Options
@@ -352,11 +348,11 @@ In our example website, we wanted to track the amount of times an agent had made
 ``` javascript
     <button id="log_button" onclick="logSale()">Buy</button>
 
-           <script type="text/javascript">
-             function logSale(){
-               Surfly.log("Sale completed");
-             }
-           </script>
+    <script type="text/javascript">
+    function logSale(){
+      Surfly.log("Sale completed");
+    }
+    </script>
 ```
 
 We matched the "Sale completed" message to the agent's id and counted the number of times that this message had been logged using the REST API. A page could then be created showing how many sales the agent has made.
