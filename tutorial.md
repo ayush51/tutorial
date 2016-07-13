@@ -313,22 +313,11 @@ Please note: This option is only available to enterprise clients.
 Blacklisting is used to ban users from a select few webpages, whereas whitelisting is more restrictive, and allows access only to the pages specified in the code snippet. 
 
 
-<a name="session_log_info"></a>
+<a name="session_log_infohis is especially useful if you want to be able to monitor your agents, for example, you could use the logs to track your agents individual sales.  "></a>
 #### Add information to the session log
 
-You can use the REST API to add additional information to the session log.  This is especially useful if you want to be able to monitor your agents, for example, you could use the logs to track your agents individual sales.  To add a custom message to the session log, use the Surfly.log function.  With the use of the REST API you can retrieve the log history and filter by the custom message.
 
-In our example website, we wanted to track the amount of times an agent had made a sale.  Everytime the "buy" button is clicked, we create a log message indicating that the sale has been completed.
-
-```
-    <button id="log_button" onclick="logSale()">Buy</button>
-
-           <script type="text/javascript">
-             function logSale(){
-             Surfly.log("Sale completed");
-             }
-           </script>
-```
+In our example website, we wanted to track the amount of times an agent had made a sale.  Everytime the "buy" button is clicked, we create a Surfly log message indicating that the sale has been completed.
 
 We matched the "Sale completed" message to the agent's id and counted the amount of times that this message had been logged using the REST API. A page could then be created showing the number of sales the agent has made.
 
