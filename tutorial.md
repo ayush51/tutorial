@@ -185,9 +185,7 @@ If you prefer, you can adapt the 'get live help' button that Surfly provides. Th
 
 ![default button appearance](https://raw.github.com/surfly/tutorial/master/screens/default-button.png)
 
-You can adapt the button appearance by changing its position, colors and size. In our example website, we decided to change the support button color to a light blue.
-
-![example website with adapted Surfly button](https://raw.github.com/surfly/tutorial/master/screens/adapted_surfly_button.png)
+You can adapt the button appearance by changing its position, colors and size. 
 
 The button, by default, will only be shown if an agent is logged into the Surfly admin page. This can also be disabled, if you wish.
 
@@ -292,9 +290,6 @@ This option is only available to enterprise clients.
 The surfly.log() function can be used to log custom messages during the Surfly session. You can use the REST API to track occurances of that message/ 
 
 In our example website, we wanted to track the amount of times an agent had made a sale. Everytime the "buy" button is clicked, we create a Surfly log message indicating that the sale has been completed.  We matched the "Sale completed" message to the agent's id and counted the amount of times that this message had been logged using the REST API. A page could then be created showing the number of sales the agent has made.
-
-
-![Agent sales](https://raw.github.com/surfly/tutorial/master/screens/agents_table.png)
 
 
 <a name="customise_appearance_for_user"></a>
